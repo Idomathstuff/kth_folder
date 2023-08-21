@@ -1,0 +1,635 @@
+福	祝福,しゅくふく, blessing
+幸福,こうふく, happiness;  well-being;
+裕福,ゆうふく, wealthy;  rich;
+
+球	地球,ちきゅう, Earth;  the globe
+球,きゅう, sphere;  counter for balls
+野球,やきゅう, baseball
+
+酒	酒,さけ, alcohol;sake
+お酒,おさけ, alcohol;  sake
+酒場,さかば, bar;  pub;
+
+君	君,きみ, you;  buddy;
+君,くん, Mr (junior);  master;
+君たち,きみたち, you (plural);  all of you;
+
+察	警察,けいさつ, police;  police officer;
+察する,さっする, to guess;  to sense;
+観察,かんさつ, observation;  survey;
+
+望	望む,のぞむ, to desire;  to wish for;
+希望,きぼう, hope;  wish;
+絶望,ぜつぼう, despair;  hopelessness
+
+婚	結婚,けっこん, marriage
+婚約者,こんやくしゃ, fiance;  fiancee
+婚約,こんやく, engagement;  betrothal
+
+単	簡単,かんたん, simple;  easy;
+単純,たんじゅん, simple;  plain;
+単に,たんに, simply;  merely;
+
+押	押す,おす, to push;  to press;
+押さえる,おさえる, to pin down;  to hold down;
+押しつける,おしつける, to press against;  to push against;
+
+割	割れる,われる, to break;  to be smashed;
+役割,やくわり, part;  assigning (allotment of) parts;
+割る,わる, to divide;  to cut;
+
+限	限り,かぎり, limit;  limits;
+限界,げんかい, limit;  bound
+限る,かぎる, to restrict;  to limit;
+
+戻	戻る,もどる, to turn back (e.g. half-way);  to return;
+戻ってくる,もどってくる, to come back
+戻す,もどす, to put back;  to return;
+
+科	教科書,きょうかしょ, textbook;  coursebook;
+科学,かがく, science
+科,か, department;  section;
+
+求	求める,もとめる, to want;  to wish for;
+要求,ようきゅう, demand;  firm request;
+欲求,よっきゅう, desire;  want;
+
+談	冗談,じょうだん, jest;  joke;
+相談,そうだん, consultation;  discussion;
+冗談じゃない,じょうだんじゃない, it's no joke;  gimme a break!
+
+降	降りる,おりる, to descend (e.g. a mountain);  to go down;
+降る,ふる, to fall (of rain, snow, ash, etc.);  to come down;
+以降,いこう, on and after;  as from;
+
+妻	妻,つま, wife; 
+夫妻,ふさい, husband and wife;  married couple
+稲妻,いなずま, lightning;  flash of lightning;
+
+岡	岡,おか, hill;  height;
+福岡,ふくおか, Fukuoka (city, prefecture)
+静岡,しずおか, Shizuoka (city, prefecture)
+
+熱	熱い,あつい, hot (thing);  passionate (feelings, etc.);
+熱,ねつ, heat;  fever;
+熱心,ねっしん, zealous;  enthusiastic;
+
+浮	浮かべる,うかべる, to float;  to set afloat;
+浮かぶ,うかぶ, to float;  to be suspended;
+浮く,うく, to float;  to become merry;
+
+等	等,とう, class;  order;
+等しい,ひとしい, equal;  identical;
+上等,じょうとう, superior;  first-class;
+
+末	始末,しまつ, management;  dealing with;
+結末,けつまつ, end;  conclusion
+末,すえ, end;  tip;
+
+幸	幸せ,しあわせ, happiness;  good fortune;
+幸い,さいわい, happiness;  blessedness;
+不幸,ふこう, unhappiness;  sorrow;
+
+草	草,くさ, grass;  weed;
+仕草,しぐさ, gesture;  movement;
+薬草,やくそう, medicinal herb
+
+越   越える,こえる, to cross over;  to cross;
+乗り越える,のりこえる, to climb over;  to get over;
+越し,ごし, across;  over;
+
+登   登場,とうじょう, entry (on stage);  appearance (on screen);
+登る,のぼる, to ascend;  to go up;
+登録,とうろく, registration;  accession;
+
+類   種類,しゅるい, variety;  kind;
+書類,しょるい, document;  official papers
+人類,じんるい, mankind;  humanity
+
+未   未来,みらい, the future (usually distant);  future tense;
+未だに,いまだに, still;  even now;
+未だ,まだ, still;  as yet;
+
+規   規模,きぼ, scale;  scope;
+大規模,だいきぼ, large-scale
+規則,きそく, rule;  regulation
+
+精   精神,せいしん, mind;  spirit;
+精一杯,せいいっぱい, the best one can do;  one's best effort;
+精神的,せいしんてき, mental;  spiritual;
+
+抱   抱える,かかえる, to hold in one's arms;  to carry in one's arms;
+抱く,いだく, to hold in one's arms (e.g. a baby);  to embrace;
+抱きしめる,だきしめる, to hug someone close;  to hold someone tight;
+
+労   苦労,くろう, trouble;  hardship;
+疲労,ひろう, fatigue;  weariness;
+ご苦労,ごくろう, trouble (I have put you through);  (your) hard work;
+
+処   処理,しょり, processing;  dealing with;
+対処,たいしょ, dealing with;  coping with
+処分,しょぶん, disposal;  throwing away;
+
+退   退屈,たいくつ, tedium;  boredom;
+撤退,てったい, evacuation;  withdrawal;
+退く,しりぞく, to step back;  to move back;
+
+費   消費,しょうひ, consumption;  expenditure
+費用,ひよう, cost;  expense
+費やす,ついやす, to spend;  to expend;
+
+非   非常,ひじょう, emergency;  extraordinary;
+非難,ひなん, criticism;  blame;
+是非,ぜひ, certainly;  without fail;
+
+喜   喜ぶ,よろこぶ, to be delighted;  to be glad;
+喜び,よろこび, joy;  delight;
+歓喜,かんき, delight;  great joy
+
+娘   娘,むすめ, daughter;  girl (i.e. a young, unmarried woman)
+小娘,こむすめ, young girl;  lass;
+娘さん,むすめさん, daughter
+
+逃   逃げる,にげる, to escape;  to run away
+逃げ出す,にげだす, to run away;  to flee;
+逃がす,にがす, to set free;  to let go;
+
+探   探す,さがす, to search for;  to look for;
+探る,さぐる, to feel around for;  to fumble for;
+探索,たんさく, search;  lookup;
+
+犯   犯人,はんにん, offender;  criminal;
+犯す,おかす, to commit (e.g. crime);  to perpetrate;
+犯罪,はんざい, crime;  offence;
+
+薬   薬,くすり, medicine;  pharmaceuticals;
+薬草,やくそう, medicinal herb
+火薬,かやく, gunpowder;  powder
+
+園   公園,こうえん, (public) park
+学園,がくえん, educational institution;  school;
+庭園,ていえん, garden;  park
+
+疑   疑う,うたがう, to doubt;  to distrust;
+疑問,ぎもん, doubt;  question;
+疑い,うたがい, doubt;  question;
+
+緒   一緒に,いっしょに, together (with);  at the same time;
+一緒,いっしょ, together;  at the same time;
+内緒,ないしょ, secrecy;  confidentiality;
+
+静   静か,しずか, quiet;  silent;
+冷静,れいせい, calmness;  composure;
+静寂,せいじゃく, silence;  stillness;
+
+具   道具,どうぐ, tool;  implement;
+具合,ぐあい, condition;  state;
+具体的,ぐたいてき, concrete;  definite;
+
+席   席,せき, seat;  location (of a gathering, etc.);
+出席,しゅっせき, attendance;  presence;
+席を立つ,せきをたつ, to leave one's seat
+
+速   速い,はやい, fast;  quick;
+速度,そくど, speed;  velocity;
+早速,さっそく, at once;  immediately;
+
+舞   舞台,ぶたい, stage (theatre, theater);  scene or setting (e.g. of novel, play, etc.)
+舞う,まう, to dance (orig. a whirling dance);  to flutter about;
+振る舞う,ふるまう, to behave;  to conduct oneself;
+
+宿   宿,やど, lodging;  inn;
+宿る,やどる, to dwell;  to live;
+宿題,しゅくだい, homework;  assignment;
+
+程   程度,ていど, degree;  amount;
+ある程度,あるていど, to some extent;  to a certain extent
+程,ほど, extent;  degree;
+
+倒   倒れる,たおれる, to fall (over, down);  to collapse;
+面倒,めんどう, trouble;  bother;
+倒す,たおす, to throw down;  to bring down;
+
+寝   寝る,ねる, to sleep (lying down);  to go to bed;
+寝室,しんしつ, bedroom
+寝かせる,ねかせる, to put to bed;  to lay down lengthwise;
+
+宅   自宅,じたく, one's home;  one's house
+帰宅,きたく, returning home
+住宅街,じゅうたくがい, residential area
+
+絵   絵,え, picture;  drawing;
+絵画,かいが, painting;  picture
+絵本,えほん, picture book
+
+破   破壊,はかい, destruction;  disruption;
+破る,やぶる, to tear;  to rip;
+突破,とっぱ, breaking through;  breakthrough;
+
+庭   庭,にわ, garden;  yard;
+家庭,かてい, home;  family;
+中庭,なかにわ, courtyard;  quadrangle;
+
+婦   夫婦,ふうふ, married couple;  husband and wife;
+婦人,ふじん, woman;  lady;
+主婦,しゅふ, housewife;  mistress (of the house);
+
+余   余裕,よゆう, surplus;  margin;
+余計,よけい, extra;  more;
+余地,よち, place;  room;
+
+訪   訪れる,おとずれる, to visit;  to call on;
+訪ねる,たずねる, to visit;  to call on;
+訪問,ほうもん, call;  visit
+
+冷   冷たい,つめたい, cold (to the touch);  chilly;
+冷静,れいせい, calmness;  composure;
+冷める,さめる, to cool down;  to get cold;
+
+暮   暮らす,くらす, to live;  to get along;
+暮らし,くらし, (way of) life;  living;
+日が暮れる,ひがくれる, to set (sun);  to become dark
+
+腹   腹,はら, abdomen;  belly;
+お腹,おなか, belly;  abdomen;
+腹が立つ,はらがたつ, to get angry;  to take offense;
+
+危   危険,きけん, danger;  peril;
+危ない,あぶない, dangerous;  risky;
+危機,きき, crisis;  critical situation;
+
+許   許す,ゆるす, to permit;  to allow;
+許可,きょか, permission;  approval;
+許し,ゆるし, pardon;  forgiveness;
+
+似   似る,にる, to resemble;  to look like;
+似合う,にあう, to suit;  to match;
+真似,まね, imitating;  copying;
+
+険   危険,きけん, danger;  peril;
+冒険,ぼうけん, adventure;  venture;
+険しい,けわしい, precipitous;  rugged;
+
+財   財布,さいふ, purse;  handbag;
+財産,ざいさん, property;  fortune;
+財宝,ざいほう, treasure
+
+遊   遊ぶ,あそぶ, to play (games, sports);  to enjoy oneself;
+遊び,あそび, playing;  play (margin between on and off, gap before pressing button or lever has an effect)
+遊びに来る,あそびにくる, to come and stay;  to drop in;
+
+雑   複雑,ふくざつ, complex;  complicated;
+雑誌,ざっし, journal;  magazine;
+雑談,ざつだん, chatting;  idle talk
+
+恐   恐ろしい,おそろしい, terrible;  dreadful;
+恐怖,きょうふ, fear;  dread;
+恐れる,おそれる, to fear;  to be afraid of
+
+値   価値,かち, value;  worth;
+値段,ねだん, price;  cost
+値,あたい, price;  cost;
+
+暗   暗い,くらい, dark;  gloomy;
+暗闇,くらやみ, darkness;  the dark
+薄暗い,うすぐらい, dim;  gloomy
+
+積   積む,つむ, to pile up;  to stack;
+積極的,せっきょくてき, positive;  assertive;
+積み上げる,つみあげる, to pile up;  to make a heap;
+
+夢   夢,ゆめ, dream
+夢中,むちゅう, absorbed in;  immersed in;
+夢を見る,ゆめをみる, to dream (i.e. while asleep);  to have a dream;
+
+痛   痛い,いたい, painful;  sore;
+痛み,いたみ, pain;  ache;
+痛む,いたむ, to hurt;  to ache;
+
+富   豊富,ほうふ, abundant;  plentiful;
+富,とみ, riches;  wealth;
+富む,とむ, to be rich in;  to abound in;
+
+刻   刻む,きざむ, to mince;  to cut fine;
+深刻,しんこく, serious;  severe;
+時刻,じこく, time;  (the) hour;
+
+鳴   鳴る,なる, to sound;  to ring;
+悲鳴,ひめい, shriek;  scream
+鳴らす,ならす, to ring;  to sound;
+
+欲   欲しい,ほしい, wanted;  wished for;
+欲望,よくぼう, desire;  appetite;
+欲,よく, greed;  craving;
+
+途   途中,とちゅう, on the way;  en route;
+途端,とたん, just (now, at the moment, etc.);  just as;
+途端に,とたんに, just as;  in the act of;
+
+曲   曲がる,まがる, to bend;  to curve;
+曲,きょく, composition;  piece of music;
+曲げる,まげる, to bend;  to crook;
+
+耳   耳,みみ, ear;  hearing;
+耳元,みみもと, close to the ear
+耳にする,みみにする, to hear;  to hear by chance;
+
+完   完全,かんぜん, perfect;  complete
+完璧,かんぺき, perfect;  complete;
+完成,かんせい, complete;  completion;
+
+願   お願い,おねがい, request;  favour (to ask);
+お願いします,おねがいします, please
+願う,ねがう, to desire;  to wish;
+
+罪   罪,つみ, crime;  sin;
+謝罪,しゃざい, apology
+犯罪,はんざい, crime;  offence;
+
+陽   太陽,たいよう, sun
+陽,ひ, sun;  sunshine;
+陽気,ようき, cheerful;  jovial;
+
+亡   亡くなる,なくなる, to die
+死亡,しぼう, death;  mortality;
+亡くす,なくす, to lose (through death) (e.g. wife, child)
+
+散   散歩,さんぽ, walk;  stroll
+散る,ちる, to fall (e.g. blossoms, leaves);  to scatter;
+散,さんざん, thoroughly;  completely;
+
+掛   仕掛ける,しかける, to start;  to begin;
+掛ける,かける, to hang up (e.g. a coat, a picture on the wall);  to let hang;
+声を掛ける,こえをかける, to greet;  to call out (to);
+
+昨   昨日,きのう, yesterday
+昨夜,ゆうべ, last night;  yesterday evening
+昨晩,さくばん, last night
+
+怒   怒る,おこる, to get angry;  to get mad;
+怒り,いかり, anger;  rage;
+怒鳴る,どなる, to shout (in anger);  to yell
+
+留   留める,とめる, to stop;  to turn off;
+仕留める,しとめる, to bring down (an animal, opponent, etc.);  to kill;
+留守,るす, absence;  being away from home;
+
+礼   失礼,しつれい, discourtesy;  impoliteness;
+お礼,おれい, thanks;  gratitude;
+礼,れい, thanks;  gratitude;
+
+列   列,れつ, row;  line;
+列車,れっしゃ, train;  railway train
+行列,ぎょうれつ, line;  queue;
+
+雪   雪,ゆき, snow;  snowfall
+吹雪,ふぶき, snow storm;  blizzard
+雪崩,なだれ, avalanche;  snowslide
+
+払   払う,はらう, to pay (e.g. money, bill);  to brush off;
+支払う,しはらう, to pay
+振り払う,ふりはらう, to shake off
+
+給   給料,きゅうりょう, salary;  wages;
+補給,ほきゅう, supply;  supplying;
+供給,きょうきゅう, supply;  provision
+
+敗   失敗,しっぱい, failure;  mistake;
+敗北,はいぼく, defeat;  loss;
+敗れる,やぶれる, to be defeated;  to be beaten;
+
+捕   捕まえる,つかまえる, to catch;  to capture;
+捕まる,つかまる, to be caught;  to be arrested;
+逮捕,たいほ, arrest;  apprehension;
+
+忘   忘れる,わすれる, to forget;  to leave carelessly;
+忘れ物,わすれもの, lost article;  something forgotten
+言い忘れる,いいわすれる, to forget to say;  to forget to mention
+
+晴   素晴らしい,すばらしい, wonderful;  splendid;
+晴れる,はれる, to clear up;  to clear away;
+晴らす,はらす, to dispel;  to clear away;
+
+因   原因,げんいん, cause;  origin;
+要因,よういん, main cause;  primary factor
+因縁,いんねん, fate;  destiny;
+
+折   折れる,おれる, to break;  to be broken;
+時折,ときおり, sometimes;  at intervals;
+折る,おる, to break;  to fracture;
+
+迎   迎える,むかえる, to go out to meet;  to receive;
+歓迎,かんげい, welcome;  reception
+出迎える,でむかえる, to meet;  to greet
+
+悲   悲しい,かなしい, sad;  miserable;
+悲鳴,ひめい, shriek;  scream
+悲しみ,かなしみ, sadness;  sorrow;
+
+港   港,みなと, harbour;  harbor;
+空港,くうこう, airport
+港町,みなとまち, port city;  harbor city;
+
+責   責任,せきにん, duty;  responsibility (incl. supervision of staff);
+責める,せめる, to condemn;  to blame;
+責任者,せきにんしゃ, person in charge (including a supervisory role for other staff);  person responsible for ...;
+
+除   掃除,そうじ, cleaning;  sweeping;
+解除,かいじょ, cancellation;  rescinding;
+除く,のぞく, to remove;  to eliminate;
+
+困   困る,こまる, to be troubled;  to have difficulty;
+困惑,こんわく, bewilderment;  perplexity;
+困難,こんなん, difficulty;  hardship;
+
+閉   閉じる,とじる, to close (e.g. book, eyes, meeting, etc.);  to shut
+目を閉じる,めをとじる, to close one's eyes;  to lower one's eyelids;
+閉める,しめる, to close;  to shut
+
+吸   吸う,すう, to smoke;  to breathe in;
+呼吸,こきゅう, breathing;  respiration;
+吸い込む,すいこむ, to inhale;  to breathe in;
+
+髪   髪,かみ, hair (on the head)
+黒髪,くろかみ, black hair
+金髪,きんぱつ, blond hair
+
+束   約束,やくそく, promise;  agreement;
+拘束,こうそく, restriction;  restraint;
+束,たば, bundle;  bunch;
+
+眠   眠る,ねむる, to sleep;  to die;
+眠い,ねむい, sleepy;  drowsy;
+眠り,ねむり, sleep;  sleeping;
+
+易   容易,ようい, easy;  simple;
+容易い,たやすい, easy;  simple;
+難易度,なんいど, degree of difficulty;  difficulty level
+
+窓   窓,まど, window
+窓際,まどぎわ, (at the) window
+窓,まど, windowpane;  window glass
+
+祖   祖父,そふ, grandfather;  old man;
+祖母,そぼ, grandmother
+先祖,せんぞ, ancestor;  forefather;
+
+勤   勤める,つとめる, to work (for);  to be employed (at);
+勤務,きんむ, service;  duty;
+出勤,しゅっきん, going to work;  leaving for work;
+
+昔   昔,むかし, olden days;  former
+昔話,むかしばなし, old tale;  folk tale;
+大昔,おおむかし, great antiquity;  old-fashioned;
+
+便   便利,べんり, convenient;  handy;
+不便,ふべん, inconvenience;  inexpediency;
+穏便,おんびん, gentle;  peaceable;
+
+適   適当,てきとう, suitable;  proper;
+最適,さいてき, most suitable;  optimum;
+適切,てきせつ, appropriate;  suitable;
+
+吹   吹く,ふく, to blow (of the wind);  to blow (one's breath);
+吹き飛ばす,ふきとばす, to blow away;  to blow off;
+吹き飛ぶ,ふきとぶ, to be blown off;  to blow off;
+
+候   候補,こうほ, candidate;  contender;
+立候補,りっこうほ, candidacy;  standing as a candidate;
+天候,てんこう, weather
+
+怖   怖い,こわい, scary;  frightening;
+恐怖,きょうふ, fear;  dread;
+怖い顔,こわいかお, grim face;  angry look
+
+辞   辞める,やめる, to resign;  to retire;
+お辞儀,おじぎ, bow;  bowing
+お世辞,おせじ, flattery;  compliment
+
+否   否定,ひてい, denial;  negation;
+拒否,きょひ, refusal;  rejection;
+否,いいえ, no;  nay;
+
+遅   遅い,おそい, slow;  time-consuming;
+遅れる,おくれる, to be late;  to be delayed;
+遅刻,ちこく, lateness;  tardiness;
+
+煙   煙,けむり, smoke;  fumes
+煙草,たばこ, tobacco;  cigarette;
+土煙,つちけむり, cloud of dust
+
+徒   生徒,せいと, pupil;  student;
+徒歩,とほ, walking;  going on foot
+生徒会,せいとかい, student council
+
+欠   欠ける,かける, to chip;  to be chipped;
+欠片,かけら, fragment;  broken piece;
+欠かす,かかす, to miss (doing);  to fail (to do)
+
+迷   迷う,まよう, to lose one's way;  to get lost;
+迷惑,めいわく, trouble;  bother;
+迷い,まよい, hesitation;  bewilderment;
+
+洗   洗う,あらう, to wash;  to cleanse;
+洗濯,せんたく, washing;  laundry;
+洗濯物,せんたくもの, laundry;  the washing
+
+互   お互い,おたがい, each other;  one another
+互いに,たがいに, mutually;  with each other;
+お互いに,おたがいに, mutually;  with each other;
+
+才   才能,さいのう, talent;  ability
+天才,てんさい, genius;  prodigy;
+才,さい, ability;  gift;
+
+更   今更,いまさら, now (when it is already much too late);  at this stage;
+変更,へんこう, change;  modification;
+更に,さらに, furthermore;  again;
+
+歯   歯,は, tooth
+歯を食いしばる,はをくいしばる, to bear up in tragedy;  to stand pain well;
+奥歯,おくば, molars;  back teeth
+
+盗   盗む,ぬすむ, to steal;  to plagiarize;
+盗賊,とうぞく, thief;  robber;
+強盗,ごうとう, robber;  mugger;
+
+慣   慣れる,なれる, to get used to;  to grow accustomed to;
+見慣れる,みなれる, to become used to seeing;  to be familiar with
+習慣,しゅうかん, habit;  (social) custom;
+
+晩   一晩,ひとばん, one night;  one evening;
+晩,ばん, evening;  night;
+昨晩,さくばん, last night
+
+箱   箱,はこ, box;  case;
+木箱,きばこ, wooden box;  wooden crate
+箱,ばこ, garbage can;  rubbish bin;
+
+到   到着,とうちゃく, arrival
+到達,とうたつ, reaching;  attaining;
+到底,とうてい, (cannot) possibly;  (not) by any means;
+
+頂   頂く,いただく, to receive;  to get;
+頂点,ちょうてん, top;  summit;
+頂戴,ちょうだい, receiving;  reception;
+
+杯   精一杯,せいいっぱい, the best one can do;  one's best effort;
+一杯,いっぱい, amount necessary to fill a container (e.g. cupful, spoonful, etc.);  drink (usu. alcoholic);
+乾杯,かんぱい, cheers;  bottoms-up;
+
+皆   皆さん,みなさん, all;  everyone;
+皆,みんな, everyone;  everybody;
+皆様,みなさま, everyone
+
+招   招く,まねく, to invite;  to ask;
+招待,しょうたい, invitation
+手招き,てまねき, beckoning
+
+寒	寒い,さむい, cold (e.g. weather);  uninteresting (esp. joke);
+寒気,さむけ, chill;  the shivers;
+悪寒,おかん, chill;  shakes;
+
+恥   恥ずかしい,はずかしい, embarrassing;  embarrassed;
+恥,はじ, shame;  embarrassment;
+気恥ずかしい,きはずかしい, embarrassed;  feeling ashamed;
+
+疲   疲れる,つかれる, to get tired;  to tire;
+お疲れ,おつかれ, thanks (for coming, helping, etc.);  glad you could make it;
+疲れ,つかれ, tiredness;  fatigue
+
+貧   貧乏,びんぼう, poverty-stricken;  destitute;
+貧しい,まずしい, poor;  needy;
+貧血,ひんけつ, anemia;  anaemia
+
+猫   猫,ねこ, cat (esp. the domestic cat, Felis catus);  shamisen;
+子猫,こねこ, kitten;  small cat
+黒猫,くろねこ, black cat
+
+誤   誤解,ごかい, misunderstanding
+誤魔化す,ごまかす, to deceive;  to falsify;
+誤る,あやまる, to make a mistake (in);  to commit an error;
+
+努   努力,どりょく, effort;  exertion;
+努める,つとめる, to endeavor (endeavour);  to try;
+努力家,どりょくか, hard worker;  hardworking person
+
+幾   幾つか,いくつか, (a) few;  some;
+幾つも,いくつも, many;  much;
+幾,いく, some;  several;
+
+賛	賛成,さんせい, approval;  agreement;
+賛同,さんどう, approval;  endorsement
+賞賛,しょうさん, praise;  admiration;
+
+偶	偶然,ぐうぜん, coincidence;  chance;
+偶像,ぐうぞう, image;  idol;
+偶発的,ぐうはつてき, accidental;  incidental;
+
+忙	忙しい,いそがしい, busy;  occupied;
+多忙,たぼう, being very busy;  busyness
+忙しない,せわしない, restless;  fidgety;
+
+泳	泳ぐ,およぐ, to swim
+水泳,すいえい, swimming
+目を泳がせる,めをおよがせる, to avoid meeting someone's gaze;  to not look someone in the eyes

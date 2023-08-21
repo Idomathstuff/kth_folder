@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Sammanfattning}{2}{}%
+\contentsline {section}{\numberline {2}Uppgiftbeskrivning}{2}{}%
+\contentsline {section}{\numberline {3}Metod}{2}{}%
+\contentsline {section}{\numberline {4}Analys}{2}{}%
+\contentsline {section}{\numberline {5}Appendix: Programkod}{3}{}%
+\contentsline {section}{\numberline {6}Appendix: Testdata}{4}{}%

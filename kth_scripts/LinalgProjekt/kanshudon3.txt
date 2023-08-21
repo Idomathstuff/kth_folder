@@ -1,0 +1,1095 @@
+部	部屋,へや, room
+全部,ぜんぶ, all;entire
+部長,ぶちょう、chief;director
+本部、ほんぶ, head quarters
+
+彼	him
+
+内	以内,いない,within;less than(adv)
+案内,あんない,guidance:inform(suru)
+
+実 	事実、じじつ,fact;reality(adv)
+実験、じっけん,experiment(suru)
+実際,じっさい,actuality;true(adv / noun genitive)
+実は,じつは, as matter of fact
+
+当	本当,ほんと
+弁当,bento,japanese lunchbox
+適当,てきとう,suitable;fit;appropiate(na)
+相当,そうとう、being same as(suru);suitable;fit;appropiate(na)
+当てる,あてる, to hit
+
+戦	戦争,せんそう,war(suru)
+戦闘,せんとう,combat(suru)
+
+性	男性,だんせい,male
+せい,gender;nature(of a person)
+性格,せいかく,personality
+
+対	反対,はんたい,opposition;resistance(suru,no,na)
+絶対,ぜったい,absolutely;definitely(adv)
+
+関	concerning,gate
+玄関,げんかん,entrance
+関係,かんけい,relationship;connection;participation(suru)
+関する,かんする,to concern;be related
+
+感	感情,かんじょう,emotion:feelings(no)
+感じる,かんじる,to feel
+感覚,かんかく,intuition(suru)
+
+定  予定,よてい,plans:schedule(suru)
+決定,けってい,decision(suru)
+否定,ひてい,denial(suru)
+安定,あんてい,stability;balance(suru)
+
+政	政府,せいふ,gov
+政治,せいじ,politics
+政党,せいとう,political party
+政界,せいかい, political world;circles
+
+取	取る,to take;grab;remove
+受け取る,うけとる,to recieve;get
+取り上げる,とりあげる,to pick up;take away
+
+現	現実,げんじつ,reality;hard fact
+現象,けんしょう, phenomenon
+現在,ぜんざい, alternative to ima;present time
+
+最	radicals:(day,ear,again)
+最近,さいきん,recently;lately(adv,no)
+最後,さいご,last;final;end
+最高,さいこう,best;finest(no,na)
+最低,さいてい,least;worst(no,na)
+
+化	文化,ぶんか,culture;civilisation
+変化,へんか,change;variation(suru)
+
+相	相談,そうだん、discuss(suru)
+首相,しゅしょう,prime minster
+相当,そうとう、being same as(suru);suitable;fit;appropiate(na)
+相続,そうぞく,inheritance;succesion(suru)
+可哀想,かわいそう,pathetic(na)
+
+法	法律、ほうりつ,law
+文法、ぶんぽう,grammar
+方法、ほうほう,method
+憲法、けんぽう,regulation
+
+全	安全、あんぜん,security
+全部、ぜんぶ,entire;all
+
+情	情報,じょうほう,news;report
+感情,かんじょう,emotion:feelings(no)
+友情, ゆうじょう,friendship
+愛情,あいじょう,love
+
+向	方向,ほうこう,direction;way
+向こう、むこう,opposite side
+向かう,むかう,to face
+向ける,むける,to turn(towards);aim
+
+平	平等、びょうどう,equality(na)
+平均,へいきん,average
+平和、へいわ,peace;harmony(na)
+公平、こうへい,fairness;justice(na)
+
+成	成功,せいこう,success(suru)
+賛成,さんせい,approval(suru)
+成人,せいじん,adult
+
+信	信頼,しんらい,trust(suru)
+配信	はいしん、transisimision;broadcast
+
+面	面白い,おもしろい,interesting;amusing
+面倒,めんどう,trouble(na)
+
+連	連想,れんそう,to be reminded(suru)
+関係,かんけい,relationship;connection;participation(suru)
+連続,れんぞく,continuation(suru)
+
+原	radicals:(white+chisai)
+原因,げんいん,to cause;origin(suru)
+原,はら,plains;tundra;wilderness
+
+機	engine;machine, radicals:(tree+2 strings+spear)
+飛行機,ひこうき,airplane
+機械,きかい,machine;mechanism
+機会、きかい,chance;opporutnity
+
+次	next tsugi
+次第,しだい,depending on(suffix);as soon as(adv)
+次々,つぎつぎ,one by one
+次ぐ,つぐ,to come next;follow up
+
+数	radicals:(rice+woman+winter)
+すう,several
+数学,すうがく,math
+数える,かぞえる,to count
+数字,すうじ,digit
+
+美	radicals:(big+sheep)
+美味しい,おいし,tasty
+美しい、うつくし,beautiful
+
+表	おもて,surface;exterior
+表面,ひょうめん,surface;exterior(no)
+
+声	こえ
+
+報	radicals:(stand+soil+kneel+again)
+情報,じょうほう,information;report;news
+報道,ほうどう,report:news(suru)
+
+要	radicals(alt_west+woman)
+必要,ひつよう
+要る、いる,to need;want
+重要,じゅうよう、important(na)
+要求,ようきゅう,to demand(suru)
+主要,じゅよう,main(na)
+
+変	へん,strange(na)
+大変,たいへん,very;greatly(na,adv)
+変わる、かわる, to change
+変化、へんか, to change(suru)
+
+神	god
+神話、しんわ,legend;myth
+神社、じんじゃ, shinto shrine
+
+記	日記、にっき,diary;journal
+暗記,あんき,memorize(suru)
+記事、きじ、news story
+記録、きろく,document;record
+記憶,きおく,memory
+
+和	平和、へいわ,peace;harmony(na)
+和牛,わぎゅう,wagyu beef
+
+治	政治,せいじ,politics
+治る,なおる, to heal
+
+込	込む,こむ,to be crowded
+
+受	(again+teeth)
+受ける、うける、to recieve
+受け取る,うけとる,to recieve;get
+
+解	radicals:(angle+knife+cow)
+理解、りかい,understanding(suru)
+解決,かいけつ,settlement;resolution(suru)
+誤解,ごかい、misunderstanding(suru)
+
+期	期待,きたい、expectation;hope(suru)
+時期、じき、season
+期間、きかん、period
+
+様	radicals:(tree+sheep+water)
+王様、おうさま、king
+模様,もよう、pattern;design
+様々,さまざま、diverse;various(na)
+
+活	radicals:(water+thousand+mouth)
+生活、せいかつ、life;living(suru)
+活用、かつよう、application(suru)
+
+頭	あたま
+
+組	組む、くむ、to put together(creative works,tv,manga)
+番組、ばんぐみ、tv programme
+組合,くみあい、assocation
+
+指	ゆび、toe;finger
+指す、さす, to point;point out:identify
+
+能	のう、talent;gift
+可能,かのう、possible(na)
+能力、のうりょく、ability;faculty
+知能,さのう、intelligence
+有能,ゆうのう、talented(na)
+
+葉	radicals:(grass+world+tree)
+言葉、ことば、word
+葉,ば、leaf
+
+流	流す,ながす、to drain;pour;flow;wash away;broadcast
+
+然	偶然,ぐうぜん、coincidence(na)
+自然,しぜん、nature
+
+初	はじめ
+
+在	現在,ぜんざい, alternative to ima;present time
+
+調	調べる、しらべる,to investigate;check
+調査,ちょうさ、examination;survey(suru)
+
+笑	笑い、わらい、funny
+笑う、わらう, to laugh
+
+議	radicals:(talk+sheep+hand+spear)
+会議、かいぎ、meeting(suru)
+議長、ぎちょう、chairman
+
+直	radicals:(lid+eye)
+真っ直ぐ,まっすぐ、straight ahead;honest(na)
+正直、しょうじき、honest(na)
+
+夫	radicals:(hito+ni)
+おっと、husband
+大丈夫、だいじょうぶ、it ait(na)
+丈夫,じょうぶ、strong;healthy(na)
+
+選	radicals:(path+together+2s)
+選手,せんしゅ、player;athlete
+選択、せんたく、choice(suru)
+
+権	radicals:(tree+left hand + bird)
+権利,けんり、right;privelage
+権力、けんりょく、authority;political power(no)
+
+利	radicals(grain+knife)
+権利,けんり、right;privelage
+利益,りえき、profit
+便利,べんり、convieniant(na)
+
+制	system, radicals:(cow+towel+knife)
+規制,きせい、regulation(suru)
+制作,せいさく、work(film,book)
+制度,せいど、system
+制服、せいふく、uniform
+
+
+続	続く、つづく
+相続,そうぞく,inheritance;succesion(suru)
+連続,れんぞく,continuation(suru)
+
+石	いし,rock
+石油,せきゆ、oil
+石鹼、せっけん、soap
+
+進	進む、すすむ、to advance
+
+伝	手伝う,てつだう、to help
+伝える,つたえる、to convey;communicate;tell
+伝説,でんせつ、folklore;legend(no)
+
+加	わる、くわわる、to be added
+増加,そうか,increase(suru)
+参加,さんか、participation(suru)
+
+助	radicals:(eye+power)
+助ける,たすける
+助手,じょしゅ、helper
+助言,じょげん、advice(suru)
+
+点	てん,dot;point(game);markradicals:(ト、mouth,fire)
+要点,ようてん、gist; main point(topic)
+満点,もんてん;perfect score
+
+産	proudce, radicals:(stand,birth)
+same as 生む
+産業,せんぎょう、industry;occupation
+
+務	radicals:(⽭ halberd + winter + power)
+務める、to work for;serv as
+公務員,こうむいん、government worker
+
+件	けん,matter;affair;issue
+事件,じけん,event;incident
+殺人事件,さつじんじけん、murder case
+
+命	いのち,fate;lifespan radicals:(hito+mouth+kneel)
+生命 ,せいめい,life;existance
+命令、めいれい, order;decree
+革命,かくめい,revolution
+命じる,めいじる, to command
+
+番	(field+rice)
+交番,こうばん,police station;small neighborhood
+一番,いちばん
+
+落	radicals:(grass+water+winter+mouth)
+落ちる,おちる,to fall;drop;be inferior
+
+付	radicals:(hito+inch)
+日付、ひづけ,date(time)
+寄付,きふ,contribution(suru)
+
+得	説得,せっとく, persuasion(suru)
+
+好	-
+
+違	違う,ちがう, to disagree;be different; be mistaken
+間違える,まちがえる,to make a mistake;error
+間違い,まちがい,blunder;error
+
+殺	radicals:(x + tree + lance)
+殺人,さつじん、murder(suru)
+殺人事件,さつじんじけん、murder case
+
+置	位置,いち,place;posistion;be located (suru)
+置く,おく,to put;to place
+装置,そうち,equipment;device(suru)
+物置,ものおき, storage room
+
+返	かえす、to return
+返信、へんしん、to reply
+
+論	theory,(say+hat+bookshelf)
+論じる、ろんじる,to discuss;argue
+論争,ろんそう、debate;dispute;argument(suru)
+論文,ろんぶん、essay;paper;article
+
+際	国際,こくさい、international
+実際,じっさい、actuality;truly(adv)
+際,さい、occasion;in case of;　
+際立つ,きわだつ、to stand out;be outstanding
+
+歳	(stop+spear+small)
+さい、years old, 
+八歳,8 yrs old
+
+反	anti,(umbrella+again)
+反対,はんたい,opposition;resistance(suru,no)
+違反,いはん、violation;breach;(suru)
+反省,はんせい、reflection;regret(suru)
+反映,はんえい、reflection [of light](suru);reflection[of society](suru)
+
+形	かたち、form;shape;, (open+beard)
+正方形,せいほうけい、square(no)
+長方形,ちょうほうけい、rectangle(no)
+形容詞,けいようし、adjective
+
+光	。	
+
+首	。
+
+勝	(moon+hito+ni+power)
+勝つ,かつ、to win
+勝利,しょうり、victory(suru)
+勝者,しょうしゃ、winner
+
+必	ひつよう
+
+係	(person+string)
+係、かかり、duty;official;person in charge
+関係,かんけい,relationship;connection;participation(suru)
+
+由	自由,じゆう、freedom(noun,na)
+経由,けいゆ、going through;going via(suru)
+理由,りゅう、reason;motive
+不自由,ふじゆう、discomfort;poverty(noun,na)
+
+愛	あい、love (winter+heart+teeth)
+可愛い,かわいい,cute
+愛情,あいじょう,love
+
+都　京都
+都合, つごう, circumstances
+都心,としん、city center
+
+放	放つ,はなつ、to shoot;fire;
+放る,ほうる、to throw;toss
+放送, ほうそう、broadcast(suru)
+放す,はなす、to release;let go
+
+確	assurance;evident;solid (rock+bird)
+確か,たしか、certain;sure(na)
+確率,かくりつ、probability
+正確,せいかく、accurate;correct(na)
+確り,しっかり、strongly;tightly(adv, kana)
+
+過	すぎる、too much;go past
+通り過ぎる,とおりすぎる、to pass by(physically)
+過ごす,すごす、to spend time;over do
+過去,かこ、the past
+
+約	約束、やくそく、promise;contract(suru)
+予約,ようやく、reservation;booking(suru)
+
+馬	やま
+
+状	現状,げんじょう、present condition;status quo
+
+想	理想,りそう、ideals(no)
+可哀想,かわいそう,pathetic(na)
+連想,れんそう,to be reminded(suru)
+
+官	(bear+lid)
+警官,けいかん,police officer
+官庁,かんちょう、gov agency
+
+交	外交,かいこう、diplomacy
+交番,こうばん,police station;small neighborhood
+交通,こうつう,traffic;communicate;sex(suru)
+
+米	rice;meter
+
+配	distribute(alcohol+oneself)
+心配、しんぱい, anxiety(suru)
+支配,しはい、rule;control(suru)
+配達,はいたつ、delivery(suru)
+配る,くばる、to distrubute
+
+若	若い、わかい、young
+若しも,もしも、supposing (adv, kana)
+
+資	資源,しげん、resources
+資本,しほん、funds;
+資料,しりょう、data
+
+常	(towel+mouth+horns)
+常識,しょうしき、common sense
+非常,ひじょう、emergency
+異常,いじょう、strange(na)
+
+果	結果、けっか、result;consequences
+
+呼	(mouth+peace)
+呼ぶ,よぶ,to invite;call out
+呼吸,こきゅう、breathing(suru)
+
+共	together
+共同,きょうどう、cooperation(suru)
+共に,ともに,together(adv,kana)
+公共,こうきょう、public;communal(no)
+共通,きょうつう、common;shared
+
+残	(death+spear)
+残念,ざんねん、unfortunate(na,nun)
+残る,のこる、to remain
+
+判	(half+knife)
+判断,はんだん、judgement(suru)
+判事,はんじ、judge
+
+役	やく、role;job
+役割,やくわり、PART;ROLE
+
+他	ほか、others;the rest, (person+aligator)
+他人,たんいん, another person
+
+術	じゅつ、way;art (go kanji +tree)
+芸術,げいじゅつ,art
+学術,がくじゅつ,science;
+戦術,せんじゅつ,tactics
+武術,ぶじゅつ、martial arts
+
+支	支払う,しはらう、to pay
+支配,しはい、rule;control(suru)
+支度、したく、preperation(suru)
+
+両	(mountain+towel)
+両親,りょうしん、parents
+両方,りょうほう、both;both sides
+両替,りょうがえ,change[money](suru)
+
+乗	のる。
+
+済	(water+moon+again+ten)
+経済,けいざい、economy
+済む,すむ、to finish
+
+供	(person+together)
+子供,こども、child
+供給,きょうきゅう、supply(suru)
+
+格	(tree+mouth+winter)
+価格,かかく,price
+性格,せいかく,personality
+
+打	打つ,うつ、to hit;strike;beat
+
+御	(sprint+stop+cow+sprint)
+ごめんなさい
+
+断	(rice+place)
+診断,しんだん、diagnosis(suru)
+判断,はんだん、judgement(suru)
+横断,あうだん、going through;traversing (suru)
+
+式	しき、equation
+公式,こうしき,formal;official(no)
+
+師	(bear+towel)
+看護師,かんごし、nurse
+医師,いし, doctor
+教師,きょうし、teacher(no)
+技師,ぎし、engineer
+
+告	広告,こうこく、advertisment(suru)
+報告,ほうこく、report(suru)
+警告,けいこく、advice;warning(suru)
+
+深	深い,ふかい,deep;dense;
+親切,しんせつ、kind;gentle(na)
+
+存	(left hand+child)
+ご存知,ごぞんじ、being aware of
+存在,そんざい、existence(suru)
+
+争	争う,あらそう、to compete
+競争,きょうそう、race;competition(suru)
+戦争,せんそう,war(suru)
+
+覚	覚える,おぼえる, to remember
+
+側	(person+shell+knife)
+側,そば、close;near;besides(no)
+太平洋側,たいへいようがわ,pacific ocean side
+
+飛	(person+double nine)
+飛ぶ,とぶ、to fly
+飛行場, ひこうじょう, airport
+
+参	(beard+big+mu)
+参る,まいる、to be defeated;annoyed; to come
+参加,さんか、participation(suru)
+
+突	(big+legs+lid)
+突く,つく、to stab
+衝突,しょうとつ,collision(suru)
+突然,とつぜん,sudden(no,adv)
+
+容	形容詞,けいようし、adjective
+
+育	(moon+mu+lid)
+教育, きょういく, education(suru)
+育つ,そだつ、to be raised;grow up
+
+構	(tree+task+double king)
+構う,かまう、to mind;care about
+結構,けっこう、splendid(na)
+
+認	(talk+heart+knife)
+認める,みとめる, to recognize;notice
+確認,かくにん、confirmation;review(suru)
+承認,しょうにん、recognition;consent(suru)
+
+位	位置,いち,place;posistion;be located (suru)
+地位,ちい、social standing
+
+達	scooter+happiness
+配達,はいたつ、delivery(suru)
+達する,たっする、to reach;arrive at
+友達,ともだち、friend
+
+守	(inch+lid)
+留守,るす、absence(suru)
+守る,まもる、to protect
+
+満	(water+mountain+towel+grass)
+満ちる、みちる、to fill
+満足,まんぞく,sufficient(na)
+満点,もんてん;perfect score
+
+消	消す,けす、to erase
+
+任	責任、せきにん、duty;responsibility
+任せる、まかせる、to entrust someone;let it happen
+
+居	to be iru
+
+予	予定,よてい, plans(suru)
+予約,ようやく、reservation;booking(suru)
+
+路	(stop+mouth+mouth+winter)
+路線,ろせん、route(bus;train)
+路地,ろじ, alleyway
+
+座	ざ、seat,(soil+hito+umbrella)
+座る,すわる、to sit
+
+客	きゃく、visitor,(mouth+winter+lid)
+
+船	ふね、boat,(boat+mouth+8)
+漁船,ぎょせん、fishing boat
+
+追	(scooter+bear)
+追う,おう、to chase;
+追い越す,おいこす、to pass;overtake[car]
+
+背	せ、back,(moon+north)
+背中,せなか、back[of body]
+背広、せびろ、business suit
+
+観	(bird+ni+see)
+観客,かんきゃく、spectator;audience
+観光, さんこう, tourism (suru)
+
+誰	だれ、who(talk+bird)ö
+誰か,だれか、someone
+
+息	(heart+self)
+息子,むすこ、son
+
+失	(slide+husband)
+失う,うしなう、to lose something; to miss a chance
+失敗,しっぱい,failure;mistake
+失業,しつぎょう,unemployment(suru)
+
+老	(old+ヒ)
+老人,ろうじん、old person
+
+良	(white + x)
+良い,よい、good
+
+示	示す,しめす、to show;demonstrate;point out
+
+号	番号,ばんごう、number
+信号,しんごう、traffic light;signal(suru)
+
+職	しょく、job;occupation,(ear+day+sound+spear)
+職業,しょくぎょう,job;occupation
+組織,そしき,organization
+
+王	.
+
+識	知識,ちしき、knowledge
+意識,いしき, consciousness(suru)
+
+警	(talk+poem+winter)
+警告,けいこく、advice;warning(suru)
+交番,こうばん,police station;small neighborhood
+警官,けいかん,police officer
+
+優	(person+winter+heart+page)
+俳優,はいゆう,actor;actress
+優しい,やさし、kind;affectionate
+優勝,ゆうしょう,overall victory;
+
+投	(hand+lance)
+投じる,どうじる、 to invest; to devote 
+投げる,なげる、to throw; to give up
+
+局	きょく、beareu;office;(mouth+right umbrella+corpse)
+結局,けっきょく,after all;in the end(adv)
+薬局,やっきょく、pharmacy
+
+難	難しい、muzukashi,hard,(chinese+bird)
+
+種	たね、seed,(grain+heavy)
+一種,いっしゅ,a sort:one kind
+種類,しゅるい,variety;kind
+人種,じんしゅ,ethnicity;
+
+念	(heart + now)
+残念,ざんねん、unfortunate(na,nun)
+観念,かんねん,idea;notion;concept(no)
+
+寄	(mouth+Rumbrella+big+lid)
+寄る,よる、to approach;to draw near
+寄付,きふ,contribution(suru)
+
+商	(同じ+legs+stand)
+商品,しょうひん,goods;stock;
+商人,しょうにん,shopkeeper
+
+害	がい、damage,(mouth+king+lid)
+被害,ひがい、damage
+損害、そんがい、damage(suru)
+障害,しょうがい,obstacle;difficulty(suru)
+
+頼	(bundle+page)
+頼む,たのむ、to beg;ask
+信頼,しんらい、reliace;trust(suru)
+頼もしい,たのもしい、trustworthy
+
+横	よこ、horizontal;side;width(tree+yellow)
+横断,あうだん、going through;traversing (suru)
+横切る,よこぎる、to cross;traverse
+
+増	増える、ふえる,increase
+増加,そうか,increase(suru)
+
+差	(left hand+sheep+エ)
+差す,さす、to hold up;be visible;be felt;pour
+交差点,こうさんてん、intersection;crossing
+差別,さべつ、distinction;discrimination(suru)
+差、さ、difference;variation
+
+苦	苦い,にがい、bitter[taste]
+苦労、ころう、trouble;hardship(suru)
+苦しい,くるしい、painful;tough
+苦しむ,くるしむ、to suffer
+
+収	(latin 4+again)
+収集,しゅうしゅう、collecting(suru)
+収入,しゅうにゅう、income
+収穫,しゅうかく,harvest(suru)
+収益,しゅうえき,revenue
+収める,おさめる、to pay fees;supply
+
+段	radicals:(comb+lance)
+階段,かいだん、staircase
+段々,だんだん、gradually(adv)
+値段、ねだん、price
+
+俺	おれ、me
+
+渡	(water+measure)
+渡す,わたる、to cross over;go across[bridge,river,road]
+手渡す,てわたす、to hand over
+過渡期,かとき、transition period(no)
+
+与	(いち+oneself)
+与える,あたえる、to bestow;provide
+給与,きゅうよ、salary;wages
+
+演	(water+field+roof)
+演技,えんぎ、acting
+演説,えんぜつ、speech(suru)
+演奏,えんそう,musical performance(suru)
+
+備	(person+task+umbrella+grass)
+備える,そなえる、to equip with;install
+設備,せつび、equipment;installation(suru)
+準備,じゅんび,preperation(suru)
+
+申	申請,しんせい、application(suru)
+申し訳,もうしわけ、apology(suru)å
+
+例	れい、habitual;custom;example(no),(hito+death+knife)
+例えば,たとえば、for example
+
+働	(hito+heavy+power)
+働く、はたらく、to work
+
+景	(day+capital)
+景色,けしき、scenery
+光景,こうけい,sight;view
+
+抜	抜く,めく、to pull out;skip;
+抜ける,めける、to fall out;come loose;fade
+
+遠	遠い、とおい、far
+
+絶	絶対,ぜったい,absolutely;definitely(adv)
+拒絶、きょぜつ、refusal(suru)
+絶望,ぜつぼう、dispair;hopeless(suru)
+
+負	負ける,きける、to lose
+勝負,しょうぶ、match
+
+福
+
+球
+
+酒
+
+君
+
+察
+
+望
+
+婚
+
+単
+
+押
+
+割
+
+限
+
+戻
+
+科
+
+求
+
+談	相談
+
+降
+
+妻
+
+岡
+
+熱
+
+浮
+
+等
+
+末
+
+幸
+
+草
+
+越
+
+登
+
+類
+
+未
+
+規
+
+精
+
+抱
+
+労
+
+処
+
+退
+
+費
+
+非
+
+喜
+
+娘
+
+逃
+
+探
+
+犯
+
+薬
+
+園
+
+疑
+
+緒　
+
+静
+
+具
+
+席
+
+速
+
+舞
+
+宿
+
+程
+
+倒
+
+寝
+
+宅
+
+絵
+
+破
+
+庭
+
+婦
+
+余
+
+訪
+
+冷
+
+暮
+
+腹
+
+危
+
+許
+
+似　
+
+険
+
+財
+
+遊
+
+雑
+
+恐
+
+値	値段、ねだん、price
+
+暗
+
+積
+
+夢
+
+痛
+
+富
+
+刻
+
+鳴
+
+欲
+
+途
+
+曲
+
+耳
+
+完
+
+願
+
+罪
+
+陽
+
+亡
+
+散
+
+掛
+
+昨
+
+怒
+
+留
+
+礼
+
+列
+
+雪
+
+払
+
+給
+
+敗
+
+捕
+
+忘
+
+晴
+
+因
+
+折
+
+迎
+
+悲
+
+港
+
+責
+
+除
+
+困
+
+閉
+
+吸
+
+髪
+
+束
+
+眠
+
+易
+
+窓
+
+祖
+
+勤	radicals: (king+middle+twenty+power)
+
+昔
+
+便
+
+適
+
+吹
+
+候
+
+怖
+
+辞
+
+否
+
+遅
+
+煙
+
+徒
+
+欠
+
+迷
+
+洗
+
+互
+
+才
+
+更
+
+歯
+
+盗
+
+慣
+
+晩
+
+箱
+
+到
+
+頂
+
+杯
+
+皆
+
+招
+
+寒
+
+恥
+
+疲
+
+貧
+
+猫
+
+誤
+
+努
+
+幾
+
+賛
+
+偶
+
+忙
+
+泳
+
+靴
+
+偉

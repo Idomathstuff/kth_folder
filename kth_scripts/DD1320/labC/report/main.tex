@@ -1,0 +1,69 @@
+\documentclass{assignment}
+\usepackage{amsmath}
+\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage[dvipsnames]{xcolor}
+
+\definecolor{Mycolor2}{HTML}{03FCF0}
+
+
+
+\fancyhf{}% Clear all headers/footers
+\fancyhead[L]{Tillämpad Datalogi \\ DD1320}\fancyhead[R]{\textbf{Lucas Frykman} \\ lfrykman@kth.se}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{26pt}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+
+
+
+\begin{document}
+
+\assignmentTitle
+{Lucas Frykman}{0210127650}
+{DD1320}
+{Sten Andersson}
+{assets/KTH_logga.png}
+{Tillämpad Datalogi}
+{C Laboration}
+
+
+\tableofcontents
+\begin{figure}[!h]
+    % \caption{foo}
+    % \centering
+    \begin{center}
+        \includegraphics[width = 155mm,height = 50mm]{trädskrift.png}
+    \end{center}
+\end{figure}
+    
+
+\newpage
+\section{Sammanfattning}
+Jag ska jämföra \textbf{Rabin-Karp} med Pythons strängmetod \textbf{find}. \\
+\blindtext
+
+\section{Uppgiftbeskrivning}
+\blindtext
+
+\section{Metod}
+\blindtext
+
+\section{Analys}
+\blindtext
+
+\section{Appendix: Programkod}
+\blindtext
+\lstinputlisting[language=C++,caption= foo.cpp]{assets/CPPdemo.cpp}
+\hword{int main() } example
+\lstinputlisting[language=Python,caption = foo.py]{assets/arrayQFile.py}
+
+\section{Appendix: Testdata}
+\blindtext
+% \cite{Miller2006psw}
+% \printbibliography
+\end{document}
