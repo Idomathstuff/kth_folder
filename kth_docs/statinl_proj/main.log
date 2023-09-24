@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.8.27)  23 SEP 2023 14:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.8.27)  24 SEP 2023 13:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -575,26 +575,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-(C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (assets/tmp.m
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1.
+<assets/Figure_1.png, id=6, 462.528pt x 346.896pt>
+File: assets/Figure_1.png Graphic file (type png)
+<use assets/Figure_1.png>
+Package pdftex.def Info: assets/Figure_1.png  used on input line 36.
+(pdftex.def)             Requested size: 281.68228pt x 211.27277pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+(C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
+ (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/lmfry/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./assets/KTH_logga.png>] (main.aux) ) 
+{C:/Users/lmfry/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./assets/KTH_logga.png> <./assets/Figure_1.png>] [2] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 18563 strings out of 476331
- 366525 string characters out of 5787765
- 1980660 words of memory out of 5000000
- 38730 multiletter control sequences out of 15000+600000
- 514589 words of font info for 40 fonts, out of 8000000 for 9000
+ 17760 strings out of 476331
+ 358548 string characters out of 5787765
+ 1855660 words of memory out of 5000000
+ 37916 multiletter control sequences out of 15000+600000
+ 520634 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,5n,118p,474b,1864s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (1 page, 150313 bytes).
+ 116i,7n,118p,474b,300s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (2 pages, 184060 bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

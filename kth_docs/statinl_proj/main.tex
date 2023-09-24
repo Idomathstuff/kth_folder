@@ -17,18 +17,35 @@
 
 
 \assignmentTitle
-{Lucas Frykman}{n/a}
-{n/a}
+{Lucas Frykman}{0210127650}
 {SF1930}
+{Liam Solus}
 {assets/KTH_logga.png}
 {Statistisk inlärning och dataanalys}
 {Projekt}
 
-\section{Introduktion}
+% \section*{Introduktion}
+% Vi betraktar den skateboard tävlingen.
 
-Vi betraktar den skateboard tävlingen.
+\section{Uppvärmning}
+Figur för histogram för trick 1-4. Figur för run 1 mot run 2.
+\begin{figure}[!h]
+    \caption{foo}
+    \begin{center}
+        % \includegraphics[width = 99mm]{assets/Figure_1.png}
+        \includegraphics[width = 99mm]{assets/Figure_1.png}
+    \end{center}
+\end{figure}
+\section{En frekventistisk modell}
+\subsection*{(a) Skatta $\theta_{i}$}
+Vi kan använda antingen momentmetoden eller ML metoden. Det går att visa att dessa två punktskattningar sammanfaller för $V_i \sim \text{Ber}(\theta_i)$.
+Så vi använder momentmetoden för att skatta $\theta$ där
+$m_1(\mathbf{X}) = \bar{X}$. Vi får punktskattningen för $\theta$ som
+$m_1(\mathbf{x})= E[X|\tilde{\theta}] \Leftrightarrow \tilde{\theta} = m_1(\mathbf{x})$
+\section{En bayesiansk modell}
+\section{En bayesiansk modell med en hierarki}
+\section{Diskussion}
 
-
-\section{Kod}
-\lstinputlisting[language=Matlab,caption=foo]{assets/tmp.m} 
+% \section{Kod}
+% \lstinputlisting[language=Matlab,caption=foo]{assets/tmp.m} 
 \end{document}
