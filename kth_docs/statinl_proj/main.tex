@@ -10,6 +10,7 @@
 \usepackage{cleveref}
 \usepackage{color,soul}
 \usepackage{amsfonts}
+
 \def\code#1{\texttt{#1}}
 \newtheorem{anm}{Anm}
 
@@ -28,7 +29,12 @@
 % Vi betraktar den skateboard tävlingen.
 
 \section{Uppvärmning}
-Figur för histogram för trick 1-4. Figur för run 1 mot run 2.
+Figur för histogram för trick 1-4.
+
+Låt $B$ vara betyg för en ett skateboardåkare och trick. Vi vill skatta $P(B>0.6|B>0) = \frac{P(B>0|B>0.6)P(B>0.6)}{P(B>0)}=\frac{P(B>0.6)}{P(B>0)}$
+som $\tilde{P}(B>0.6|B>0) = \frac{\sum_{i}^4}{\sum_{j}^96}trick_{ij} = \indicator{A}$
+
+
 \begin{figure}[!h]
     \caption{foo}
     \begin{center}
@@ -36,6 +42,8 @@ Figur för histogram för trick 1-4. Figur för run 1 mot run 2.
         \includegraphics[width = 99mm]{assets/Figure_1.png}
     \end{center}
 \end{figure}
+
+
 \section{En frekventistisk modell}
 \subsection*{(a) Skatta $\theta_{i}$}
 Vi kan använda antingen momentmetoden eller ML metoden. Det går att visa att dessa två punktskattningar sammanfaller för $V_i \sim \text{Ber}(\theta_i)$.
