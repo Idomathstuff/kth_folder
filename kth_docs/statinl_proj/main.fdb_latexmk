@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1695903937 "c:/kth_repos/kth_folder/kth_docs/statinl_proj/main.tex" "main.pdf" "main" 1695903939 0
+["pdflatex"] 1695995609 "c:/kth_repos/kth_folder/kth_docs/statinl_proj/main.tex" "main.pdf" "main" 1695995614 0
   "C:/Users/lmfry/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1683891800 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/lmfry/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1675251863 23173873 5447f906f40272bcb7fd9ec59765ec65 ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ectt1000.tfm" 993062340 1348 d70ddf2d5d512b838e50a335e385e919 ""
@@ -144,9 +144,9 @@
   "assets/Figure_1.png" 1695903357 14834 7c559787e4f859ff01fcfb4b360ba2a7 ""
   "assets/KTH_logga.png" 1675093832 127917 0e70cb79d5835b9183d0104fc44b3e91 ""
   "assignment.cls" 1695903925 2130 5751c88821d12bcdf4c6741e4a331bdd ""
-  "c:/kth_repos/kth_folder/kth_docs/statinl_proj/main.tex" 1695903937 1772 0702210c03f6f2cbef92a61370d4c30d ""
-  "main.aux" 1695903939 680 4fc45b2fb6fd0625eb726da16fb54721 "pdflatex"
-  "main.tex" 1695903937 1772 0702210c03f6f2cbef92a61370d4c30d ""
+  "c:/kth_repos/kth_folder/kth_docs/statinl_proj/main.tex" 1695995607 1772 0702210c03f6f2cbef92a61370d4c30d ""
+  "main.aux" 1695995613 680 4fc45b2fb6fd0625eb726da16fb54721 "pdflatex"
+  "main.tex" 1695995607 1772 0702210c03f6f2cbef92a61370d4c30d ""
   (generated)
   "main.aux"
   "main.log"
