@@ -6,7 +6,7 @@ import pandas as pd
 import csv
 # pdf = lambda x: 2*np.exp(-2*x);
 # Finv = lambda u: -(1/2)*np.log(u)
-df = pd.read_csv("SLS22.csv") #data frame
+df = pd.read_csv("SLS22.csv") #data frame 
 
 def init_normal_dataframe():
     ndf = df
@@ -34,6 +34,16 @@ def make_histogram():
     plt.legend()
     plt.show()
 
+
+def make_histogram_runs():
+    # fig, ax = plt.subplots(1, 1)
+    plt.hist(ndf["run 1"], density=True,
+             histtype='stepfilled', alpha=0.5, label="run 1")
+    plt.hist(ndf["run 2"], density=True,
+             histtype='stepfilled', alpha=0.5, label="run 2")
+    plt.legend()
+    plt.show()
+
 def calculate_Q1_partd():
     count_lands = ndf["make 1"].values.tolist().count(1) + ndf["make 2"].values.tolist().count(1) +ndf["make 3"].values.tolist().count(1) + ndf["make 4"].values.tolist().count(1) 
     count_bigger_than6 = 0;
@@ -51,7 +61,7 @@ def plot_run1_run2():
     plt.legend()
     plt.show()
 
-# make_histogram()
+make_histogram_runs()
 # print(calculate_Q1_partd())
 # plot_run1_run2()
 
