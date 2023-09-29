@@ -29,16 +29,22 @@
 % Vi betraktar den skateboard tävlingen.
 
 \section{Uppvärmning}
-Figur för histogram för trick 1-4.
-
-Låt $B$ vara betyg för en ett skateboardåkare och trick. Vi vill skatta $P(B>0.6|B>0) = \frac{P(B>0|B>0.6)P(B>0.6)}{P(B>0)}=\frac{P(B>0.6)}{P(B>0)}$
-som $\tilde{P}(B>0.6|B>0) = \frac{\sum_{i}^4}{\sum_{j}^96}trick_{ij} = \indicator{A}$
-
 
 \begin{figure}[!h]
-    \caption{foo}
+    \caption{Histogram av betyg skalad mellan 0 och 1}
     \begin{center}
-        % \includegraphics[width = 99mm]{assets/Figure_1.png}
+        \includegraphics[width = 99mm]{assets/Figure_2.png} \label{Histogram 1}
+    \end{center}
+\end{figure}
+
+
+Låt $B$ vara betyg för en ett skateboardåkare och trick. Vi vill skatta $P(B>0.6|B>0) = \frac{P(B>0|B>0.6)P(B>0.6)}{P(B>0)}=\frac{P(B>0.6)}{P(B>0)}$
+som $\tilde{P}(B>0.6|B>0) = \frac{\sum_{i}^4\sum_{j}^{96}trick_{ij}\indicator{[0.6,1]}}{\sum_{i}^4\sum_{j}^{96}trick_{ij}\indicator{[0,1]}} \approx 0.96$
+Det här stämmer med utseendet på \cref{Histogram 1}.
+
+\begin{figure}[!h]
+    \caption{Spridningsdiagram mellan run 1 och run 2}
+    \begin{center}
         \includegraphics[width = 99mm]{assets/Figure_1.png}
     \end{center}
 \end{figure}

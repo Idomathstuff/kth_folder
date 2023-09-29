@@ -56,7 +56,7 @@ def plot_run1_run2():
 # plot_run1_run2()
 
 
-tmpset = set(df["id"].values.tolist())
+# tmpset = set(df["id"].values.tolist())
 # tmpset.remove("Horigome")
 # tmpset.remove('Joslin')
 # tmpset.remove('Milou')
