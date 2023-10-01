@@ -123,22 +123,16 @@ def euler_method(f, x0, y0, h, x_end):
 
 
 def plot(method,x0,y0,x_end):
-    # x0 = -1  # Initial value of x
-    # y0 = -1   # Initial value of y
-    # x_end = 15.0  # Ending value of x
     h = 0.0001    
-
     x_values, y_values = method(f, x0, y0, h, x_end)
-
-    # plt.figure(figsize=(10, 6))
     plt.plot(x_values, y_values, label='Approximate Solution', color='b')
     plt.xlabel('x')
     plt.ylabel('y')
     # plt.title('Euler\'s Method for y\' = f(x, y)')
-    # plt.axhline(0, color='black',linewidth=0.5)
-    # plt.axvline(0, color='black',linewidth=0.5)
     plt.grid()
     plt.legend()
     plt.show()
+    for a,b in zip(x_values,y_values):
+        print(a,b)
 
 plot(euler_method,-1,-1+0.0001,15)
