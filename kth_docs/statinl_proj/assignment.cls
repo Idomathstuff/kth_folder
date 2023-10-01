@@ -25,7 +25,7 @@
 
 % default code style
 
-\newcommand{\indicator}[1]{\mathbf{1}_{\{#1\}}}
+
 
 \lstset{
     % firstnumber=1, % starts the enumeration of lines of the code at 1. THis is default
