@@ -1,1 +1,1 @@
-$T_i=Z_i$
+$\integral_{a}$
