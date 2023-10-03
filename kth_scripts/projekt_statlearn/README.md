@@ -1,1 +1,1 @@
-$\integral_{a}$
+$\psi_{a}$
