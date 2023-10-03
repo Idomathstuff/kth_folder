@@ -79,7 +79,7 @@ Nu tar vi log likliehoodfunktionen.
 \end{align}
 MLE för bernoulli fördelningens $V_i$ parameter $\hat{\theta_i} = \text{argmax}_{\theta\in\Omega} L(\theta_i|v_{i[n]}) = \bar{v_i}$ skulle ge oss samma resultat. Eftersom vi kan transformera stickprovet $x_{i[n]}\rightarrow v_{i[n]}$ med \cref{properties} $v_i=\indicator{x\neq0}(x_i)$.
 vilket betyder att $m=\sum_{j=1}^n v_i$ och därmed får \cref{MLE result} att sammanfalla med MLE av bernoulli fördelningen. 
-\subsection*{(b) skatta $\alpha$ och $\beta_i$}
+\subsection*{(b) skatta $\alpha_i$ och $\beta_i$}
 Observera att från \cref{loglike}  $\sum_{j=1}^n \log \left(f_{Z_i}(x_{ij})\indicator{x\neq0}(x_{ij}) + \indicator{x=0}(x_{ij})\right) = \sum_{j=1}^n \log \left(f_{Z_i}(x_{ij})\indicator{x\neq0}(x_{ij})\right)$ eftersom $\log(1)=0$.
 Vi vet att 
 \\ $\text{argmax}_{\alpha,\beta\in\Omega}\log(L)=\text{argmax}_{\alpha,\beta\in\Omega}\sum_{j=1}^n \log \left(f_{Z_i}(x_{ij})\indicator{x\neq0}(x_{ij})\right)$ vilket är ekvivalent med 
@@ -103,7 +103,15 @@ Vi vet att
         \end{matrix}\right.
 \end{align*}
 
-
+\subsection*{(c) Model för $Y_i$}
+$Y_i$ ska vara run betyget för åkaren $i$. Eftersom $Y_i\in(0,1]$ (varje deltagare får betyg större än 0) kommer bernoulli delen försvinna. Så vi antar att $Y_i\sim \text{Beta}(\alpha_i,\beta_i)$. 
+Vi använder samma metod som vi använde för att skatta $\alpha,\beta$ för $X$.
+\subsection*{(d) Simulering}
+Total betyget för varje deltagare beräknas som summan av deras två största trick betyg och största run betyg. Vi
+kan beskriva i termer av stokatiska variabler. Låt $T_i$ vara total betyg för deltagare $i$.
+Låt $Z_{i,\text{först}}=\max(X_{i1},X_{i2},X_{i3},X_{i4})$ och 
+\\$Z_{i,\text{andra}}=\max(\min(X_1, X_2), \min(X_1, X_3), \min(X_1, X_4), \min(X_2, X_3), \min(X_2, X_4), \min(X_3, X_4))$.
+\\Vi vill simulera total betyget för varje deltagare $i$ som $T_i=Z_{i,\text{först}}+Z_{i,\text{andra}}+\max(Y_{i1},Y_{i2})$
 \section{En bayesiansk modell}
 \section{En bayesiansk modell med en hierarki}
 \section{Diskussion}
