@@ -111,19 +111,32 @@ def f(x, y):
     return np.sqrt(abs(y))
 
 def euler_method(f, x0, y0, h, x_end):
-    x_values = [x0]
-    y_values = [y0]
-    while x0 < x_end:
-        y0 = y0 + h * f(x0, y0)
-        x0 = x0 + h
-        x_values.append(x0)
-        y_values.append(y0)
+    y = y0
+    x = x0
+    back_x_values = [x0]
+    back_y_values = [y0]
+
+    while x>-x_end:
+        y-=h * f(x,y)
+        x-=h
+        back_x_values.append(x)
+        back_y_values.append(y)
+    
+    x_values = back_x_values[::-1]
+    print(x_values)
+    y_values = back_y_values[::-1]
+    while x < x_end:
+        y = y + h * f(x, y)
+        # print(y)
+        x = x + h
+        x_values.append(x)
+        y_values.append(y)
 
     return x_values, y_values
 
 
 def plot(method,x0,y0,x_end):
-    h = 0.0001    
+    h = 0.1
     x_values, y_values = method(f, x0, y0, h, x_end)
     plt.plot(x_values, y_values, label='Approximate Solution', color='b')
     plt.xlabel('x')
@@ -132,7 +145,7 @@ def plot(method,x0,y0,x_end):
     plt.grid()
     plt.legend()
     plt.show()
-    for a,b in zip(x_values,y_values):
-        print(a,b)
+    # for a,b in zip(x_values,y_values):
+        # print(a,b)
 
-plot(euler_method,-1,-1+0.0001,15)
+plot(euler_method,0,-9/4,15)
