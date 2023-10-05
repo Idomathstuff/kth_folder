@@ -79,20 +79,22 @@ def make_finalist_histogram():
     winner_array = []
     y = []
     x_labels = []  
-    for i in range(5000):
+    for i in range(10000):
         new_W = get_rand_finalists()
         winner_array.append(new_W)
         for e in new_W:
             y.append(e)
             winner_count[e] += 1
-    plt.hist(y, density=True, histtype='stepfilled',alpha=0.5, label="Trick 1")
+    plt.hist(y, density=True, histtype='stepfilled',alpha=0.5, label="")
+    
     for lcq_id in Lcq_ids:
         x_labels.append(lcq_id)
-    
     plt.xticks(range(len(x_labels)), x_labels, rotation=90)
-    print(most_common_array(get_rand_finalists_array(5000)))
+    print(most_common_array(get_rand_finalists_array(10000)))
 
     plt.show()
 
 
-# make_finalist_histogram()
+make_finalist_histogram()
+
+
