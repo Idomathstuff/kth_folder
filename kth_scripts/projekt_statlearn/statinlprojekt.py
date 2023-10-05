@@ -7,8 +7,10 @@ from numeriska_metoder import newton_raphson
 # pdf = lambda x: 2*np.exp(-2*x);
 # Finv = lambda u: -(1/2)*np.log(u)
 df = pd.read_csv("SLS22.csv") #data frame 
-Lcq_ids = ["Majerus", "Oliveira","Decenzo","Santiago", "Papa", "Eaton", "Mota", "Shirai", "Jordan", "Hoefler", "Hoban", "Gustavo", "Ribeiro C", "O’neill", "Foy", "Midler"]
-
+Lcq_ids = ["Majerus", "Oliveira","Decenzo","Santiago", "Papa", "Eaton", "Mota", "Shirai", 
+           "Jordan", "Hoefler", "Hoban", "Gustavo", "Ribeiro C", "O’neill", "Foy", "Midler"]
+Lcq_ids = ["Majerus", "Oliveira", "O’neill", "Santiago", "Papa", "Ribeiro C", "Mota", "Shirai",
+           "Jordan", "Hoefler", "Foy", "Midler", "Gustavo", "Hoban", "Eaton", "Decenzo"]
 def init_normal_dataframe():
     ndf = df
     ndf["run 1"] = [x/10 for x in df["run 1"]]
@@ -87,11 +89,11 @@ def init_trick_data():
 
 tricks_data = init_trick_data()
 
-# average_svariance = 0
-# for eachdata in tricks_data.values():
-#     a = np.array([k for k in eachdata if k>0])
-#     average_svariance+=np.var(a)
-# average_svariance/=len(ids)
+average_svariance = 0
+for eachdata in tricks_data.values():
+    a = np.array([k for k in eachdata if k>0])
+    average_svariance+=np.var(a)
+average_svariance/=len(ids)
 
 def get_pooled_var():
     täljare = 0
@@ -123,7 +125,7 @@ def AlphaBeta_MoM_skattning(xdata):
         svariance = pooled_var
     else:
         svariance = np.var(data,ddof=1)
-    svariance = global_svariance
+    svariance = average_svariance
     alpha_0 = np.mean(data)*((1-np.mean(data))/svariance-1)
     beta_0 = (1-np.mean(data))*((1-np.mean(data))/svariance-1)
     return np.array([alpha_0,beta_0])   
@@ -143,8 +145,10 @@ def get_parameters_tricks():
     result = {}
     for name in ids:
         theta = Theta_MoM_skattning(np.array(tricks_data[name]))
-        alpha = newton_raphson(np.array(tricks_data[name]))[0]
-        beta = newton_raphson(np.array(tricks_data[name]))[1]
+        alpha = AlphaBeta_MoM_skattning(np.array(tricks_data[name]))[0]
+        beta = AlphaBeta_MoM_skattning(np.array(tricks_data[name]))[1]
+        # alpha = newton_raphson(np.array(tricks_data[name]))[0]
+        # beta = newton_raphson(np.array(tricks_data[name]))[1]
         result[name] = [theta,alpha,beta]
     return result
 get_parameters_tricks()
@@ -168,7 +172,9 @@ run_data = init_run_data()
 def get_parameters_runs():
     result = {}
     for name in ids:
-        alpha = newton_raphson(np.array(run_data[name]))[0]
-        beta = newton_raphson(np.array(run_data[name]))[1]
+        alpha = AlphaBeta_MoM_skattning(np.array(run_data[name]))[0]
+        beta = AlphaBeta_MoM_skattning(np.array(run_data[name]))[1]
+        # alpha = newton_raphson(np.array(run_data[name]))[0]
+        # beta = newton_raphson(np.array(run_data[name]))[1]
         result[name] = [alpha,beta]
     return result
