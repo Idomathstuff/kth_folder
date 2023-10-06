@@ -1,9 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-G, M, m = 10**-10, 10**7, 10  # Sun and Earth mass
-vx_0, vy_0 = 5, 5  # Initial velocities (set vy_0 to a non-zero value for a circular orbit)
-x_0, y_0 = 50, 50  # Initial position
+G = 6.67430e-11  # Gravitationskonstanten (m^3 kg^-1 s^-2)
+M = 1.989e30    # Massan av solen (kg)
+m = 1
+x_0 = 1.496e11    # 1 AU i meter
+y_0 = 0
+vx_0 = 0
+vy_0 = 29.78e3    # Jordens genomsnittliga orbitalhastighet (m/s)
 
 
 # r = lambda x,y: np.sqrt(x**2 + y**2)
@@ -16,20 +20,20 @@ def ode_func(x, y, vx, vy):
     vyprime = -(G * M * m / r**3) * y
     x_prime = vx
     y_prime = vy
-    return np.array([vx, vy, x_prime, y_prime])
+    return np.array([vx, vy, vyprime, vxprime])
 
 def euler(timestop):
-    x_values = []
-    y_values = []
-    X = np.array([vx_0, vy_0, x_0, y_0])
+
+    X = np.array([x_0, y_0, vx_0, vy_0])
     dt = 1
     n = round(timestop / dt)
-    x_values.append(X[2])
-    y_values.append(X[3])
+    x_values=[X[0]]
+    y_values=[X[1]]
     for i in range(n):
-        X = X + dt * ode_func(X[2], X[3], X[0], X[1])
-        x_values.append(X[2])
-        y_values.append(X[3])
+        print(i)
+        X = X - dt * ode_func(X[0], X[1], X[2], X[3])
+        x_values.append(X[0])
+        y_values.append(X[1])
     return x_values, y_values
 
 def plot_orbit(x_values, y_values):
@@ -37,9 +41,9 @@ def plot_orbit(x_values, y_values):
     plt.scatter([x_0], [y_0], color="green", marker="o", label="Initial point")
     plt.scatter([0], [0], color="red", marker="o", label="Sun")
     ax.plot(x_values, y_values, '.-', label='Position')
-    for i in range(len(x_values) - 1):
-        ax.annotate('', xy=(x_values[i + 1], y_values[i + 1]), xytext=(x_values[i], y_values[i]),
-                    arrowprops=dict(arrowstyle='->', lw=1))
+    # for i in range(len(x_values) - 1):
+    #     ax.annotate('', xy=(x_values[i + 1], y_values[i + 1]), xytext=(x_values[i], y_values[i]),
+    #                 arrowprops=dict(arrowstyle='->', lw=1))
     ax.legend()
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
@@ -47,5 +51,5 @@ def plot_orbit(x_values, y_values):
     plt.grid(True)
     plt.show()
 
-x_values, y_values = euler(20)
+x_values, y_values = euler(50000)
 plot_orbit(x_values, y_values)
