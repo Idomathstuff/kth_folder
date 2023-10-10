@@ -2,13 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
-G = 6.67430e-11  # Gravitationskonstanten (m^3 kg^-1 s^-2)
-M = 1.989e30    # mass of sun kg
-m = 5.97e24      # mass of earth
-x_0 = 1.496e11   # orbital radius m
+G = 6.67430e-11  
+M = 1.989e30    
+m = 5.97e24      
+x_0 = 1.496e11   
 y_0 = 0
 vx_0 = 0
-vy_0 = 2.978e4   # orbit velocity m/s
+vy_0 = 2.978e4  
 
 def ode_system(X, t):
     x, y, vx, vy = X

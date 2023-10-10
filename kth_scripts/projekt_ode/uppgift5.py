@@ -1,40 +1,44 @@
 import numpy as np
 import matplotlib.pyplot as plt
-G = 6.67430e-11  # Gravitationskonstanten (m^3 kg^-1 s^-2)
+G = 6.67430e-11  # Gravitationskonstanten 
 M = 1.989e30    # mass of sun kg
 m = 5.97e24 # mass of earth
-x_0 = 1.496e11 # orbital radius m
 
+x_0 = 1.496e11 # orbital radius m
 y_0 = 0
 vx_0 = 0
 vy_0 = 2.978e4 # orbit velocity m/s
+time_step = 60*60*24
 
 def ode_func(X):
-    time_step = 60 * 60 * 24  # 1 day in seconds
+    # time_step = 60 * 60  # 1 day in seconds
     x,y,vx,vy = X
     r = np.sqrt(x**2+y**2)
     vx_prime = -x*G*M/r**3
     vy_prime = -y*G*M/r**3
-    # x_prime = vx
-    # y_prime = vy
+    # x_prime = vx 
+    # y_prime = vy 
     x_prime = vx + time_step*vx_prime
     y_prime = vy + time_step*vy_prime
     return np.array([x_prime,y_prime,vx_prime,vy_prime])
 
 def euler(X0):
     X = X0
-    time_step = 60 * 60 * 24  # 1 day in seconds
     x_values = []
     y_values = []
     vx_values = []
     vy_values = []
-    n = 366 # days in a year
+    n = 365*int(60*60*24/time_step) # days in a year
     for i in range(n):
         x_values.append(X[0])
         y_values.append(X[1])
         vx_values.append(X[2])
         vy_values.append(X[3])
-        X += time_step*ode_func(X)
+        # X[2]+=time_step*ode_func(X)[2]
+        # X[3]+=time_step*ode_func(X)[3]
+        # X[0]+=time_step*ode_func(X)[0]
+        # X[1]+=time_step*ode_func(X)[1]
+        X += time_step*ode_func(X )
     return [vx_values,vy_values,x_values,y_values]
 
 def plot_orbit(x_values, y_values, X0):

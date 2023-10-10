@@ -13,7 +13,6 @@ def toc(start_time):
 
 
 
-
 for i in range(2):
     C=10**i
     def f(x, y):

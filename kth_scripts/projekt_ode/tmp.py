@@ -1,58 +1,82 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-#  kutte
-def runge_kutta(y_prime, y0, z0, t0, t_end, dt):
-    y = y0
-    z = z0
-    t = t0
-    while y > 0:  # Fortsätt tills y korsar x-axeln
-        k1_y = dt * z
-        k1_z = dt * y_prime(t, y, z)
+G = 6.67430e-11  # Gravitational constant
+M = 1.989e30    # Mass of the Sun in kg
+m_j = 1.898e27   # Mass of Jupiter in kg
+m_e = 5.97e24    # Mass of Earth in kg
+AU = 1.496e11    # Astronomical unit in meters
+
+X0_e = [AU, 0, 0, 2.978e4]   # Initial conditions for Earth [x, y, vx, vy]
+X0_j = [5*AU, 0, 0, 1.307e4]  # Initial conditions for Jupiter [x, y, vx, vy]
+
+def ode_func(X_e, X_j):
+    x_e, y_e, vx_e, vy_e = X_e
+    x_j, y_j, vx_j, vy_j = X_j
+    
+    r_e = np.sqrt(x_e**2 + y_e**2)
+    r_j = np.sqrt(x_j**2 + y_j**2)
+    r_ej = np.sqrt((x_j - x_e)**2 + (y_j - y_e)**2)
+    
+    ax_e = (-G * M * x_e / r_e**3) + (-G * m_j * (x_e - x_j) / r_ej**3)
+    ay_e = (-G * M * y_e / r_e**3) + (-G * m_j * (y_e - y_j) / r_ej**3)
+    
+    ax_j = (-G * M * x_j / r_j**3) + (-G * m_e * (x_j - x_e) / r_ej**3)
+    ay_j = (-G * M * y_j / r_j**3) + (-G * m_e * (y_j - y_e) / r_ej**3)
+    
+    x_e_prime = vx_e
+    y_e_prime = vy_e
+    vx_e_prime = ax_e
+    vy_e_prime = ay_e
+    
+    x_j_prime = vx_j
+    y_j_prime = vy_j
+    vx_j_prime = ax_j
+    vy_j_prime = ay_j
+    
+    X_e_derivs = [x_e_prime, y_e_prime, vx_e_prime, vy_e_prime]
+    X_j_derivs = [x_j_prime, y_j_prime, vx_j_prime, vy_j_prime]
+    
+    return X_e_derivs, X_j_derivs
+
+def euler(X0_e, X0_j, m_e, m_j, num_steps):
+    X_e = np.array(X0_e, dtype=float)
+    X_j = np.array(X0_j, dtype=float)
+    
+    time_step = 60 * 60 * 24  # 1 day in seconds
+    x_e_values = []
+    y_e_values = []
+    x_j_values = []
+    y_j_values = []
+    
+    for _ in range(num_steps):
+        x_e_values.append(X_e[0])
+        y_e_values.append(X_e[1])
+        x_j_values.append(X_j[0])
+        y_j_values.append(X_j[1])
         
-        k2_y = dt * (z + 0.5*k1_z)
-        k2_z = dt * y_prime(t + 0.5*dt, y + 0.5*k1_y, z + 0.5*k1_z)
+        X_e_derivs, X_j_derivs = ode_func(X_e, X_j)
         
-        k3_y = dt * (z + 0.5*k2_z)
-        k3_z = dt * y_prime(t + 0.5*dt, y + 0.5*k2_y, z + 0.5*k2_z)
-        
-        k4_y = dt * (z + k3_z)
-        k4_z = dt * y_prime(t + dt, y + k3_y, z + k3_z)
-        
-        y += (k1_y + 2*k2_y + 2*k3_y + k4_y) / 6
-        z += (k1_z + 2*k2_z + 2*k3_z + k4_z) / 6
-        t += dt
-    return t, y
+        X_e += time_step * np.array(X_e_derivs)
+        X_j += time_step * np.array(X_j_derivs)
+    
+    return x_e_values, y_e_values, x_j_values, y_j_values
 
-# Definiera differentialekvationen y'' + y = 0
-def system(t, y, z):
-    return -y
+num_steps = 366  # Number of steps (days in a year)
+earth_x, earth_y, jupiter_x, jupiter_y = euler(X0_e, X0_j, m_e, m_j, num_steps)
 
-# Initialvillkor
-y0 = 1
-z0 = 0
-
-dt = 1e-8
-
-t_cross, y_cross = runge_kutta(system, y0, z0, 0, 10, dt)
-
-# Skatta π
-pi_estimate = 2 * t_cross
-
-print(f"Skattning av π med Runge-Kutta: {pi_estimate:.20f}")
-print(f"actual value: {np.pi}")
-
-# Plotta 
-t_values = np.arange(0, t_cross + dt, dt)
-y_values = [y0 * np.exp(-t_val) for t_val in t_values]  #  lösning y(t) = y0 * e^(-t)
-plt.plot(t_values, y_values, label="Analytisk lösning")
-plt.axhline(0, color='black', linewidth=0.5)
+# Plot the orbits
+plt.figure(figsize=(8, 6))
+plt.plot(earth_x, earth_y, label='Earth Orbit')
+plt.plot(jupiter_x, jupiter_y, label='Jupiter Orbit')
+plt.scatter(0, 0, color='yellow', label='Sun', marker='o', s=1000)
+plt.xlabel('X Position (meters)')
+plt.ylabel('Y Position (meters)')
+plt.title('Orbits of Earth and Jupiter around the Sun')
 plt.legend()
-plt.xlabel("t")
-plt.ylabel("y(t)")
-plt.title("Lösning av y'' + y = 0")
+plt.axis('equal')
+plt.grid(True)
 plt.show()
-
 
 
 # import numpy as np
