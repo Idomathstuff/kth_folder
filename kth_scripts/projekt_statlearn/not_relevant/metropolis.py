@@ -18,17 +18,20 @@ def log_posterior(alpha, beta):
         log_p += (alpha - 1)*np.log(x) + (beta - 1)*np.log(1 - x)
     return log_p
 
+print(log_posterior(2,2))
+
 def make_contour_plot():
     alpha_grid = np.linspace(0.1, 10, 100)
     beta_grid = np.linspace(0.1, 10, 100)
-    log_posterior_grid = [[log_posterior(alpha, beta)
-                        for alpha in alpha_grid] for beta in beta_grid]
+    log_posterior_grid = [[log_posterior(alpha, beta)for alpha in alpha_grid] for beta in beta_grid]
     posterior_grid = np.exp(log_posterior_grid - np.max(log_posterior_grid))
     plt.figure(figsize=(10, 6))
     plt.contour(alpha_grid, beta_grid, posterior_grid)
     plt.xlabel(r"$\alpha$", fontsize=12)
     plt.ylabel(r"$\beta$", fontsize=12)
     plt.show()
+
+# make_contour_plot()
 
 def method_moments(list):
     m1 = np.mean(list)
@@ -81,20 +84,20 @@ def metropolis():
     plt.ylabel('beta', fontsize=12)
     plt.show()
 
-metropolis()
+# metropolis()
 
-import numpy as np
-import matplotlib.pyplot as plt
-fig, ax = plt.subplots()
+# import numpy as np
+# import matplotlib.pyplot as plt
+# fig, ax = plt.subplots()
 
-a = np.array(np.random.beta(2,2,50))
-b = np.array(np.random.beta(2,2,50))
+# a = np.array(np.random.beta(2,2,50))
+# b = np.array(np.random.beta(2,2,50))
 
-plt.scatter(a,b)
-plt.scatter(a[0],b[0], color="green", marker="o", label="starting point")
-plt.scatter(a[-1],b[-1], color="red", marker="o", label="end")
+# plt.scatter(a,b)
+# plt.scatter(a[0],b[0], color="green", marker="o", label="starting point")
+# plt.scatter(a[-1],b[-1], color="red", marker="o", label="end")
 
-for i in range(len(a) - 1):
-    ax.annotate('', xy=(a[i + 1], b[i + 1]), xytext=(a[i], b[i]),arrowprops=dict(arrowstyle='->', lw=1))
-ax.legend()
-plt.show()
+# for i in range(len(a) - 1):
+#     ax.annotate('', xy=(a[i + 1], b[i + 1]), xytext=(a[i], b[i]),arrowprops=dict(arrowstyle='->', lw=1))
+# ax.legend()
+# plt.show()

@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from collections import Counter
-from statinlprojekt import get_parameters_tricks, get_parameters_runs, Lcq_ids, ids
+from statinlprojekt import get_parameters_tricks, get_parameters_runs, Lcq_ids, ids, init_trick_data
 
 Lcq_ids_index = {Lcq_ids[e]:e for e in range(len(Lcq_ids))}
 # print(Lcq_ids_index)
@@ -21,6 +21,7 @@ def print_dic(dic):
 
 xparams, yparams = get_LCQ_params()
 
+# print_dic(xparams)
 
 def sort_with_indices(arr):
     indexed_arr = list(enumerate(arr))
@@ -79,18 +80,18 @@ def make_finalist_histogram():
     winner_array = []
     y = []
     x_labels = []  
-    for i in range(10000):
+    for i in range(5000):
         new_W = get_rand_finalists()
         winner_array.append(new_W)
         for e in new_W:
             y.append(e)
             winner_count[e] += 1
-    plt.hist(y, density=True, histtype='stepfilled',alpha=0.5, label="")
+    plt.hist(y,density=True, histtype='stepfilled',alpha=0.5, label="")
     
     for lcq_id in Lcq_ids:
         x_labels.append(lcq_id)
     plt.xticks(range(len(x_labels)), x_labels, rotation=90)
-    print(most_common_array(get_rand_finalists_array(10000)))
+    print(most_common_array(get_rand_finalists_array(5000)))
 
     plt.show()
 

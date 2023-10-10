@@ -2,40 +2,44 @@ import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 
-# Konstanter
-G = 6.67430e-11  # Gravitationskonstanten (m^3 kg^-1 s^-2)
-M = 1.989e30    # Massan av solen (kg)
-
-# System av differentialekvationer
-def system(Y, t):
+# Define the system of differential equations
+def system(Y, t=0):
     x, y, vx, vy = Y
+    dxdt = vx
+    dydt = vy
     r = np.sqrt(x**2 + y**2)
-    ax = -G * M * x / r**3
-    ay = -G * M * y / r**3
-    return [vx, vy, ax, ay]
+    dvxdt = -x / r**3
+    dvydt = -y / r**3
+    return [dxdt, dydt, dvxdt, dvydt]
 
-# Initialvärden
-x0 = 1.496e11    # 1 AU i meter
-y0 = 0
-vx0 = 0
-vy0 = 29.78e3    # Jordens genomsnittliga orbitalhastighet (m/s)
+# Time array for simulation
+t = np.linspace(0, 20*np.pi, 5000)  # Extended time period
 
-Y0 = [x0, y0, vx0, vy0]
+# List of initial conditions for simulation
+initial_conditions_list = [
+    [1, 0, 0, 1],
+    [1, 0, 0.5, 1.5],
+    [0.5, 0.5, 0, 1]
+]
 
-# Tidsintervall
-t = np.linspace(0, 365*24*3600, 1000)  # Ett år i sekunder
+plt.figure(figsize=(10, len(initial_conditions_list)*5))
 
-# Lös systemet
-sol = odeint(system, Y0, t)
+for idx, initial_conditions in enumerate(initial_conditions_list, 1):
+    # Solve the system of differential equations
+    solution = odeint(system, initial_conditions, t)
+    x, y = solution[:, 0], solution[:, 1]
+    
+    plt.subplot(len(initial_conditions_list), 2, 2*idx-1)
+    plt.plot(t, x, label='x(t)')
+    plt.plot(t, y, label='y(t)')
+    plt.legend()
+    plt.title(f'x(t) and y(t) vs. time for initial conditions {initial_conditions}')
+    
+    plt.subplot(len(initial_conditions_list), 2, 2*idx)
+    plt.plot(x, y)
+    plt.title(f'Orbit in x-y plane for initial conditions {initial_conditions}')
+    plt.xlabel('x')
+    plt.ylabel('y')
 
-# Plotta
-plt.figure(figsize=(10, 6))
-plt.plot(sol[:, 0], sol[:, 1], label="Planetens bana")
-plt.plot(0, 0, 'yo', label="Solen")
-plt.title("Planetens bana runt solen")
-plt.xlabel("x (m)")
-plt.ylabel("y (m)")
-plt.legend()
-plt.grid(True)
-plt.axis('equal')
+plt.tight_layout()
 plt.show()

@@ -1,26 +1,34 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-G = 6.67430e-11  # Gravitationskonstanten (m^3 kg^-1 s^-2)
-M = 1.989e30    # Massan av solen (kg)
-m = 1
-x_0 = 1.496e11    # 1 AU i meter
-y_0 = 0
-vx_0 = 0
-vy_0 = 29.78e3    # Jordens genomsnittliga orbitalhastighet (m/s)
-
-
 # r = lambda x,y: np.sqrt(x**2 + y**2)
+# G = 0.001  # Gravitationskonstanten (m^3 kg^-1 s^-2)
+# M = 1000    # Massan av solen (kg)
+# m = 0.0001
+x_0 = 100   # 1 AU i meter
+y_0 = 0
+vx_0 = -0.1
+vy_0 = -0.01
+
+
 # vxprime = lambda x,y: -(G * M * m / r(x,y)**3) * x
 # vyprime = lambda x,y: -(G * M * m / r(x,y)**3) * y
 
+# def ode_func(x, y, vx, vy):
+#     r = np.sqrt(x**2 + y**2)
+#     vxprime = -(G * M * m / r**3) * x
+#     vyprime = -(G * M * m / r**3) * y
+#     x_prime = vx
+#     y_prime = vy
+#     return np.array([vx, vy, vyprime, vxprime])
+
 def ode_func(x, y, vx, vy):
     r = np.sqrt(x**2 + y**2)
-    vxprime = -(G * M * m / r**3) * x
-    vyprime = -(G * M * m / r**3) * y
+    vxprime = -(x/ r**3)
+    vyprime = -(y/ r**3)
     x_prime = vx
     y_prime = vy
-    return np.array([vx, vy, vyprime, vxprime])
+    return np.array([x_prime, y_prime, vyprime, vxprime])
 
 def euler(timestop):
 
@@ -51,5 +59,5 @@ def plot_orbit(x_values, y_values):
     plt.grid(True)
     plt.show()
 
-x_values, y_values = euler(50000)
+x_values, y_values = euler(200)
 plot_orbit(x_values, y_values)

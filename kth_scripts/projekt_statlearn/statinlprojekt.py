@@ -75,6 +75,11 @@ def plot_run1_run2():
     plt.show()
 
 
+def print_dic(dic):
+    for keys,values in dic.items():
+        print(keys,values)
+
+
 def init_trick_data():
     ndf.set_index('id',inplace=True)
     tricks_data = {}
@@ -88,7 +93,7 @@ def init_trick_data():
     return tricks_data
 
 tricks_data = init_trick_data()
-
+# print_dic(tricks_data)
 average_svariance = 0
 for eachdata in tricks_data.values():
     a = np.array([k for k in eachdata if k>0])
@@ -124,8 +129,7 @@ def AlphaBeta_MoM_skattning(xdata):
     if len(data)==1:
         svariance = pooled_var
     else:
-        svariance = np.var(data,ddof=1)
-    svariance = average_svariance
+        svariance = average_svariance
     alpha_0 = np.mean(data)*((1-np.mean(data))/svariance-1)
     beta_0 = (1-np.mean(data))*((1-np.mean(data))/svariance-1)
     return np.array([alpha_0,beta_0])   
@@ -155,6 +159,14 @@ get_parameters_tricks()
 # params = get_parameters_tricks()
 # for key,value in params.items():
 #     print(key,*value)
+
+def get_avg_alpha_beta_tricks():
+    params = list(get_parameters_tricks().values())
+    alphas = [params[i][1] for i in range(len(params))]
+    betas = [params[i][2] for i in range(len(params))]
+    medel_alpha, medel_beta = np.mean(alphas), np.mean(betas)
+    return [medel_alpha,medel_beta]
+
 
 def init_run_data():
     tricks_data = {}
