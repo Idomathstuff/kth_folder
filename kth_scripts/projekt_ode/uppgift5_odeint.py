@@ -20,8 +20,8 @@ def ode_system(X, t):
     return [x_prime, y_prime, vx_prime, vy_prime]
 
 X0 = [x_0, y_0, vx_0, vy_0]
-t = np.linspace(0, 365 * 24 * 60 * 60, 366)  # 1 year in seconds
-
+t = np.linspace(0, 365*60*60*24, 366)  # 1 year in seconds
+print(t)
 def ODE_solve(X0):
     sol = odeint(ode_system, X0, t)
     x_values = sol[:, 0]

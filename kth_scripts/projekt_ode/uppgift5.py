@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-G = 6.67430e-11  # Gravitationskonstanten 
+G = 6.67430e-11  # gravitations konstant 
 M = 1.989e30    # mass of sun kg
 m = 5.97e24 # mass of earth
 
@@ -11,7 +11,6 @@ vy_0 = 2.978e4 # orbit velocity m/s
 time_step = 60*60*24
 
 def ode_func(X):
-    # time_step = 60 * 60  # 1 day in seconds
     x,y,vx,vy = X
     r = np.sqrt(x**2+y**2)
     vx_prime = -x*G*M/r**3
@@ -64,10 +63,10 @@ def plot_orbit(x_values, y_values, X0):
     plt.grid(True)
 
 def plot_different_inital_values():
-    x_0 = 1.496e11 # orbital radius m
+    x_0 = 1.496e11 
     y_0 = 0
     vx_0 = 0
-    vy_0 = 2.978e4 # orbit velocity m/s
+    vy_0 = 2.978e4 # orbit velocity /s
 
     X0 = [x_0,y_0,vx_0,vy_0]
     vx_values,vy_values,x_values,y_values = euler(X0)
@@ -87,12 +86,12 @@ def plot_energy():
     x_0 = 1.496e11 # orbital radius m
     y_0 = 0
     vx_0 = 0
-    vy_0 = 2.978e4 # orbit velocity m/s
+    vy_0 = 2.978e4-1e4 # orbit velocity m/s
     X0 = [x_0,y_0,vx_0,vy_0]
     x_values, y_values, vx_values, vy_values = euler(X0)
     def energy(x, y, vx, vy):
         r = np.sqrt(x**2+y**2)
-        T = 0.5 * m*(vx**2 + vy**2)
+        T = m*(vx**2 + vy**2)/2
         U = -G*M*m / r
         return T + U
     energy_vals = []
@@ -107,5 +106,4 @@ def plot_energy():
     ax.set_ylabel('E(t)  (Joules)')
     plt.show()
 # plot_energy()
-
 plot_different_inital_values()

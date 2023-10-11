@@ -1,3 +1,4 @@
+#inte pang
 import numpy as np
 import matplotlib.pyplot as plt
 import time
@@ -17,8 +18,9 @@ def euler(step_size, f, starty, startx, stopx):
         y.append(next_y)
     return x,y
 
-k = 4
-x, y= euler(0.01,f,1,0,2**k)
+N=50
+k = 9 # går inte att justera k högre än 9
+x, y= euler(0.01,f,N,0,2**k)
 print(y[-1])
 plt.plot(x,y)
 plt.show()

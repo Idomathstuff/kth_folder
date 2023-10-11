@@ -73,6 +73,7 @@ def metropolis(sample_size=1e4):
     thetas[0] = Theta_MoM_skattning(data)
 
     for i in range(n_samples - 1):
+        print(i)
         for j in range(n_chains):
             last_alpha = alphas[i, j]
             last_beta = betas[i, j] 

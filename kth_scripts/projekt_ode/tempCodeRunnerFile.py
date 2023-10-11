@@ -1,3 +1,3 @@
-print(x_e_values)
-# plt.plot(x_e_values, y_e_values, label='Earth')
-# plt.plot(x_j_values, y_j_values, label='Jupiter')
+    # if np.abs(r_s - r_j) < 1.1 * r_j and np.sqrt(vx_s**2 + vy_s**2) < 10e3:
+    #     vx_s += 5e3
+    #     vy_s += 2e3
