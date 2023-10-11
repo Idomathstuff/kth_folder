@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 G = 6.67430e-11  # Gravitationskonstanten 
 M = 1.989e30    # mass of sun kg
-m_j = 1.898e28 # mass of jupiter
 m_j = 1.898e29 # mass of jupiter
 
 m_e = 5.97e24 # mass of earth
@@ -11,8 +10,10 @@ m_s = 2e4 # mass of space ship
 AU = 1.496e11 # astronomical unit
 
 X0_e = np.array([-AU, 0, 0, 2.978e4]) # initial x,y,vx,vy
-X0_j = np.array([3*AU, 0 ,0, 1.307e4])
-X0_s = np.array([-1.1*AU, 0, 0, -3.5e4]) # ändra initial hastighet för rymdskeppet för att lämna solsystemet
+X0_j = np.array([5*AU, 0 ,0, 1.007e4])
+X0_s = np.array([-1.1*AU, 0, 0, -3.58e4]) # ändra initial hastighet för rymdskeppet för att lämna solsystemet
+X0_s = np.array([-1.1*AU, 0, 0, -3.58e4]) # ändra initial hastighet för rymdskeppet för att lämna solsystemet
+
 time_step = 60*60*24 
 
 def ode_func(X_e,X_j,X_s):
@@ -26,17 +27,12 @@ def ode_func(X_e,X_j,X_s):
     r_s = np.sqrt(x_s**2+y_s**2)
     r_s_to_j = np.sqrt((x_s-x_j)**2+(y_s-y_j)**2)
     r_s_to_e = np.sqrt((x_s-x_e)**2+(y_s-y_e)**2)
-    
-    ax_e = -x_e*G*M/r_e**3 -(x_j-x_e)*G*m_j/r_e_to_j**3
-    ay_e = -y_e*G*M/r_e**3 -(y_j-y_e)*G*m_j/r_e_to_j**3
-    ax_j = -x_j*G*M/r_j**3 -(x_e-x_j)*G*m_e/r_e_to_j**3
-    ay_j = -y_j*G*M/r_j**3 -(y_e-y_j)*G*m_e/r_e_to_j**3
-    ax_s = -x_s*G*M/r_s**3 -(x_e-x_s)*G*m_e/r_s_to_e**3 -(x_j-x_s)*G*m_j/r_s_to_j**3
-    ay_s = -y_s*G*M/r_s**3 -(y_e-y_s)*G*m_e/r_s_to_e**3 -(y_j-y_s)*G*m_j/r_s_to_j**3
-    
-    # if np.abs(r_s - r_j) < 1.1 * r_j and np.sqrt(vx_s**2 + vy_s**2) < 10e3:
-    #     vx_s += 5e3
-    #     vy_s += 2e3
+    ax_e = -x_e*G*M/r_e**3 +(x_j-x_e)*G*m_j/r_e_to_j**3
+    ay_e = -y_e*G*M/r_e**3 +(y_j-y_e)*G*m_j/r_e_to_j**3
+    ax_j = -x_j*G*M/r_j**3 +(x_e-x_j)*G*m_e/r_e_to_j**3
+    ay_j = -y_j*G*M/r_j**3 +(y_e-y_j)*G*m_e/r_e_to_j**3
+    ax_s = -x_s*G*M/r_s**3 +(x_e-x_s)*G*m_e/r_s_to_e**3 +(x_j-x_s)*G*m_j/r_s_to_j**3
+    ay_s = -y_s*G*M/r_s**3 +(y_e-y_s)*G*m_e/r_s_to_e**3 +(y_j-y_s)*G*m_j/r_s_to_j**3
 
     x_e_prime = vx_e + ax_e*time_step
     y_e_prime = vy_e + ay_e*time_step
@@ -60,7 +56,7 @@ def euler(X0_e,X0_j,X0_s):
     y_j_values = []
     x_s_values = []
     y_s_values = []
-    n = 5000
+    n = 20000
     for i in range(n):
         x_e_values.append(X_e[0])
         y_e_values.append(X_e[1])
@@ -85,18 +81,20 @@ x_e_values, y_e_values, x_j_values, y_j_values, x_s_values, y_s_values = euler(X
 
 
 fig, ax = plt.subplots()
-plt.plot(x_e_values,y_e_values, color = "cyan")
-plt.plot(x_j_values,y_j_values, color = "orange")
-plt.plot(x_s_values,y_s_values,marker='o',markersize=0.1)
-plt.scatter(0,0, color="yellow")
-
+plt.plot(x_e_values,y_e_values, color = "cyan", label="earth")
+plt.plot(x_j_values,y_j_values, color = "orange", label="jupiter")
+plt.plot(x_s_values,y_s_values,marker='o',markersize=0.1, label="space ship")
+plt.scatter(0,0, color="yellow", label="sun")
+plt.legend()
 earth, = ax.plot([], [], 'o', color='cyan', markersize=5)
 jupiter, = ax.plot([], [], 'o', color='orange', markersize=5)
 spaceship, = ax.plot([], [], 'o', color='blue', markersize=5)
 sun = ax.plot(0, 0, 'yo', markersize=5)
-ax.set_xlim(-8 * AU, 8 * AU)
-ax.set_ylim(-8 * AU, 8 * AU)
-
+ax.set_xlim(-20 * AU, 10 * AU)
+ax.set_ylim(-10 * AU, 10 * AU)
+ax.set_title("Slingshot manuever")
+ax.set_xlabel("x meters")
+ax.set_ylabel("y meters")
 
 def init():
     earth.set_data([], [])
@@ -115,7 +113,10 @@ def animate(i):
 
 
 ani = FuncAnimation(fig, animate, init_func=init,
-                    frames=len(x_e_values), repeat=False, blit=True, interval=0.0001)
+                    frames=len(x_e_values), repeat=False, blit=True, interval=0.001)
 
 
 plt.show()
+# def escape_velocity(M, r):
+#     return np.sqrt(2*G*M/r)
+# print(escape_velocity(M,AU))

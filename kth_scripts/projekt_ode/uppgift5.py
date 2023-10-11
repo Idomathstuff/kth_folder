@@ -54,8 +54,8 @@ def plot_orbit(x_values, y_values, X0):
                 continue
             ax.annotate('', xy=(x_values[skip_val+i], y_values[skip_val+i]), xytext=(x_values[i], y_values[i]), arrowprops=dict(arrowstyle='->', lw=2))
     # add_arrows()
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
+    ax.set_xlabel('x (meters)')
+    ax.set_ylabel('y (meters)')
     def format_scientific(num):
         return f"{num:.1e}"
     title = ax.set_title(f'     Initial x, y, x velocity, y velocity: [{format_scientific(x_0)}, {format_scientific(y_0)}, {format_scientific(vx_0)}, {format_scientific(vy_0)}]')
