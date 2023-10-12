@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1696265046 "c:/kth_folder/kth_docs/statinl_proj/main.tex" "main.pdf" "main" 1696265047 0
+["pdflatex"] 1697118653 "c:/kth_folder/kth_docs/statinl_proj/main.tex" "main.pdf" "main" 1697118654 0
   "C:/Users/lmfry/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1693150496 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/lmfry/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1693150262 23178960 d5eefa0c49f96240e3117b64430455c9 ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ectt1000.tfm" 993062340 1348 d70ddf2d5d512b838e50a335e385e919 ""
@@ -131,6 +131,7 @@
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1680182075 29768 5600b3a98028e2e01b60e7f98fbf4b9c ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty" 1680182821 6107 315d4fb3eadc8324d4c14694285a7ca1 ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/l3keys2e/l3keys2e.sty" 1675363588 4674 257c150d9d5c2fbc229303c8beaf6228 ""
+  "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xparse.sty" 1675363588 6812 3c152a1c8d562d7b7291c4839b61a5c3 ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/tex/latex/lipsum/lipsum.ltd.tex" 1633253722 95525 6fd0552101a6b1f9b7a84b402ec435ba ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/tex/latex/lipsum/lipsum.sty" 1633253722 14690 c2c754218a7108db7823a4839c1bc3cd ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.cfg" 1679060724 1829 d8258b7d94f5f955e70c623e525f9f45 ""
@@ -151,10 +152,11 @@
   "assets/Figure_1.png" 1695553406 14834 7c559787e4f859ff01fcfb4b360ba2a7 ""
   "assets/Figure_2.png" 1695919598 11194 561f4a814a83128c0b771c28b5e8e988 ""
   "assets/KTH_logga.png" 1692864666 127917 0e70cb79d5835b9183d0104fc44b3e91 ""
+  "assets/freq_bar_graph.png" 1697116588 26811 54c62c739cab57785d5103b20fd150e9 ""
   "assignment.cls" 1696002444 2157 e960cdbb4c5150270baefa998b41bade ""
-  "c:/kth_folder/kth_docs/statinl_proj/main.tex" 1696265045 6770 e8bacb54337e6e2bd557525fff5840c7 ""
-  "main.aux" 1696265047 1277 7ec05981cbee37e11dc2d3e56542bddd "pdflatex"
-  "main.tex" 1696265045 6770 e8bacb54337e6e2bd557525fff5840c7 ""
+  "c:/kth_folder/kth_docs/statinl_proj/main.tex" 1697118652 10030 4911a85cb4a1471e6e54a7e2047ce6dc ""
+  "main.aux" 1697118654 1611 2dd93ace11e89d5a0036dafc121a2f38 "pdflatex"
+  "main.tex" 1697118652 10030 4911a85cb4a1471e6e54a7e2047ce6dc ""
   (generated)
   "main.aux"
   "main.log"

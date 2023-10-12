@@ -6,6 +6,7 @@ from scipy.special import gamma, loggamma
 from statinlprojekt import Theta_MoM_skattning, AlphaBeta_MoM_skattning, tricks_data, get_parameters_tricks, get_avg_alpha_beta_tricks
 
 # data = np.array([0.16, 0.32, 0, 0, 0, 0.16, 0.36, 0.41, 0.48, 0.28])
+
 data = np.array(tricks_data["Gustavo"])
 
 def log_datafördelning(data,theta, alpha,beta):
@@ -31,8 +32,8 @@ def log_posterior(data,theta, alpha, beta):
 
 def make_contour_plot():
     theta = Theta_MoM_skattning(data)
-    alpha_grid = np.linspace(0.1, 30, 100)
-    beta_grid = np.linspace(0.1, 30, 100)
+    alpha_grid = np.linspace(0.1, 100, 100)
+    beta_grid = np.linspace(0.1, 60, 100)
     log_posterior_grid = [[log_posterior(data,theta, alpha, beta)for alpha in alpha_grid] for beta in beta_grid]
     posterior_grid = np.exp(log_posterior_grid - np.max(log_posterior_grid))
     plt.figure(figsize=(10, 6))
@@ -41,6 +42,7 @@ def make_contour_plot():
     plt.ylabel(r"$\beta$", fontsize=12)
     plt.show()
 
+# make_contour_plot()
 
 def method_moments(data):
     data = [x for x in data if x>0]
@@ -50,7 +52,7 @@ def method_moments(data):
     beta = ((m1-m2)*(1-m1))/(m2-m1**2)
     return([alpha,beta])
 
-def metropolis(sample_size=1e4):
+def metropolis(sample_size=1e5):
     def genY(X):
         X = np.array(X)
         proposal_alpha = np.exp(np.log(X[0]) + delta * stats.norm.rvs())
@@ -113,7 +115,6 @@ def metropolis(sample_size=1e4):
         plt.ylabel('beta', fontsize=12)
         plt.show()
 
-    make_thetas_hist()
     def Plot_3D():
         fig = plt.figure(figsize=(10, 8))
         ax = fig.add_subplot(111, projection='3d')
@@ -129,10 +130,12 @@ def metropolis(sample_size=1e4):
         print("theta: ", np.mean(thetas[:,0]))
         print("alpha: ", np.mean(alphas[:,0]))
         print("beta: ", np.mean(betas[:,0]))
+    make_alpha_beta_scatter()
+    make_thetas_hist()
     disp_means()
     return thetas, alphas, betas
 
 thetas, alphas, betas, = metropolis()
 
-# print(get_parameters_tricks()["Gustavo"])
+print(get_parameters_tricks()["Gustavo"])
 

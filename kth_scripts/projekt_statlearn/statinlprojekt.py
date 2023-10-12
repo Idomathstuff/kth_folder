@@ -9,8 +9,8 @@ from numeriska_metoder import newton_raphson
 df = pd.read_csv("SLS22.csv") #data frame 
 Lcq_ids = ["Majerus", "Oliveira","Decenzo","Santiago", "Papa", "Eaton", "Mota", "Shirai", 
            "Jordan", "Hoefler", "Hoban", "Gustavo", "Ribeiro C", "O’neill", "Foy", "Midler"]
-Lcq_ids = ["Majerus", "Oliveira", "O’neill", "Santiago", "Papa", "Ribeiro C", "Mota", "Shirai",
-           "Jordan", "Hoefler", "Foy", "Midler", "Gustavo", "Hoban", "Eaton", "Decenzo"]
+# Lcq_ids = ["Majerus", "Oliveira", "O’neill", "Santiago", "Papa", "Ribeiro C", "Mota", "Shirai","Jordan", "Hoefler", "Foy", "Midler", "Gustavo", "Hoban", "Eaton", "Decenzo"]
+
 def init_normal_dataframe():
     ndf = df
     ndf["run 1"] = [x/10 for x in df["run 1"]]
@@ -27,6 +27,7 @@ def init_normal_dataframe():
     ndf["make 4"] = [int(bool(x)) for x in df["trick 4"].values.tolist()]
     return ndf
 ndf = init_normal_dataframe()
+
 global_trick_data = np.concatenate([ndf[f"trick {i}"].values for i in range(1,5)])
 global_svariance = np.var(global_trick_data,ddof=1)
 global_smean = np.mean(global_trick_data)
@@ -100,24 +101,24 @@ for eachdata in tricks_data.values():
     average_svariance+=np.var(a)
 average_svariance/=len(ids)
 
-def get_pooled_var():
-    täljare = 0
-    nämnare = 0
-    for eachdata in tricks_data.values():
-        zi = np.array([k for k in eachdata if k>0])
-        if len(zi)==1:
-            si = 0
-            ni = len(zi)-1
-            täljare+=si*ni
-            nämnare+=ni
-        else:
-            si = np.var(zi,ddof=1)
-            ni = len(zi)-1
-            täljare+=si*(ni)
-            nämnare+=ni
-    return täljare/nämnare
+# def get_pooled_var():
+#     täljare = 0
+#     nämnare = 0
+#     for eachdata in tricks_data.values():
+#         zi = np.array([k for k in eachdata if k>0])
+#         if len(zi)==1:
+#             si = 0
+#             ni = len(zi)-1
+#             täljare+=si*ni
+#             nämnare+=ni
+#         else:
+#             si = np.var(zi,ddof=1)
+#             ni = len(zi)-1
+#             täljare+=si*(ni)
+#             nämnare+=ni
+#     return täljare/nämnare
 
-pooled_var = get_pooled_var()
+# pooled_var = get_pooled_var()
 
 
 def Theta_MoM_skattning(xdata):
@@ -127,11 +128,12 @@ def Theta_MoM_skattning(xdata):
 def AlphaBeta_MoM_skattning(xdata):
     data = [x for x in xdata if x>0]
     if len(data)==1:
-        svariance = pooled_var
-    else:
         svariance = average_svariance
-    alpha_0 = np.mean(data)*((1-np.mean(data))/svariance-1)
-    beta_0 = (1-np.mean(data))*((1-np.mean(data))/svariance-1)
+    else:
+        svariance = np.var(data, ddof=1)
+    m = np.mean(data)
+    alpha_0 = m*(m*(1-m)/svariance-1)
+    beta_0 = (1-m)*(m*(1-m)/svariance-1)
     return np.array([alpha_0,beta_0])   
 
 

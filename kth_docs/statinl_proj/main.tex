@@ -11,6 +11,13 @@
 \usepackage{color,soul}
 \usepackage{amsfonts}
 \newcommand{\indicator}[1]{\mathbf{1}_{\{#1\}}}
+\usepackage{xparse}
+
+% Define a new command for PDFs with subscripts
+\NewDocumentCommand{\pdf}{ m }{%
+  f_{#1}#1
+}
+
 \def\code#1{\texttt{#1}}
 \newtheorem{anm}{Anm}
 
@@ -40,13 +47,14 @@
 
 Låt $B$ vara betyg för en ett skateboardåkare och trick. Vi vill skatta $P(B>0.6|B>0) = \frac{P(B>0|B>0.6)P(B>0.6)}{P(B>0)}=\frac{P(B>0.6)}{P(B>0)}$
 som $\tilde{P}(B>0.6|B>0) = \frac{\sum_{i}^4\sum_{j}^{96}trick_{ij}\indicator{[0.6,1]}}{\sum_{i}^4\sum_{j}^{96}trick_{ij}\indicator{[0,1]}} \approx 0.96$
-Det här stämmer med utseendet på \cref{Histogram 1}.
+Det här stämmer med utseendet på \cref{Histogram 1}. När man plottar run 2 mot run 1 ser de ut att ha jätte svag korrelation \cref{Spridningsdiagram}
 
 \begin{figure}[!h]
     \caption{Spridningsdiagram mellan run 1 och run 2}
     \begin{center}
         \includegraphics[width = 99mm]{assets/Figure_1.png}
     \end{center}
+    \label{Spridningsdiagram}
 \end{figure}
 
 \newpage
@@ -102,18 +110,72 @@ Vi vet att
         \\ \\ \partial_{\beta}\log L= k\psi(\alpha+\beta)-k\psi(\beta) + \sum_{j=1}^k\log(1-z_{ij})) = 0
         \end{matrix}\right.
 \end{align*}
+\\ Det går dock inte att lösa ML skattningen analytisk härifrån. Numeriska metoder som newton rhapson eller gradient descent
+behövs för att skatta vår ML skattning. Att göra så medför sig en del problem som ökar systematiska felet genom
+numerisk fel. Vi behåller riktighet i punktskattningen genom att använda moment metoden istället. Vi utgår från följande
+system ekvationerna
+\begin{align*}
+    \left\{\begin{matrix}
+        M_1(\mathbf{Z}_i)  = \text{E}[Z_i]
+        \\ M_2(\mathbf{Z}_i) = \text{Var}[Z_i]+\text{E}[Z_i]^2
+    \end{matrix}\right.
+    \Longleftrightarrow \left\{\begin{matrix}
+        \Leftrightarrow M_1 = \frac{\alpha}{\alpha+\beta}
+        \\ M_2 = \frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}+(\frac{\alpha}{\alpha+\beta})^2
+    \end{matrix}\right.
+    \\ :: S^2=\frac{1}{n}\sum (Z_{k}-\bar{Z})^2 = M_2-M_1^2
+    \\ \Longleftrightarrow \left\{\begin{matrix}
+        \Leftrightarrow \alpha = \beta\frac{M_1}{1-M_1}
+        \\ S^2 = \frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}
+    \end{matrix}\right.
+    \Longleftrightarrow \left\{\begin{matrix}
+        \widetilde{\alpha} = M_1\left(\frac{M_1(1-M_1)}{S^2}-1\right)
+        \\ \widetilde{\beta} = (1-M_1)\left(\frac{M_1(1-M_1)}{S^2}-1\right)
+    \end{matrix}\right.
+    \\ = \left\{\begin{matrix}
+        \widetilde{\alpha_i} = \bar{Z_i}\left(\frac{\bar{Z_i}(1-\bar{Z_i})}{S^2}-1\right)
+        \\ \widetilde{\beta_i} = (1-\bar{Z_i})\left(\frac{\bar{Z_i}(1-\bar{Z_i})}{S^2}-1\right)
+    \end{matrix}\right.
+\end{align*}
 
 \subsection*{(c) Model för $Y_i$}
 $Y_i$ ska vara run betyget för åkaren $i$. Eftersom $Y_i\in(0,1]$ (varje deltagare får betyg större än 0) kommer bernoulli delen försvinna. Så vi antar att $Y_i\sim \text{Beta}(\alpha_i,\beta_i)$. 
 Vi använder samma metod som vi använde för att skatta $\alpha,\beta$ för $X$.
 \subsection*{(d) Simulering}
 Total betyget för varje deltagare beräknas som summan av deras två största trick betyg och största run betyg. Vi
-kan beskriva i termer av stokatiska variabler. Låt $T_i$ vara total betyg för deltagare $i$.
-Låt $Z_{i,\text{först}}=\max(X_{i1},X_{i2},X_{i3},X_{i4})$ och 
-\\$Z_{i,\text{andra}}=\max(\min(X_1, X_2), \min(X_1, X_3), \min(X_1, X_4), \min(X_2, X_3), \min(X_2, X_4), \min(X_3, X_4))$.
-\\Vi vill simulera total betyget för varje deltagare $i$ som $T_i=Z_{i,\text{först}}+Z_{i,\text{andra}}+\max(Y_{i1},Y_{i2})$
+kan beskriva i termer av stokatiska variabler. Låt $O_i$ vara total betyg för deltagare $i$.
+Låt $Q_{i,\text{först}}=\max(X_{i1},X_{i2},X_{i3},X_{i4})$ och 
+\\$Q_{i,\text{andra}}=\max(\min(X_{i1}, X_{i2}), \min(X_{i1}, X_{i3}), \min(X_{i1}, X_{i4}), \min(X_{i2}, X_{i3}), \min(X_{i2}, X_{i4}), \min(X_{i3}, X_{i4}))$.
+\\Vi vill simulera total betyget för varje deltagare $i$ som $O_i=Q_{i,\text{först}}+Q_{i,\text{andra}}+\max(Y_{i1},Y_{i2})$
+De som fick de 4 högsta betyg får delta i finalen. Vi simulerar $5000$ LCQ:ar. Det ger oss en följd av stokatisk sets $\mathbf{W}_1,...\mathbf{W}_{5000}$.
+Python har redan libraries för att generera stickprov från beta och bernoulli fördelningar. Så vi slipper 
+använda box muller, inverse metoden, eller dylikt. 
+\begin{figure}[!h]
+    \caption{Frequency appearing in final $\mathbf{W}$}
+    \begin{center}
+        \includegraphics[width = 200mm]{assets/freq_bar_graph.png} 
+    \end{center}
+    \label{Histogram 2}
+\end{figure}
+Jag skapade en frequency bar graph för att visualisera simuleringen och fick detta i en körning \cref{Histogram 2}.
+De som har markerats i orange är de som faktiskt vann den verkliga LCQ:en.
+Typvärdet på $\mathbf{W}$ innehöll oftast Hoban, Eaton, Jordan, och Shirai. Typvärdets frekvens vara kring 50 gger dvs $1\%$. 
+Frekvensen av när $\mathbf{W}$ innehöll samtliga verkliga vinnare (nämligen Gustavo, Hoban, Eaton, Decenzo) vara när 16-20 gger dvs mindre än $0.5\%$.  
+
+\newpage
+\newpage
 \section{En bayesiansk modell}
+\subsection*{(a) Apriori fördelnignar} 
+\subsection*{(b) Aposteriori för $X_i$}
+\subsection*{(c) Aposteriori för $X_i$}
+\subsection*{(d) Simulering}
+\subsection*{(e)}
 \section{En bayesiansk modell med en hierarki}
+\subsection*{(a) Apriori fördelning för $\theta$} 
+\subsection*{(b) Aposteriori för $X_i$}
+\subsection*{(c) Aposteriori för $X_i$}
+\subsection*{(d) Simulering}
+\subsection*{(e)}
 \section{Diskussion}
 
 % \section{Kod}
