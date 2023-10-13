@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.8.27)  12 OCT 2023 15:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.8.27)  13 OCT 2023 21:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -498,20 +498,20 @@ Package: xparse 2023-02-02 L3 Experimental document command parser
  (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -570,77 +570,101 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 <assets/KTH_logga.png, id=4, 285.7074pt x 285.7074pt>
 File: assets/KTH_logga.png Graphic file (type png)
 <use assets/KTH_logga.png>
-Package pdftex.def Info: assets/KTH_logga.png  used on input line 33.
+Package pdftex.def Info: assets/KTH_logga.png  used on input line 32.
 (pdftex.def)             Requested size: 56.90504pt x 56.9055pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
 <assets/Figure_2.png, id=6, 462.528pt x 346.896pt>
 File: assets/Figure_2.png Graphic file (type png)
 <use assets/Figure_2.png>
-Package pdftex.def Info: assets/Figure_2.png  used on input line 43.
+Package pdftex.def Info: assets/Figure_2.png  used on input line 42.
 (pdftex.def)             Requested size: 281.68228pt x 211.27277pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
 (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
  (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+
+LaTeX Warning: Reference `Histogram 1' on page 1 undefined on input line 49.
+
+
+LaTeX Warning: Reference `Spridningsdiagram' on page 1 undefined on input line 49.
+
 <assets/Figure_1.png, id=7, 462.528pt x 346.896pt>
 File: assets/Figure_1.png Graphic file (type png)
 <use assets/Figure_1.png>
-Package pdftex.def Info: assets/Figure_1.png  used on input line 55.
+Package pdftex.def Info: assets/Figure_1.png  used on input line 54.
 (pdftex.def)             Requested size: 281.68228pt x 211.27277pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [1
 
-{C:/Users/lmfry/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./assets/KTH_logga.png> <./assets/Figure_2.png>] [2 <./assets/Figure_1.png>]
-Overfull \hbox (21.49081pt too wide) in paragraph at lines 91--96
-\OT1/cmr/m/n/10.95 Observera att fr^^Wan eq. (3) $[][] [] [] = [][] [] []$
+{C:/Users/lmfry/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./assets/KTH_logga.png> <./assets/Figure_2.png>]
+
+LaTeX Warning: Reference `properties' on page 1 undefined on input line 87.
+
+
+LaTeX Warning: Reference `MLE result' on page 1 undefined on input line 88.
+
+
+LaTeX Warning: Reference `loglike' on page 1 undefined on input line 90.
+
+
+Overfull \hbox (3.2711pt too wide) in paragraph at lines 90--95
+\OT1/cmr/m/n/10.95 Observera att fr^^Wan [] $[][] [] [] = [][] [] []$
  []
 
 
-Overfull \hbox (26.65207pt too wide) in paragraph at lines 91--96
+Overfull \hbox (26.65207pt too wide) in paragraph at lines 90--95
 [][] []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ; ^^L\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 z[]\OT1/cmr/m/n/10.95 ))$ f^^?or att $\OML/cmm/m/it/10.95 z$ \OT1/cmr/m/n/10.95 stick-provet in-neh^^Waller alla trick som lan-dade $\OML/cmm/m/it/10.95 z[] \OT1/cmr/m/n/10.95 = (\OML/cmm/m/it/10.95 z[]; [] z[]\OT1/cmr/m/n/10.95 )[] =
  []
 
-[3]
-<assets/freq_bar_graph.png, id=37, 1093.4451pt x 456.0237pt>
+[2 <./assets/Figure_1.png>]
+<assets/freq_bar_graph.png, id=34, 1093.4451pt x 456.0237pt>
 File: assets/freq_bar_graph.png Graphic file (type png)
 <use assets/freq_bar_graph.png>
-Package pdftex.def Info: assets/freq_bar_graph.png  used on input line 156.
+Package pdftex.def Info: assets/freq_bar_graph.png  used on input line 158.
 (pdftex.def)             Requested size: 569.05511pt x 237.32156pt.
 
-Overfull \hbox (99.30013pt too wide) in paragraph at lines 156--157
+Overfull \hbox (99.30013pt too wide) in paragraph at lines 158--159
  [] 
  []
 
 
-Overfull \hbox (27.17426pt too wide) in paragraph at lines 145--164
+LaTeX Warning: Reference `Histogram 2' on page 1 undefined on input line 162.
+
+
+Overfull \hbox (27.17426pt too wide) in paragraph at lines 147--166
 \OML/cmm/m/it/10.95 Q[] \OT1/cmr/m/n/10.95 = []([](\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 ))$. 
  []
 
+[3] [4 <./assets/freq_bar_graph.png>]
+Overfull \hbox (8.70383pt too wide) in paragraph at lines 184--191
+\OT1/cmr/m/n/10.95 Aposteriorin ^^?ar v^^War m^^Walf^^?ordelning men vi kom-mer anv^^?anda $\OML/cmm/m/it/10.95 L[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^R[]; []; ^^L[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 / []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 f[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^R[]; []; ^^L[]\OMS/cmsy/m/n/10.95 j\OT1/cmr/bx/n/10.95 x[]\OT1/cmr/m/n/10.95 ))$
+ []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+[5] (main.aux)
 
-[4] [5 <./assets/freq_bar_graph.png>] (main.aux) ) 
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 17855 strings out of 476331
- 360751 string characters out of 5787765
- 1872660 words of memory out of 5000000
- 38002 multiletter control sequences out of 15000+600000
+ 17858 strings out of 476331
+ 360769 string characters out of 5787765
+ 1875660 words of memory out of 5000000
+ 38005 multiletter control sequences out of 15000+600000
  521681 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,17n,118p,474b,302s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (5 pages, 332593 bytes).
+Output written on main.pdf (5 pages, 339958 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

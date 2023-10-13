@@ -37,8 +37,6 @@ for name in ndf['id']:
     if name not in ids:
         ids.append(name)
 
-# print(len(ids))
-
 def make_histogram():
     # fig, ax = plt.subplots(1, 1)
     plt.hist(ndf["trick 1"], density=True, histtype='stepfilled', alpha=0.5, label = "Trick 1")
@@ -75,32 +73,9 @@ def plot_run1_run2():
     plt.legend()
     plt.show()
 
-
-def print_dic(dic):
-    for keys,values in dic.items():
-        print(keys,values)
-
-
-def init_trick_data():
-    ndf.set_index('id',inplace=True)
-    tricks_data = {}
-    n = len(ndf)
-    for name in list(ids):
-        namesdata = ndf.loc[name]
-        if isinstance(namesdata['trick 1'],float):
-            tricks_data[name] = np.array([namesdata['trick 1']]+[namesdata['trick 2']]+[namesdata['trick 3']]+[namesdata['trick 4']])
-        else:
-            tricks_data[name] = np.array(list(namesdata['trick 1'])+list(namesdata['trick 2'])+list(namesdata['trick 3'])+list(namesdata['trick 4']))
-    return tricks_data
-
-tricks_data = init_trick_data()
-# print_dic(tricks_data)
-average_svariance = 0
-for eachdata in tricks_data.values():
-    a = np.array([k for k in eachdata if k>0])
-    average_svariance+=np.var(a)
-average_svariance/=len(ids)
-
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # def get_pooled_var():
 #     täljare = 0
 #     nämnare = 0
@@ -117,9 +92,46 @@ average_svariance/=len(ids)
 #             täljare+=si*(ni)
 #             nämnare+=ni
 #     return täljare/nämnare
-
 # pooled_var = get_pooled_var()
 
+def print_dic(dic):
+    for keys,values in dic.items():
+        print(keys,values)
+
+### extracting trick and run data
+def init_trick_data():
+    ndf.set_index('id',inplace=True)
+    tricks_data = {}
+    n = len(ndf)
+    for name in list(ids):
+        namesdata = ndf.loc[name]
+        if isinstance(namesdata['trick 1'],float):
+            tricks_data[name] = np.array([namesdata['trick 1']]+[namesdata['trick 2']]+[namesdata['trick 3']]+[namesdata['trick 4']])
+        else:
+            tricks_data[name] = np.array(list(namesdata['trick 1'])+list(namesdata['trick 2'])+list(namesdata['trick 3'])+list(namesdata['trick 4']))
+    return tricks_data
+
+def init_run_data():
+    tricks_data = {}
+    n = len(ndf)
+    for name in list(ids):
+        namesdata = ndf.loc[name]
+        if isinstance(namesdata['run 1'],float):
+            tricks_data[name] = np.array([namesdata['run 1']]+[namesdata['run 2']])
+        else:
+            tricks_data[name] = np.array(list(namesdata['run 1'])+list(namesdata['run 2']))
+    return tricks_data
+
+tricks_data = init_trick_data()
+run_data = init_run_data()
+
+
+### Calculations needed to estimate theta, alpha, beta
+average_svariance = 0
+for eachdata in tricks_data.values():
+    a = np.array([k for k in eachdata if k>0])
+    average_svariance+=np.var(a)
+average_svariance/=len(ids)
 
 def Theta_MoM_skattning(xdata):
     data = xdata>0.0
@@ -136,32 +148,25 @@ def AlphaBeta_MoM_skattning(xdata):
     beta_0 = (1-m)*(m*(1-m)/svariance-1)
     return np.array([alpha_0,beta_0])   
 
-
-
-def get_parameters():
-    result = {}
-    for name in ids:
-        theta = Theta_MoM_skattning(np.array(tricks_data[name]))
-        alpha = AlphaBeta_MoM_skattning(np.array(tricks_data[name]))[0]
-        beta = AlphaBeta_MoM_skattning(np.array(tricks_data[name]))[1]
-        result[name] = [theta,alpha,beta]
-    return result
-
+### Storing the parameter estimations above to each player in dictionary form
 def get_parameters_tricks():
     result = {}
     for name in ids:
         theta = Theta_MoM_skattning(np.array(tricks_data[name]))
         alpha = AlphaBeta_MoM_skattning(np.array(tricks_data[name]))[0]
         beta = AlphaBeta_MoM_skattning(np.array(tricks_data[name]))[1]
-        # alpha = newton_raphson(np.array(tricks_data[name]))[0]
-        # beta = newton_raphson(np.array(tricks_data[name]))[1]
         result[name] = [theta,alpha,beta]
     return result
-get_parameters_tricks()
-# params = get_parameters_tricks()
-# for key,value in params.items():
-#     print(key,*value)
 
+def get_parameters_runs():
+    result = {}
+    for name in ids:
+        alpha = AlphaBeta_MoM_skattning(np.array(run_data[name]))[0]
+        beta = AlphaBeta_MoM_skattning(np.array(run_data[name]))[1]
+        result[name] = [alpha,beta]
+    return result
+
+### Arbitrary metric: calculate the mean of the alpha,beta parameters. USED IN METROPOLIS
 def get_avg_alpha_beta_tricks():
     params = list(get_parameters_tricks().values())
     alphas = [params[i][1] for i in range(len(params))]
@@ -169,26 +174,11 @@ def get_avg_alpha_beta_tricks():
     medel_alpha, medel_beta = np.mean(alphas), np.mean(betas)
     return [medel_alpha,medel_beta]
 
+def get_avg_alpha_beta_runs():
+    params = list(get_parameters_runs().values())
+    alphas = [params[i][0] for i in range(len(params))]
+    betas = [params[i][1] for i in range(len(params))]
+    medel_alpha, medel_beta = np.mean(alphas), np.mean(betas)
+    return [medel_alpha,medel_beta]
 
-def init_run_data():
-    tricks_data = {}
-    n = len(ndf)
-    for name in list(ids):
-        namesdata = ndf.loc[name]
-        if isinstance(namesdata['run 1'],float):
-            tricks_data[name] = np.array([namesdata['run 1']]+[namesdata['run 2']])
-        else:
-            tricks_data[name] = np.array(list(namesdata['run 1'])+list(namesdata['run 2']))
-    return tricks_data
-
-run_data = init_run_data()
-
-def get_parameters_runs():
-    result = {}
-    for name in ids:
-        alpha = AlphaBeta_MoM_skattning(np.array(run_data[name]))[0]
-        beta = AlphaBeta_MoM_skattning(np.array(run_data[name]))[1]
-        # alpha = newton_raphson(np.array(run_data[name]))[0]
-        # beta = newton_raphson(np.array(run_data[name]))[1]
-        result[name] = [alpha,beta]
-    return result
+print(get_avg_alpha_beta_tricks())

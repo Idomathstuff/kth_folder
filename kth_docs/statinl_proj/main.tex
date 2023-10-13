@@ -14,9 +14,8 @@
 \usepackage{xparse}
 
 % Define a new command for PDFs with subscripts
-\NewDocumentCommand{\pdf}{ m }{%
-  f_{#1}#1
-}
+\NewDocumentCommand{\pdf}{ m }{f_{#1}(#1)}
+\NewDocumentCommand{\indp}{}{\perp\!\!\!\!\perp}
 
 \def\code#1{\texttt{#1}}
 \newtheorem{anm}{Anm}
@@ -49,7 +48,7 @@ Låt $B$ vara betyg för en ett skateboardåkare och trick. Vi vill skatta $P(B>
 som $\tilde{P}(B>0.6|B>0) = \frac{\sum_{i}^4\sum_{j}^{96}trick_{ij}\indicator{[0.6,1]}}{\sum_{i}^4\sum_{j}^{96}trick_{ij}\indicator{[0,1]}} \approx 0.96$
 Det här stämmer med utseendet på \cref{Histogram 1}. När man plottar run 2 mot run 1 ser de ut att ha jätte svag korrelation \cref{Spridningsdiagram}
 
-\begin{figure}[!h]
+\begin{figure}
     \caption{Spridningsdiagram mellan run 1 och run 2}
     \begin{center}
         \includegraphics[width = 99mm]{assets/Figure_1.png}
@@ -57,7 +56,7 @@ Det här stämmer med utseendet på \cref{Histogram 1}. När man plottar run 2 m
     \label{Spridningsdiagram}
 \end{figure}
 
-\newpage
+
 \section{En frekventistisk modell}
 \begin{anm} \label{properties}
     Vår model för $X_i$ är följande 
@@ -137,7 +136,10 @@ system ekvationerna
         \\ \widetilde{\beta_i} = (1-\bar{Z_i})\left(\frac{\bar{Z_i}(1-\bar{Z_i})}{S^2}-1\right)
     \end{matrix}\right.
 \end{align*}
-
+För vissa skatebordåkare kan man inte få en punktskattningen eftersom det finns endast en
+datapunkt $z_1$ för vissa skatebordåkare. Stickprovsvariansen i sådana fall blir lika med noll. Stickprovsvariansen
+representerar hur osäkert vi är om en skatebordåkares prestation på en trick. Intuivt sett Vi gör valet
+här att skatta stickprovsvariansen som $S_i^2\approx \bar{S^2}$ dvs vi tar medelvärdet av samtliga varianser. 
 \subsection*{(c) Model för $Y_i$}
 $Y_i$ ska vara run betyget för åkaren $i$. Eftersom $Y_i\in(0,1]$ (varje deltagare får betyg större än 0) kommer bernoulli delen försvinna. Så vi antar att $Y_i\sim \text{Beta}(\alpha_i,\beta_i)$. 
 Vi använder samma metod som vi använde för att skatta $\alpha,\beta$ för $X$.
@@ -150,7 +152,7 @@ Låt $Q_{i,\text{först}}=\max(X_{i1},X_{i2},X_{i3},X_{i4})$ och
 De som fick de 4 högsta betyg får delta i finalen. Vi simulerar $5000$ LCQ:ar. Det ger oss en följd av stokatisk sets $\mathbf{W}_1,...\mathbf{W}_{5000}$.
 Python har redan libraries för att generera stickprov från beta och bernoulli fördelningar. Så vi slipper 
 använda box muller, inverse metoden, eller dylikt. 
-\begin{figure}[!h]
+\begin{figure}
     \caption{Frequency appearing in final $\mathbf{W}$}
     \begin{center}
         \includegraphics[width = 200mm]{assets/freq_bar_graph.png} 
@@ -162,20 +164,48 @@ De som har markerats i orange är de som faktiskt vann den verkliga LCQ:en.
 Typvärdet på $\mathbf{W}$ innehöll oftast Hoban, Eaton, Jordan, och Shirai. Typvärdets frekvens vara kring 50 gger dvs $1\%$. 
 Frekvensen av när $\mathbf{W}$ innehöll samtliga verkliga vinnare (nämligen Gustavo, Hoban, Eaton, Decenzo) vara när 16-20 gger dvs mindre än $0.5\%$.  
 
-\newpage
-\newpage
+\newpage 
 \section{En bayesiansk modell}
 \subsection*{(a) Apriori fördelnignar} 
-\subsection*{(b) Aposteriori för $X_i$}
-\subsection*{(c) Aposteriori för $X_i$}
+$\pdf{\theta_i}\propto 1$
+\\ $\pdf{\alpha_i,\beta_i} = \frac{\lambda^\theta}{\Gamma(\theta)}(\alpha_i+\beta_i+1)^{\theta-1}e^{-\lambda(\alpha_i+\beta_i+1)}(\alpha_i+\beta_i)^{-1}$  
+\\ Vi antar $\Theta_i \indp A_i,B_i$ för alla $i$ $\Longrightarrow \pdf{\theta_i,\alpha_i,\beta_i} = \pdf{\theta_i}\pdf{\alpha_i,\beta_i}$ 
+\subsection*{(b) Aposteriori för $X_i$ och skattning} 
+$\pdf{\theta_i, \alpha_i,\beta_i|x_i} \propto \pdf{\theta_i}\pdf{\alpha_i,\beta_i} \pdf{x_i|\theta_i,\alpha_i,\beta_i}$
+\\ Vårt mål är att använda aposteriorin för att skatta $\text{E}[\Theta_i,A_i,B_i|\mathbf{X_i}=\mathbf{x_i}]$.
+För att göra detta använder vi metropolis algoritimen för att generera ett stickprov och ta stickprovsmedelvärdet
+$$
+\begin{pmatrix} \theta_{i0},\theta_{i1} \dots \theta_{i5000}\\ \alpha_{i0},\alpha_{i1}\dots \alpha_{i5000}  \\ \beta_{i0},\beta_{i1}\dots \beta_{i5000}\end{pmatrix} \longrightarrow
+\begin{pmatrix}
+    \bar{\theta_i} \\
+    \bar{\alpha_i} \\
+    \bar{\beta_i}
+\end{pmatrix}
+$$  
+Aposteriorin är vår målfördelning men vi kommer använda $L_{p}(\theta_i, \alpha_i,\beta_i) \propto \log(\pdf{\theta_i, \alpha_i,\beta_i|\mathbf{x}_i})$ istället.
+Data fördelning $\pdf{\mathbf{x}_i|\theta_i, \alpha_i,\beta_i}$ i aposterorin är samma som likelihoodfunktionen 
+$L(\theta_i, \alpha_i,\beta_i|\mathbf{x}_i)$
+% $$
+% \Rightarrow L_p(\theta_i, \alpha_i,\beta_i) = \underbrace{\log(\pdf{\theta_i)}}_{\log(1)=0}+\log(\pdf{\alpha_i,\beta_i})+\log L(\theta_i,\alpha_i,\beta_i)
+% $$
+ 
+% \begin{enumerate}
+%     \item Välj $[\theta_{i0},\beta_{i0},\alpha_{i0}]^T$
+%     \item Generera utfall från förslag fördelning $ Lambda \sim q(\Lambda|\Psi_{i-1})$
+%     \item Sätt $R = L_p(\Lambda)/f(\Psi_{k-1})$
+%     \item Generera $U\sim \text{U}(0,1)$
+%     \item Om $U \leq \min(1,R)$, sätt $\Psi_{k}=\Lambda$
+%     \item   
+% \end{enumerate}
+\subsection*{(c) Aposteriori för $Y_i$}
 \subsection*{(d) Simulering}
 \subsection*{(e)}
 \section{En bayesiansk modell med en hierarki}
 \subsection*{(a) Apriori fördelning för $\theta$} 
 \subsection*{(b) Aposteriori för $X_i$}
-\subsection*{(c) Aposteriori för $X_i$}
+\subsection*{(c) Aposteriori för $Y_i$}
 \subsection*{(d) Simulering}
-\subsection*{(e)}
+\subsection*{(e) Grafisk model}
 \section{Diskussion}
 
 % \section{Kod}

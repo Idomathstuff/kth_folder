@@ -132,4 +132,5 @@ def make_finalist_histogram():
     plt.ylabel("# times appeared as finalist")
     plt.show()
 
-make_finalist_histogram()
+if __name__=="__main__":
+    make_finalist_histogram()

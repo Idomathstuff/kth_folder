@@ -674,7 +674,6 @@ INPUT .\assets\Figure_1.png
 INPUT .\assets\Figure_1.png
 INPUT .\assets\Figure_1.png
 INPUT .\assets\Figure_1.png
-INPUT C:\Users\lmfry\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\lmfry\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Users\lmfry\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti8.tfm
 INPUT C:\Users\lmfry\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
@@ -684,6 +683,7 @@ INPUT C:\Users\lmfry\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tf
 INPUT C:\Users\lmfry\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\lmfry\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\lmfry\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\lmfry\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT .\assets\freq_bar_graph.png
 INPUT .\assets\freq_bar_graph.png
 INPUT assets\freq_bar_graph.png
