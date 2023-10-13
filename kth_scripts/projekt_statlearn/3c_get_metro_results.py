@@ -1,79 +1,53 @@
-import os
-import csv
 import pandas as pd
-from ast import literal_eval as tolist
-from scipy import stats
 import numpy as np 
 import matplotlib.pyplot as plt
-from scipy.special import loggamma
-from statinlprojekt import Theta_MoM_skattning, AlphaBeta_MoM_skattning, tricks_data, get_parameters_tricks, get_avg_alpha_beta_tricks, Lcq_ids
-from simulate import xparams, print_dic
-from metro import metropolis
+from statinlprojekt import run_data, Lcq_ids
+from simulate import print_dic
+from metro_for_Y import metropolisY
 
 
 def make_metro_file():
-    thetas_16 = []
     alphas_16 = []
     betas_16 = []
-    theta_means = []
     alpha_means = []
     beta_means = []
-    theta_variances = []
     alpha_variances = []
     beta_variances = []
     for id in Lcq_ids:
         print(id)
-        ids_data = tricks_data[id]
-        thetas, alphas, betas = metropolis(ids_data, 1e4)
+        ids_data = run_data[id]
+        alphas, betas = metropolisY(ids_data, 1e4)
         
-        mean_theta = np.mean(thetas[:, 0])
         mean_alpha = np.mean(alphas[:, 0])
         mean_beta = np.mean(betas[:, 0])
         
-        var_theta = np.var(thetas[:, 0], ddof=1)
         var_alpha = np.var(alphas[:, 0], ddof=1)
         var_beta = np.var(betas[:, 0], ddof=1)
         
-        theta_means.append(mean_theta)
         alpha_means.append(mean_alpha)
         beta_means.append(mean_beta)
-        theta_variances.append(var_theta)
+
         alpha_variances.append(var_alpha)
         beta_variances.append(var_beta)
         
-        thetas_16.append(thetas[:, 0])
         alphas_16.append(alphas[:, 0])
         betas_16.append(betas[:, 0])
 
     metro_results = {'ids': Lcq_ids,
-                    'thetas': thetas_16,
                     'alphas': alphas_16,
                     'betas': betas_16,
-                    'theta mean': theta_means,
                     'alpha mean': alpha_means,
                     'beta mean': beta_means,
-                    'theta variance': theta_variances,
                     'alpha variance': alpha_variances,
                     'beta variance': beta_variances}
 
     metro_df = pd.DataFrame(metro_results)
-    metro_df.to_json('metro_results.json')
+    metro_df.to_json('for_Y_metro_results.json')
 
-metro_df = pd.read_json('metro_results.json')
+# make_metro_file()
+
+metro_df = pd.read_json('for_Y_metro_results.json')
 metro_df.set_index('ids',inplace=True)
-
-def make_hists():
-    fig, axes = plt.subplots(4, 4, figsize=(12, 8))
-    fig.suptitle(r"$\theta$ Histograms")
-    plt.subplots_adjust(hspace=0.5, wspace=0.5)
-    c = 0
-    for i in range(4):
-        for j in range(4):
-            thetas = metro_df.loc[Lcq_ids[c]]['thetas']
-            axes[i,j].hist(thetas, density=True)
-            axes[i,j].set_title(Lcq_ids[c])
-            c+=1
-    plt.show()
 
 def make_scatters():
     fig, axes = plt.subplots(4, 4, figsize=(12, 8))
@@ -90,6 +64,5 @@ def make_scatters():
             c+=1
     plt.show()
 
-make_hists()
 make_scatters()
 

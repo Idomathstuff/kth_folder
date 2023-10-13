@@ -90,9 +90,32 @@ def make_scatters():
             c+=1
     plt.show()
 
-make_hists()
-make_scatters()
+def moving_avg_plot():
+    fig, axes = plt.subplots(4, 4, figsize=(12, 8))
+    fig.suptitle(r"moving avg")
+    plt.subplots_adjust(hspace=0.5, wspace=0.5)
+    c = 0
+    for i in range(4):
+        for j in range(4):
+            alphas = metro_df.loc[Lcq_ids[c]]['alphas']
+            betas = metro_df.loc[Lcq_ids[c]]['betas']
+            thetas = metro_df.loc[Lcq_ids[c]]['thetas']
+            iters = len(alphas)
+            moving_avg_alpha = [np.mean(alphas[:k]) for k in range(1,iters)]
+            moving_avg_beta = [np.mean(betas[:k]) for k in range(1,iters)]
+            moving_avg_theta = [np.mean(thetas[:k]) for k in range(1,iters)]
+            axes[i,j].plot(list(range(1,iters)),moving_avg_alpha, label=r"$\bar{\alpha}$")
+            axes[i,j].legend()
+            axes[i,j].plot(list(range(1,iters)),moving_avg_beta, label=r"$\bar{\beta}$")
+            axes[i,j].plot(list(range(1,iters)),moving_avg_theta, label=r"$\bar{\theta}$")
+            axes[i,j].set_title(Lcq_ids[c])
+            axes[i,j].legend()
+            c+=1
+    plt.show()
 
+# make_hists()
+# make_scatters()
+moving_avg_plot()
 
 
 # def make_alpha_beta_scatter(name):

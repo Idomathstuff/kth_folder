@@ -175,10 +175,18 @@ def get_avg_alpha_beta_tricks():
     return [medel_alpha,medel_beta]
 
 def get_avg_alpha_beta_runs():
-    params = list(get_parameters_runs().values())
-    alphas = [params[i][0] for i in range(len(params))]
-    betas = [params[i][1] for i in range(len(params))]
+    params = get_parameters_runs()
+    alphas = [params[name][0] for name in Lcq_ids]
+    betas = [params[name][1] for name in Lcq_ids]
     medel_alpha, medel_beta = np.mean(alphas), np.mean(betas)
     return [medel_alpha,medel_beta]
 
-print(get_avg_alpha_beta_tricks())
+
+def create_table(dict):
+    result = {
+        'ids': ids,
+        'Betyg':[betyg_arr for betyg_arr in list(dict.values())]
+    }
+
+    return pd.DataFrame(result)
+

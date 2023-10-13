@@ -19,9 +19,10 @@ def log_datafördelning(data,theta, alpha,beta):
             DF+= log_beta_pdf(x,alpha,beta) + np.log(theta)
     return DF
 
+avg_alpha_beta_tricks = get_avg_alpha_beta_tricks()
 def log_prior(alpha, beta):
     lambd = 1
-    thet = lambd*(sum(get_avg_alpha_beta_tricks())+1)
+    thet = lambd*(sum(avg_alpha_beta_tricks)+1)
     return np.log(thet**lambd) - loggamma(thet) + (thet - 1)*np.log(alpha + beta + 1) - lambd*(alpha + beta + 1) - np.log(alpha + beta)
 
 def log_posterior(data,theta, alpha, beta):
@@ -41,7 +42,6 @@ def make_contour_plot(data):
     plt.ylabel(r"$\beta$", fontsize=12)
     plt.show()
 
-# make_contour_plot()
 
 def method_moments(data):
     data = [x for x in data if x>0]
@@ -139,4 +139,3 @@ if __name__=="__main__":
     make_contour_plot(data)
     # thetas, alphas, betas, = metropolis(data,1e3)
     print(get_parameters_tricks()["Gustavo"])
-
