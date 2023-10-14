@@ -4,12 +4,10 @@ import matplotlib.pyplot as plt
 import scipy.special
 import pandas as pd
 from numeriska_metoder import newton_raphson
-# pdf = lambda x: 2*np.exp(-2*x);
-# Finv = lambda u: -(1/2)*np.log(u)
+
 df = pd.read_csv("SLS22.csv") #data frame 
 Lcq_ids = ["Majerus", "Oliveira","Decenzo","Santiago", "Papa", "Eaton", "Mota", "Shirai", 
            "Jordan", "Hoefler", "Hoban", "Gustavo", "Ribeiro C", "O’neill", "Foy", "Midler"]
-# Lcq_ids = ["Majerus", "Oliveira", "O’neill", "Santiago", "Papa", "Ribeiro C", "Mota", "Shirai","Jordan", "Hoefler", "Foy", "Midler", "Gustavo", "Hoban", "Eaton", "Decenzo"]
 
 def init_normal_dataframe():
     ndf = df
@@ -28,9 +26,9 @@ def init_normal_dataframe():
     return ndf
 ndf = init_normal_dataframe()
 
-global_trick_data = np.concatenate([ndf[f"trick {i}"].values for i in range(1,5)])
-global_svariance = np.var(global_trick_data,ddof=1)
-global_smean = np.mean(global_trick_data)
+# global_trick_data = np.concatenate([ndf[f"trick {i}"].values for i in range(1,5)])
+# global_svariance = np.var(global_trick_data,ddof=1)
+# global_smean = np.mean(global_trick_data)
 
 ids = []
 for name in ndf['id']:
@@ -76,23 +74,7 @@ def plot_run1_run2():
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# def get_pooled_var():
-#     täljare = 0
-#     nämnare = 0
-#     for eachdata in tricks_data.values():
-#         zi = np.array([k for k in eachdata if k>0])
-#         if len(zi)==1:
-#             si = 0
-#             ni = len(zi)-1
-#             täljare+=si*ni
-#             nämnare+=ni
-#         else:
-#             si = np.var(zi,ddof=1)
-#             ni = len(zi)-1
-#             täljare+=si*(ni)
-#             nämnare+=ni
-#     return täljare/nämnare
-# pooled_var = get_pooled_var()
+
 
 def print_dic(dic):
     for keys,values in dic.items():
@@ -185,8 +167,15 @@ def get_avg_alpha_beta_runs():
 def create_table(dict):
     result = {
         'ids': ids,
-        'Betyg':[betyg_arr for betyg_arr in list(dict.values())]
+        'Alpha, Beta':[betyg_arr for betyg_arr in list(dict.values())]
     }
 
     return pd.DataFrame(result)
 
+def display_params(params):
+    df = pd.DataFrame(params)
+    df = df.transpose()
+    df.columns = ["Theta", "Alpha", "Beta"]
+    print(df)
+
+display_params(get_parameters_tricks())

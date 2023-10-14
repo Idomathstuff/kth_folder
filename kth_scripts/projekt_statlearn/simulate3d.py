@@ -67,12 +67,12 @@ def get_rand_finalists():
     return [sorted_players[-4][0],sorted_players[-3][0],sorted_players[-2][0],sorted_players[-1][0]]
 
 
-def get_rand_finalists_array(n):
-    W_array = []
-    for i in range(n):
-        W = get_rand_finalists()
-        W_array.append(W)
-    return W_array
+# def get_rand_finalists_array(n):
+#     W_array = []
+#     for i in range(n):
+#         W = get_rand_finalists()
+#         W_array.append(W)
+#     return W_array
 
 
 def most_common_set(set_list):
@@ -104,9 +104,10 @@ def make_finalist_histogram():
 
     def disp_most_common_finalists():
         finalist_array_sets = [set(finalists) for finalists in finalist_array]
-        print(actual_finalists, " has freq: ", finalist_array_sets.count(set(actual_finalists)))
+        actual_finalists_freq = finalist_array_sets.count(set(actual_finalists))
+        print("The actual finalists are\n", actual_finalists, " has freq: ", actual_finalists_freq, " which approx equals: ",100*actual_finalists_freq/5000,"%")
         most_common_finalists, freq = most_common_set(finalist_array_sets)
-        print(most_common_finalists, " has freq: ", freq)
+        print("The mode is\n", most_common_finalists, " has freq: ", freq, " which approx equals: ", 100*freq/5000,"%")
 
     
     disp_most_common_finalists()

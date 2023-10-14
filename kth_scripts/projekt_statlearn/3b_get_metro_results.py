@@ -1,13 +1,7 @@
-import os
-import csv
 import pandas as pd
-from ast import literal_eval as tolist
-from scipy import stats
 import numpy as np 
 import matplotlib.pyplot as plt
-from scipy.special import loggamma
-from statinlprojekt import Theta_MoM_skattning, AlphaBeta_MoM_skattning, tricks_data, get_parameters_tricks, get_avg_alpha_beta_tricks, Lcq_ids
-from simulate import xparams, print_dic
+from statinlprojekt import tricks_data, Lcq_ids
 from metro import metropolis
 
 
@@ -62,6 +56,8 @@ def make_metro_file():
 metro_df = pd.read_json('metro_results.json')
 metro_df.set_index('ids',inplace=True)
 
+
+
 def make_hists():
     fig, axes = plt.subplots(4, 4, figsize=(12, 8))
     fig.suptitle(r"$\theta$ Histograms")
@@ -115,25 +111,5 @@ def moving_avg_plot():
 
 # make_hists()
 # make_scatters()
-moving_avg_plot()
-
-
-# def make_alpha_beta_scatter(name):
-#     alphas = metro_df.loc[name]['alphas']
-#     betas = metro_df.loc[name]['betas']
-#     plt.figure(figsize=(8, 4))
-#     plt.plot(alphas, betas, '.-', markersize=10, alpha=0.5)
-#     plt.legend()
-#     plt.xlabel('alpha', fontsize=12)
-#     plt.ylabel('beta', fontsize=12)
-#     plt.show()
-
-# def make_thetas_hist(name):
-#     thetas = metro_df.loc[name]['thetas']
-#     plt.figure(figsize=(8, 4))
-#     plt.hist(thetas,bins=20, alpha=0.5, density=True)
-#     plt.scatter(thetas[0],0, label="MoM skattning")
-#     plt.ylabel(r'$f(\theta|x)$')
-#     plt.xlabel(r'$\theta$')
-#     plt.legend()
-#     plt.show()
+# moving_avg_plot()
+print(metro_df.drop(['thetas','alphas','betas'],axis=1))

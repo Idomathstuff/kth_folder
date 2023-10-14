@@ -129,9 +129,6 @@ def metropolis(data,sample_size=1e4):
         print("theta: ", np.mean(thetas[:,0]))
         print("alpha: ", np.mean(alphas[:,0]))
         print("beta: ", np.mean(betas[:,0]))
-    # make_alpha_beta_scatter()
-    # make_thetas_hist()
-    # disp_means()
     return thetas, alphas, betas
 
 if __name__=="__main__":

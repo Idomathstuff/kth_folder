@@ -5,8 +5,6 @@ import matplotlib.pyplot as plt
 from scipy.special import loggamma
 from statinlprojekt import AlphaBeta_MoM_skattning, run_data, get_parameters_runs, get_avg_alpha_beta_runs
 
-# data = np.array([0.16, 0.32, 0, 0, 0, 0.16, 0.36, 0.41, 0.48, 0.28])
-
 def log_datafördelning(data,alpha,beta):
     log_beta_pdf = lambda x, alpha, beta: loggamma(alpha + beta) - loggamma(alpha) - loggamma(beta) + (alpha - 1)*np.log(x) + (beta - 1)*np.log(1 - x)
     DF = 0
@@ -29,8 +27,8 @@ def log_posterior(data,alpha, beta):
 
 
 def make_contour_plot(data):
-    alpha_grid = np.linspace(0.1, 100, 100)
-    beta_grid = np.linspace(0.1, 60, 100)
+    alpha_grid = np.linspace(0.1, 6, 100)
+    beta_grid = np.linspace(0.1, 6, 100)
     log_posterior_grid = [[log_posterior(data,alpha, beta)for alpha in alpha_grid] for beta in beta_grid]
     posterior_grid = np.exp(log_posterior_grid - np.max(log_posterior_grid))
     plt.figure(figsize=(10, 6))
@@ -81,23 +79,26 @@ def metropolisY(data,sample_size=1e4):
             else:
                 alphas[i + 1, j] = last_alpha
                 betas[i + 1, j] = last_beta    
+    return alphas, betas
 
-    def make_alpha_beta_scatter():
-        plt.figure(figsize=(8, 4))
-        for j in range(n_chains):
-            plt.plot(alphas[:, j], betas[:, j], '.-', markersize=10, alpha=0.5, label="chain"+str(j+1))
-        plt.legend()
-        plt.xlabel('alpha', fontsize=12)
-        plt.ylabel('beta', fontsize=12)
-        plt.show()
-
+if __name__=="__main__":
+    Example_skateboarder = "Gustavo"
+    data = np.array(run_data[Example_skateboarder])
+    alphas, betas, = metropolisY(data,1e4)
     def disp_means():
         print("Sticksprovsmedelvärdet för: " )
         print("alpha: ", np.mean(alphas[:,0]))
         print("beta: ", np.mean(betas[:,0]))
-    return alphas, betas
-
-if __name__=="__main__":
-    data = np.array(run_data["Gustavo"])
-    alphas, betas, = metropolisY(data,1e4)
+    
+    def make_alpha_beta_scatter():
+        plt.figure(figsize=(8, 4))
+        for j in range(1):
+            plt.plot(alphas[:, j], betas[:, j], '.-', markersize=10, alpha=0.5, label="chain"+str(j+1))
+        plt.legend()
+        plt.title(f"Example skateboarde: {Example_skateboarder}",)
+        plt.xlabel('alpha', fontsize=12)
+        plt.ylabel('beta', fontsize=12)
+        plt.show()
+    make_contour_plot(data)
+    make_alpha_beta_scatter()
     print(get_parameters_runs()["Gustavo"])
