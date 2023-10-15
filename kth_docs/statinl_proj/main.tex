@@ -154,7 +154,7 @@ Så vi antar att $Y_i\sim \text{Beta}(^y\alpha_i,^y\beta_i)$.
 För att skatta parameter till $Y$ använder vi samma moment metoden som vi använde för att skatta $\alpha,\beta$ för $X$.
 (Obs: Enda skillnaden i det här fallet vi slipper använda medelvärdet på stickprovsvariansen $S^2=\bar{S^2}$
 för att det är garanterat vi får mer än en datapunkt för alla skateboardåkare $i$.)
-\subsection*{(d) Simulering}
+\subsection*{(d) LCQ simulering för frekventistisk modell}
 Total betyget för varje deltagare beräknas som summan av deras två största trick betyg och största run betyg. Vi
 kan beskriva i termer av stokatiska variabler. Låt $O_i$ vara total betyg för deltagare $i$.
 Låt $Q_{i,\text{först}}=\max(X_{i1},X_{i2},X_{i3},X_{i4})$ och 
@@ -235,23 +235,68 @@ $$
     \EndFor
     \end{algorithmic}
 \end{algorithm}
-Valet för förslagsfördelning blir $\Theta'\sim Q(\theta'|\theta_{k-1}) = 
+Valet för förslagsfördelning blir $\mathbf{\Theta}'\sim Q(\mathbf{\Theta}'|\mathbf{\Theta}_{k-1}) = 
 \begin{pmatrix}
     \exp(\log \alpha_{k-1} + \delta Z_\alpha)
     \\ \exp(\log \beta_{k-1} + \delta Z_\beta)
     \\ U_\theta
 \end{pmatrix}$
 där $Z_\alpha \sim \text{N}(0,1)$, $Z_\beta \sim \text{N}(0,1)$, $U_\theta \sim \text{U}(0,1)$, och $\delta = 0.5$
-
+Anledning till valet för $\alpha,\beta$ elementen är att det behöver vara ett tal större än 0 så vi tog exponentialen. Dessutom behöver
+vi $\theta\in (0,1)$ så det var intuitivt att välja en uniform fördelning.
 \newpage
 \subsection*{(c) Aposteriori för $Y_i$}
 Eftersom $Y_i \sim \text{Beta}(^y\alpha_i,^y\beta_i)$ ska vi använda en apriori fördelning av samma form som den alpha beta apriori i $X$.
 \\ $\pdf{\alpha_i,\beta_i} = \frac{\lambda^\theta}{\Gamma(\theta)}(\alpha_i+\beta_i+1)^{\theta-1}e^{-\lambda(\alpha_i+\beta_i+1)}(\alpha_i+\beta_i)^{-1}$  
 som ger oss aposteriorin 
 $$\pdf{\alpha_i,\beta_i|\mathbf{y}_i}\propto \pdf{\alpha_i,\beta_i}\pdf{\mathbf{y}_i|\alpha_i,\beta_i}$$
-\subsection*{(d) Simulering för bayesiansk modell}
-Jag använde $\begin{pmatrix} \bar{\theta_i} \\ \bar{\alpha_i} \\ \bar{\beta_i} \end{pmatrix}$ från metropolis som min punktskattning.  
-\subsection*{(e) Teori}
+\subsection*{(d) LCQ simulering för bayesiansk modell}
+Jag använde $\begin{pmatrix} \bar{\theta_i} \\ \bar{\alpha_i} \\ \bar{\beta_i} \end{pmatrix}$ och
+$\begin{pmatrix} \bar{^y\theta_i} \\ \bar{^y\alpha_i}\end{pmatrix}$ 
+från metropolis som min punktskattning för tricks och runs parametrar för att simulera 5000 LCQ:ar som vi 
+gjorde i 2(d).
+Det ger oss följande frequency bar plot \cref{MCMC freq bar} 
+\begin{figure}
+    \includegraphics[width=200mm]{assets/MCMCsim.png}
+    \caption{Frequency appearing in final \textbf{W} using MCMC estimated parameters}
+    \label{MCMC freq bar}
+\end{figure}
+\subsection*{(e) Teori om modellen}
+Jag ritade en acyclisk riktad graf för att representera modellen där 
+\begin{itemize}
+    \item $\mathbf{\Upsilon_i} = [^y A_i, ^y B_i]^T$
+    \item $\mathbf{\Theta}_i = [\Theta_i, A_i, B_i]^T$
+    \item $\mathbf{Y}_i = [Y_i^{(1)},Y_i^{(2)}]^T$ \text{ betecknar $i$s två runbetyg}
+    \item $\mathbf{X}_i = [X_i^{(1)},X_i^{(2)},X_i^{(3)},X_i^{(4)}]^T$ \text{ betecknar $i$s fyra trickbetyg}
+\end{itemize}
+Nu ska vi svara på några frågor.
+\begin{itemize}
+    \item Varför antog vi att $\mathbf{\Upsilon}_i \indp \mathbf{\Theta}_i | \mathbf{X}_i,\mathbf{Y}_i$ i 3(d)?
+\end{itemize}
+Den främsta anledning är att förenkla modellen och de tillhörande beräkningarna. 
+Om parametrarna behandlas som oberoende är det lättare att hitta lämpliga apriori och aposteriorin.  
+Man slipper betrakta aposteriorin $f(\theta,\alpha,\beta,^y\alpha,^y\beta|x,y)$ och alla val som det medför sig.
+Detta är särskilt fördelaktigt när man använder beräkningstekniker som Markov Chain Monte Carlo (MCMC) 
+eftersom det kan påskynda konvergens och minska beräkningstiden.
+En annat anledning är många situationer kan det saknas starka skäl att tro att parametrar är korrelerade. 
+Utan någon extern information som antyder ett förhållande mellan parametrarna är det ofta säkrare att anta oberoende.
+\begin{itemize}
+    \item Kan vi dra slutsatsen från grafen \cref{DAG} att $\Theta_i \indp A_i,B_i | \mathbf{X}_i$?
+\end{itemize}
+Nej. Betrakta stigen $\Theta_i \rightarrow X^{(4)}_i \rightarrow A_i$. 
+För att $X^{(4)}_i \in \text{an}_G(\mathbf{X}_i)$ är $\Theta$ och $A, B$ d-sammanhängande.
+\begin{itemize}
+    \item Kan vi dra slutsatsen från grafen \cref{DAG} att $\mathbf{\Upsilon}_i \indp \mathbf{\Theta}_i | \mathbf{X}_i,\mathbf{Y}_i$
+\end{itemize}
+Ja för att $\mathbf{X}_i, \mathbf{Y}_i \notin \text{an}_G(O_i)$
+\begin{itemize}
+    \item Kan vi anta \cref{DAG} $\mathbf{\Upsilon}_i \indp \mathbf{\Theta}_i | O_i$?
+\end{itemize}
+Nej för att $O_i$ blockerar alla stigar mellan $\mathbf{\Upsilon}_i$ och $\mathbf{\Theta}_i$.
+Intuitivt sett verkar det vettig att 
+$\mathbf{\Upsilon}_i$ kan ge information om $\mathbf{\Theta}_i$ givet total betyget. Om vi vet lite om värdet av total betyg $O_i$ 
+och $\mathbf{\Upsilon}_i$ så vet vi ungefär vilka värde run betyg antar som kan ge information om trick betyget 
+och därmed vilka värde $\mathbf{\Theta}_i$ kommer anta.  
 \begin{figure}
     \centering
     \begin{tikzpicture}[
@@ -292,17 +337,55 @@ Jag använde $\begin{pmatrix} \bar{\theta_i} \\ \bar{\alpha_i} \\ \bar{\beta_i} 
     \draw[edge] (6) -- (11);
     \end{tikzpicture}
     \caption[short]{acyklisk riktad graf}
+    \label{DAG}
 \end{figure}
 
 \newpage
 \section{En bayesiansk modell med en hierarki}
-\subsection*{(a) Apriori fördelning för $\theta$} 
+\subsection*{(a) Apriori fördelning för $[\Theta_i,C_i,D_i]^T$} 
+\begin{itemize}
+    \item Låt $\Theta_i|C_i=c_i,D_i=d_i \sim \text{Beta} (c_i,d_i)$.
+    \item Låt $\pdf{c_i,d_i} \propto (c_i+d_i)^{-5/2}$
+\end{itemize}
 \subsection*{(b) Aposteriori för $X_i$}
+
 \subsection*{(c) Aposteriori för $Y_i$}
 \subsection*{(d) Simulering}
 \subsection*{(e) Grafisk model}
 \section{Diskussion}
+\subsection*{(a)} Hur jämför resultaten (skateboardåkarna i typvärdena) av de olika mod-
+ellerna? Vilka skateboardåkare är korrekt förutspådda och vilka inte är det?
+Ge några möjliga förklaringar till skillnaderna mellan de olika modellernas
+förutsägelser. Vilken modell föredrar du och varför?
 
+\subsection*{(b)}
+Hur jämför dina skattningar för $\theta_i$ i Uppgift 1 och dina skattade väntevär-
+den och varianser för $\theta_i$ Uppgift 3 och 4? Vad är det förväntade betyget
+för ett trick för varje skateboardåkare givet att tricket har lyckats landa?
+Vad är det förväntade runbetyget? Med tanke på de skateboardåkare som
+förutspås vinna enligt de olika modellerna, ger dessa statistikor några insikter
+om framgångsrika strategier för att vinna? Till exempel, fungerar det att
+fokusera på ett bra runbetyg framför bra trickbetyg? Finns det exempel där
+denna strategi fungerar? Är det bra att ha bättre trickbetyg med stor varians
+eller lite sämre trickbetyg med mindre varians? osv.
+
+\subsection*{(c)}
+
+Skatta väntevärdet och standardavvikelsen för varje skateboardåkares total-
+betyg för modellerna i uppgift 3 och 4. Stödjer denna statistik dina förut-
+sägelser? Enligt denna statistik, vad måste hända för att resultatet ska bli de
+riktiga vinnarna?
+
+\subsection*{(d)}
+
+I alla modellerna antog vi att skateboardåkarens prestationer är oberoende.
+Till exempel antog vi att alla Vi är oberoende. Verkar detta som ett rimligt
+antagande? Motivera ditt svar.
+
+\subsection*{(e)}
+
+I alla modeller struntade vi i ordningen som skateboardåkarna turades om.
+Verkar detta vara en rimlig sak att göra? Varför eller varför inte?
 % \section{Kod}
 % \lstinputlisting[language=Matlab,caption=foo]{assets/tmp.m} 
 \end{document}

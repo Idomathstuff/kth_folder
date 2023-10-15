@@ -1,8 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1697309358 "c:/kth_folder/kth_docs/statinl_proj/main.tex" "main.pdf" "main" 1697309359 0
+["pdflatex"] 1697367317 "c:/kth_folder/kth_docs/statinl_proj/main.tex" "main.pdf" "main" 1697367319 0
   "C:/Users/lmfry/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1697281195 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+  "C:/Users/lmfry/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1697363223 12668 2bdbb031aa8da44e8b30897b0364033f ""
   "C:/Users/lmfry/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1693150262 23178960 d5eefa0c49f96240e3117b64430455c9 ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ectt1000.tfm" 993062340 1348 d70ddf2d5d512b838e50a335e385e919 ""
+  "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1095.tfm" 993062508 1460 8005ce585ff351dff78998923504da5e ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233955448 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233955454 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -38,6 +40,7 @@
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1247596666 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1247596666 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
@@ -169,11 +172,12 @@
   "assets/Figure_1.png" 1695553406 14834 7c559787e4f859ff01fcfb4b360ba2a7 ""
   "assets/Figure_2.png" 1695919598 11194 561f4a814a83128c0b771c28b5e8e988 ""
   "assets/KTH_logga.png" 1692864666 127917 0e70cb79d5835b9183d0104fc44b3e91 ""
+  "assets/MCMCsim.png" 1697361587 34647 d61fd98337c064defc02ae166dbb8c7a ""
   "assets/freq_bar_graph.png" 1697116588 26811 54c62c739cab57785d5103b20fd150e9 ""
   "assignment.cls" 1697225035 2157 e960cdbb4c5150270baefa998b41bade ""
-  "c:/kth_folder/kth_docs/statinl_proj/main.tex" 1697309357 17333 402b9db72e95d9b26b73e882f0d1cbbf ""
-  "main.aux" 1697309359 1845 2fe889bfdef6931f372866895fc9c7f0 "pdflatex"
-  "main.tex" 1697309357 17333 402b9db72e95d9b26b73e882f0d1cbbf ""
+  "c:/kth_folder/kth_docs/statinl_proj/main.tex" 1697367316 22379 a93c8127dd93d1be5cfa3d5958dff569 ""
+  "main.aux" 1697367318 2185 012db72aa9ea1d01083ddf692be9a6cb "pdflatex"
+  "main.tex" 1697367316 22379 a93c8127dd93d1be5cfa3d5958dff569 ""
   (generated)
   "main.aux"
   "main.log"

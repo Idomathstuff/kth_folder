@@ -66,15 +66,6 @@ def get_rand_finalists():
     sorted_players = sorted(rand_LCQ.items(), key = lambda x:x[1])
     return [sorted_players[-4][0],sorted_players[-3][0],sorted_players[-2][0],sorted_players[-1][0]]
 
-
-# def get_rand_finalists_array(n):
-#     W_array = []
-#     for i in range(n):
-#         W = get_rand_finalists()
-#         W_array.append(W)
-#     return W_array
-
-
 def most_common_set(set_list):
     set_counts = Counter(frozenset(s) for s in set_list)
     most_common_set, count = set_counts.most_common(1)[0]
@@ -96,11 +87,6 @@ def make_finalist_histogram():
         finalist_array.append(new_W)
         for e in new_W:
             winner_count[e] += 1
-    
-    def disp_least_to_greatest():
-        winner_count_sorted = sorted(winner_count.items(), key = lambda x: x[1])
-        for e in winner_count_sorted:
-            print(e[0],e[1])
 
     def disp_most_common_finalists():
         finalist_array_sets = [set(finalists) for finalists in finalist_array]
@@ -108,14 +94,15 @@ def make_finalist_histogram():
         print("The actual finalists are\n", actual_finalists, " has freq: ", actual_finalists_freq, " which approx equals: ",100*actual_finalists_freq/5000,"%")
         most_common_finalists, freq = most_common_set(finalist_array_sets)
         print("The mode is\n", most_common_finalists, " has freq: ", freq, " which approx equals: ", 100*freq/5000,"%")
-
-    
     disp_most_common_finalists()
 
+    
+    # plt.figure(figsize=(20, 5))
     colors = ['orange' if x in actual_finalists else 'blue' for x in Lcq_ids]
     plt.bar(Lcq_ids, [winner_count[name] for name in Lcq_ids], color=colors, alpha=0.8)
     plt.xlabel("Skaters ids")
     plt.ylabel("# times appeared as finalist")
+    plt.title("Simulation using bayes MCMC estimation")
     plt.show()
 
 if __name__=="__main__":

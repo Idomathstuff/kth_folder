@@ -178,4 +178,3 @@ def display_params(params):
     df.columns = ["Theta", "Alpha", "Beta"]
     print(df)
 
-display_params(get_parameters_tricks())

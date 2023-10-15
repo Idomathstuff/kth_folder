@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.8.27)  14 OCT 2023 20:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.8.27)  15 OCT 2023 12:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -701,53 +701,64 @@ Overfull \hbox (8.70383pt too wide) in paragraph at lines 214--218
  []
 
 [5] [6]
-Overfull \hbox (9.2923pt too wide) in paragraph at lines 261--261
+<assets/MCMCsim.png, id=49, 1147.6476pt x 469.0323pt>
+File: assets/MCMCsim.png Graphic file (type png)
+<use assets/MCMCsim.png>
+Package pdftex.def Info: assets/MCMCsim.png  used on input line 260.
+(pdftex.def)             Requested size: 569.05511pt x 232.56891pt.
+
+Overfull \hbox (99.30013pt too wide) in paragraph at lines 260--261
+[][] 
+ []
+
+[7 <./assets/MCMCsim.png>]
+Overfull \hbox (9.2923pt too wide) in paragraph at lines 306--306
  [][]$\OML/cmm/m/it/10.95 X[]$ 
  []
 
 
-Overfull \hbox (9.2923pt too wide) in paragraph at lines 262--262
+Overfull \hbox (9.2923pt too wide) in paragraph at lines 307--307
  [][]$\OML/cmm/m/it/10.95 X[]$ 
  []
 
 
-Overfull \hbox (9.2923pt too wide) in paragraph at lines 263--263
+Overfull \hbox (9.2923pt too wide) in paragraph at lines 308--308
  [][]$\OML/cmm/m/it/10.95 X[]$ 
  []
 
 
-Overfull \hbox (9.2923pt too wide) in paragraph at lines 264--264
+Overfull \hbox (9.2923pt too wide) in paragraph at lines 309--309
  [][]$\OML/cmm/m/it/10.95 X[]$ 
  []
 
 
-Overfull \hbox (8.15169pt too wide) in paragraph at lines 265--265
+Overfull \hbox (8.15169pt too wide) in paragraph at lines 310--310
  [][]$\OML/cmm/m/it/10.95 Y[]$ 
  []
 
 
-Overfull \hbox (8.15169pt too wide) in paragraph at lines 266--266
+Overfull \hbox (8.15169pt too wide) in paragraph at lines 311--311
  [][]$\OML/cmm/m/it/10.95 Y[]$ 
  []
 
 
-Overfull \hbox (1.18805pt too wide) in paragraph at lines 267--267
+Overfull \hbox (1.18805pt too wide) in paragraph at lines 312--312
  [][]$\OT1/cmr/bx/n/10.95 ^^G[]$ 
  []
 
-[7] [8] (main.aux) ) 
+[8] [9] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 21249 strings out of 476331
- 436221 string characters out of 5787765
+ 21265 strings out of 476331
+ 436491 string characters out of 5787765
  1874660 words of memory out of 5000000
- 41339 multiletter control sequences out of 15000+600000
- 521980 words of font info for 67 fonts, out of 8000000 for 9000
+ 41353 multiletter control sequences out of 15000+600000
+ 522321 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,17n,118p,474b,704s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (8 pages, 368272 bytes).
+ 116i,17n,118p,474b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\lmfry\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (9 pages, 419070 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
+ 141 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
