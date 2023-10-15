@@ -4,13 +4,11 @@ import matplotlib.pyplot as plt
 import scipy.special
 import pandas as pd
 from numeriska_metoder import newton_raphson
-# pdf = lambda x: 2*np.exp(-2*x);
-# Finv = lambda u: -(1/2)*np.log(u)
+
 df = pd.read_csv("SLS22.csv") #data frame 
 Lcq_ids = ["Majerus", "Oliveira","Decenzo","Santiago", "Papa", "Eaton", "Mota", "Shirai", 
            "Jordan", "Hoefler", "Hoban", "Gustavo", "Ribeiro C", "O’neill", "Foy", "Midler"]
-Lcq_ids = ["Majerus", "Oliveira", "O’neill", "Santiago", "Papa", "Ribeiro C", "Mota", "Shirai",
-           "Jordan", "Hoefler", "Foy", "Midler", "Gustavo", "Hoban", "Eaton", "Decenzo"]
+
 def init_normal_dataframe():
     ndf = df
     ndf["run 1"] = [x/10 for x in df["run 1"]]
@@ -27,16 +25,15 @@ def init_normal_dataframe():
     ndf["make 4"] = [int(bool(x)) for x in df["trick 4"].values.tolist()]
     return ndf
 ndf = init_normal_dataframe()
-global_trick_data = np.concatenate([ndf[f"trick {i}"].values for i in range(1,5)])
-global_svariance = np.var(global_trick_data,ddof=1)
-global_smean = np.mean(global_trick_data)
+
+# global_trick_data = np.concatenate([ndf[f"trick {i}"].values for i in range(1,5)])
+# global_svariance = np.var(global_trick_data,ddof=1)
+# global_smean = np.mean(global_trick_data)
 
 ids = []
 for name in ndf['id']:
     if name not in ids:
         ids.append(name)
-
-# print(len(ids))
 
 def make_histogram():
     # fig, ax = plt.subplots(1, 1)
@@ -74,12 +71,16 @@ def plot_run1_run2():
     plt.legend()
     plt.show()
 
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 def print_dic(dic):
     for keys,values in dic.items():
         print(keys,values)
 
-
+### extracting trick and run data
 def init_trick_data():
     ndf.set_index('id',inplace=True)
     tricks_data = {}
@@ -92,82 +93,6 @@ def init_trick_data():
             tricks_data[name] = np.array(list(namesdata['trick 1'])+list(namesdata['trick 2'])+list(namesdata['trick 3'])+list(namesdata['trick 4']))
     return tricks_data
 
-tricks_data = init_trick_data()
-# print_dic(tricks_data)
-average_svariance = 0
-for eachdata in tricks_data.values():
-    a = np.array([k for k in eachdata if k>0])
-    average_svariance+=np.var(a)
-average_svariance/=len(ids)
-
-def get_pooled_var():
-    täljare = 0
-    nämnare = 0
-    for eachdata in tricks_data.values():
-        zi = np.array([k for k in eachdata if k>0])
-        if len(zi)==1:
-            si = 0
-            ni = len(zi)-1
-            täljare+=si*ni
-            nämnare+=ni
-        else:
-            si = np.var(zi,ddof=1)
-            ni = len(zi)-1
-            täljare+=si*(ni)
-            nämnare+=ni
-    return täljare/nämnare
-
-pooled_var = get_pooled_var()
-
-
-def Theta_MoM_skattning(xdata):
-    data = xdata>0.0
-    return np.mean(data)
-
-def AlphaBeta_MoM_skattning(xdata):
-    data = [x for x in xdata if x>0]
-    if len(data)==1:
-        svariance = pooled_var
-    else:
-        svariance = average_svariance
-    alpha_0 = np.mean(data)*((1-np.mean(data))/svariance-1)
-    beta_0 = (1-np.mean(data))*((1-np.mean(data))/svariance-1)
-    return np.array([alpha_0,beta_0])   
-
-
-
-def get_parameters():
-    result = {}
-    for name in ids:
-        theta = Theta_MoM_skattning(np.array(tricks_data[name]))
-        alpha = AlphaBeta_MoM_skattning(np.array(tricks_data[name]))[0]
-        beta = AlphaBeta_MoM_skattning(np.array(tricks_data[name]))[1]
-        result[name] = [theta,alpha,beta]
-    return result
-
-def get_parameters_tricks():
-    result = {}
-    for name in ids:
-        theta = Theta_MoM_skattning(np.array(tricks_data[name]))
-        alpha = AlphaBeta_MoM_skattning(np.array(tricks_data[name]))[0]
-        beta = AlphaBeta_MoM_skattning(np.array(tricks_data[name]))[1]
-        # alpha = newton_raphson(np.array(tricks_data[name]))[0]
-        # beta = newton_raphson(np.array(tricks_data[name]))[1]
-        result[name] = [theta,alpha,beta]
-    return result
-get_parameters_tricks()
-# params = get_parameters_tricks()
-# for key,value in params.items():
-#     print(key,*value)
-
-def get_avg_alpha_beta_tricks():
-    params = list(get_parameters_tricks().values())
-    alphas = [params[i][1] for i in range(len(params))]
-    betas = [params[i][2] for i in range(len(params))]
-    medel_alpha, medel_beta = np.mean(alphas), np.mean(betas)
-    return [medel_alpha,medel_beta]
-
-
 def init_run_data():
     tricks_data = {}
     n = len(ndf)
@@ -179,14 +104,77 @@ def init_run_data():
             tricks_data[name] = np.array(list(namesdata['run 1'])+list(namesdata['run 2']))
     return tricks_data
 
+tricks_data = init_trick_data()
 run_data = init_run_data()
+
+
+### Calculations needed to estimate theta, alpha, beta
+average_svariance = 0
+for eachdata in tricks_data.values():
+    a = np.array([k for k in eachdata if k>0])
+    average_svariance+=np.var(a)
+average_svariance/=len(ids)
+
+def Theta_MoM_skattning(xdata):
+    data = xdata>0.0
+    return np.mean(data)
+
+def AlphaBeta_MoM_skattning(xdata):
+    data = [x for x in xdata if x>0]
+    if len(data)==1:
+        svariance = average_svariance
+    else:
+        svariance = np.var(data, ddof=1)
+    m = np.mean(data)
+    alpha_0 = m*(m*(1-m)/svariance-1)
+    beta_0 = (1-m)*(m*(1-m)/svariance-1)
+    return np.array([alpha_0,beta_0])   
+
+### Storing the parameter estimations above to each player in dictionary form
+def get_parameters_tricks():
+    result = {}
+    for name in ids:
+        theta = Theta_MoM_skattning(np.array(tricks_data[name]))
+        alpha = AlphaBeta_MoM_skattning(np.array(tricks_data[name]))[0]
+        beta = AlphaBeta_MoM_skattning(np.array(tricks_data[name]))[1]
+        result[name] = [theta,alpha,beta]
+    return result
 
 def get_parameters_runs():
     result = {}
     for name in ids:
         alpha = AlphaBeta_MoM_skattning(np.array(run_data[name]))[0]
         beta = AlphaBeta_MoM_skattning(np.array(run_data[name]))[1]
-        # alpha = newton_raphson(np.array(run_data[name]))[0]
-        # beta = newton_raphson(np.array(run_data[name]))[1]
         result[name] = [alpha,beta]
     return result
+
+### Arbitrary metric: calculate the mean of the alpha,beta parameters. USED IN METROPOLIS
+def get_avg_alpha_beta_tricks():
+    params = list(get_parameters_tricks().values())
+    alphas = [params[i][1] for i in range(len(params))]
+    betas = [params[i][2] for i in range(len(params))]
+    medel_alpha, medel_beta = np.mean(alphas), np.mean(betas)
+    return [medel_alpha,medel_beta]
+
+def get_avg_alpha_beta_runs():
+    params = get_parameters_runs()
+    alphas = [params[name][0] for name in Lcq_ids]
+    betas = [params[name][1] for name in Lcq_ids]
+    medel_alpha, medel_beta = np.mean(alphas), np.mean(betas)
+    return [medel_alpha,medel_beta]
+
+
+def create_table(dict):
+    result = {
+        'ids': ids,
+        'Alpha, Beta':[betyg_arr for betyg_arr in list(dict.values())]
+    }
+
+    return pd.DataFrame(result)
+
+def display_params(params):
+    df = pd.DataFrame(params)
+    df = df.transpose()
+    df.columns = ["Theta", "Alpha", "Beta"]
+    print(df)
+

@@ -54,7 +54,3 @@ def newton_raphson(data):
 
     return alpha_beta
 
-# # Example usage:
-# data = np.array([0.3, 0.4, 0.6, 0.8, 0.9])
-# alpha_hat, beta_hat = newton_raphson(data)
-# print(f"Estimated Alpha: {alpha_hat}, Estimated Beta: {beta_hat}")
