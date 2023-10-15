@@ -154,7 +154,9 @@ Så vi antar att $Y_i\sim \text{Beta}(^y\alpha_i,^y\beta_i)$.
 För att skatta parameter till $Y$ använder vi samma moment metoden som vi använde för att skatta $\alpha,\beta$ för $X$.
 (Obs: Enda skillnaden i det här fallet vi slipper använda medelvärdet på stickprovsvariansen $S^2=\bar{S^2}$
 för att det är garanterat vi får mer än en datapunkt för alla skateboardåkare $i$.)
+
 \subsection*{(d) LCQ simulering för frekventistisk modell}
+
 Total betyget för varje deltagare beräknas som summan av deras två största trick betyg och största run betyg. Vi
 kan beskriva i termer av stokatiska variabler. Låt $O_i$ vara total betyg för deltagare $i$.
 Låt $Q_{i,\text{först}}=\max(X_{i1},X_{i2},X_{i3},X_{i4})$ och 
@@ -244,16 +246,28 @@ Valet för förslagsfördelning blir $\mathbf{\Theta}'\sim Q(\mathbf{\Theta}'|\m
 där $Z_\alpha \sim \text{N}(0,1)$, $Z_\beta \sim \text{N}(0,1)$, $U_\theta \sim \text{U}(0,1)$, och $\delta = 0.5$
 Anledning till valet för $\alpha,\beta$ elementen är att det behöver vara ett tal större än 0 så vi tog exponentialen. Dessutom behöver
 vi $\theta\in (0,1)$ så det var intuitivt att välja en uniform fördelning.
+\begin{figure}
+    \includegraphics[width=200mm]{assets/mcmc_theta.png}
+    \caption[short]{Plottan av $f(\theta_i|x_i)$}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=180mm]{assets/mcmc_alpha_beta.png}
+    \caption[short]{Plottan av $f(\alpha_i,\beta_i|x_i)$}
+\end{figure}
+
 \newpage
 \subsection*{(c) Aposteriori för $Y_i$}
 Eftersom $Y_i \sim \text{Beta}(^y\alpha_i,^y\beta_i)$ ska vi använda en apriori fördelning av samma form som den alpha beta apriori i $X$.
 \\ $\pdf{\alpha_i,\beta_i} = \frac{\lambda^\theta}{\Gamma(\theta)}(\alpha_i+\beta_i+1)^{\theta-1}e^{-\lambda(\alpha_i+\beta_i+1)}(\alpha_i+\beta_i)^{-1}$  
 som ger oss aposteriorin 
 $$\pdf{\alpha_i,\beta_i|\mathbf{y}_i}\propto \pdf{\alpha_i,\beta_i}\pdf{\mathbf{y}_i|\alpha_i,\beta_i}$$
+processen för MCMC blir alltså rätt liknande som $X_i$s parametrar men vi excluderar
+$\theta_i$
 \subsection*{(d) LCQ simulering för bayesiansk modell}
 Jag använde $\begin{pmatrix} \bar{\theta_i} \\ \bar{\alpha_i} \\ \bar{\beta_i} \end{pmatrix}$ och
 $\begin{pmatrix} \bar{^y\theta_i} \\ \bar{^y\alpha_i}\end{pmatrix}$ 
-från metropolis som min punktskattning för tricks och runs parametrar för att simulera 5000 LCQ:ar som vi 
+från metropolis som min punktskattning för trickbetygs och runbetygs parametrar för att simulera 5000 LCQ:ar som vi 
 gjorde i 2(d).
 Det ger oss följande frequency bar plot \cref{MCMC freq bar} 
 \begin{figure}
@@ -345,13 +359,17 @@ och därmed vilka värde $\mathbf{\Theta}_i$ kommer anta.
 \subsection*{(a) Apriori fördelning för $[\Theta_i,C_i,D_i]^T$} 
 \begin{itemize}
     \item Låt $\Theta_i|C_i=c_i,D_i=d_i \sim \text{Beta} (c_i,d_i)$.
-    \item Låt $\pdf{c_i,d_i} \propto (c_i+d_i)^{-5/2}$
+    \item Låt $\pdf{c_i,d_i} \propto (c_i+d_i)^{-5/2}$ (egentlig icke och informativ apriori)
 \end{itemize}
-\subsection*{(b) Aposteriori för $X_i$}
+\subsection*{(b) Aposteriori och simulering}
 
-\subsection*{(c) Aposteriori för $Y_i$}
-\subsection*{(d) Simulering}
-\subsection*{(e) Grafisk model}
+\subsection*{(c) Simulera LCQ för bayesiansk modell med en hierarki}
+
+\begin{figure}
+    \includegraphics[width = 20mm]{assets/new_theta_LCQ.png}
+    \label{new theta lcq}
+    \caption{Frequency appearing in final using new heirarchal model and MoM estimation}
+\end{figure}
 \section{Diskussion}
 \subsection*{(a)} Hur jämför resultaten (skateboardåkarna i typvärdena) av de olika mod-
 ellerna? Vilka skateboardåkare är korrekt förutspådda och vilka inte är det?

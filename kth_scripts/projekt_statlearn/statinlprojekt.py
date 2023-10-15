@@ -26,9 +26,6 @@ def init_normal_dataframe():
     return ndf
 ndf = init_normal_dataframe()
 
-# global_trick_data = np.concatenate([ndf[f"trick {i}"].values for i in range(1,5)])
-# global_svariance = np.var(global_trick_data,ddof=1)
-# global_smean = np.mean(global_trick_data)
 
 ids = []
 for name in ndf['id']:
@@ -62,7 +59,6 @@ def calculate_Q1_partd():
         if x>0.6:
             count_bigger_than6+=1
     return float(count_bigger_than6)/float(count_lands)
-
 
 def plot_run1_run2():
     plt.scatter(ndf["run 1"],ndf["run 2"],color='blue', marker='o')
@@ -107,6 +103,27 @@ def init_run_data():
 tricks_data = init_trick_data()
 run_data = init_run_data()
 
+
+
+def calc_q1d():
+    def display(input):
+        df = pd.DataFrame(input)
+        df = df.transpose()
+        df.columns = ["Trick betyg större än 0.6", "Inte landar tricket"]
+        print(df)
+
+    result = {}
+    for name in list(ids):
+        xdata = tricks_data[name]
+        count_not_land = list(xdata).count(0.0)
+        count_land = len(xdata)-count_not_land
+        count_bigger_than_6=0
+        for x in xdata:
+            if x>0.6:
+                count_bigger_than_6+=1
+        
+        result[name] = [count_bigger_than_6/count_land, count_not_land/len(xdata)]
+    display(result)
 
 ### Calculations needed to estimate theta, alpha, beta
 average_svariance = 0
@@ -163,7 +180,7 @@ def get_avg_alpha_beta_runs():
     medel_alpha, medel_beta = np.mean(alphas), np.mean(betas)
     return [medel_alpha,medel_beta]
 
-
+### Debugging functions
 def create_table(dict):
     result = {
         'ids': ids,
@@ -171,10 +188,30 @@ def create_table(dict):
     }
 
     return pd.DataFrame(result)
-
 def display_params(params):
     df = pd.DataFrame(params)
     df = df.transpose()
     df.columns = ["Theta", "Alpha", "Beta"]
     print(df)
+
+### make histograms of runs and trick data
+
+
+# def make_hists_trickbetyg():
+#     fig, axes = plt.subplots(4, 4, figsize=(12, 8))
+#     fig.suptitle(r"trick betyg histograms")
+#     plt.subplots_adjust(hspace=0.5, wspace=0.5)
+#     c = 0
+#     for i in range(4):
+#         for j in range(4):
+#             skateboarder_id = Lcq_ids[c]
+#             xdata = tricks_data[skateboarder_id]            
+#             axes[i, j].hist(xdata, density=True)
+#             axes[i, j].set_title(Lcq_ids[c])
+#             c += 1
+#     plt.show()
+
+# if __name__=="__main__":
+#     # make_hists_trickbetyg()
+#     calc_q1d()
 

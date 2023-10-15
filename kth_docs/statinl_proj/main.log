@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.8.27)  15 OCT 2023 12:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  15 OCT 2023 19:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/kth_folder/kth_docs/statinl_proj/main.tex
-(c:/kth_folder/kth_docs/statinl_proj/main.tex
+**c:/kth_repos/kth_folder/kth_docs/statinl_proj/main.tex
+(c:/kth_repos/kth_folder/kth_docs/statinl_proj/main.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-03-30> (assignment.cls
+L3 programming layer <2023-01-24> (assignment.cls
 Document Class: assignment a latex class for editing your assignment
 (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -144,16 +144,16 @@ File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 \lst@lineno=\count279
 \lst@maxwidth=\dimen161
  (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count280
 \lst@skipnumbers=\count281
 \lst@framebox=\box54
 ) (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2023/02/27 1.9 listings configuration
+File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
-Package: listings 2023/02/27 1.9 (Carsten Heinz)
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
  (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
-Package: tcolorbox 2023/03/17 version 6.0.3 text color boxes
+Package: tcolorbox 2022/06/24 version 5.1.1 text color boxes
  (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks24
 \pgfutil@tempdima=\dimen162
@@ -307,7 +307,7 @@ Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 )) (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
-Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks34
 \verbatim@line=\toks35
 \verbatim@in@stream=\read3
@@ -331,13 +331,13 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \tcb@temp=\box68
 \tcb@temp=\box69
 )) (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2023-03-30 L3 programming layer (loader) 
+Package: expl3 2023-01-24 L3 programming layer (loader) 
  (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count298
 \l__pdf_internal_box=\box70
 ))
-Package: l3keys2e 2023-02-02 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2023-01-16 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count299
@@ -457,9 +457,9 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `listings' support loaded on input line 3131.
 ) (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
-Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
+Package: soul 2023-02-18 v3.0 Permit use of UTF-8 characters in soul (HO)
  (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul-ori.sty
-Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
+Package: soul-ori 2023-02-18 v3.0 letterspacing/underlining (mf)
 \SOUL@word=\toks37
 \SOUL@lasttoken=\toks38
 \SOUL@syllable=\toks39
@@ -564,7 +564,7 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
-Package: xparse 2023-02-02 L3 Experimental document command parser
+Package: xparse 2023-01-16 L3 Experimental document command parser
 )
 \c@anm=\count354
  (main.aux)
@@ -683,82 +683,109 @@ Overfull \hbox (26.65207pt too wide) in paragraph at lines 97--102
 <assets/freq_bar_graph.png, id=37, 1093.4451pt x 456.0237pt>
 File: assets/freq_bar_graph.png Graphic file (type png)
 <use assets/freq_bar_graph.png>
-Package pdftex.def Info: assets/freq_bar_graph.png  used on input line 169.
+Package pdftex.def Info: assets/freq_bar_graph.png  used on input line 171.
 (pdftex.def)             Requested size: 569.05511pt x 237.32156pt.
 
-Overfull \hbox (99.30013pt too wide) in paragraph at lines 169--170
+Overfull \hbox (99.30013pt too wide) in paragraph at lines 171--172
  [] 
  []
 
 
-Overfull \hbox (27.17426pt too wide) in paragraph at lines 158--177
+Overfull \hbox (27.17426pt too wide) in paragraph at lines 160--179
 \OML/cmm/m/it/10.95 Q[] \OT1/cmr/m/n/10.95 = []([](\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 ))$. 
  []
 
 [4 <./assets/freq_bar_graph.png>]
-Overfull \hbox (8.70383pt too wide) in paragraph at lines 214--218
+Overfull \hbox (8.70383pt too wide) in paragraph at lines 216--220
 \OT1/cmr/m/n/10.95 Aposteriorin ^^?ar v^^War m^^Walf^^?ordelning men vi kom-mer anv^^?anda $\OML/cmm/m/it/10.95 L[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^R[]; []; ^^L[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 / []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 f[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^R[]; []; ^^L[]\OMS/cmsy/m/n/10.95 j\OT1/cmr/bx/n/10.95 x[]\OT1/cmr/m/n/10.95 ))$
  []
 
-[5] [6]
-<assets/MCMCsim.png, id=49, 1147.6476pt x 469.0323pt>
-File: assets/MCMCsim.png Graphic file (type png)
-<use assets/MCMCsim.png>
-Package pdftex.def Info: assets/MCMCsim.png  used on input line 260.
-(pdftex.def)             Requested size: 569.05511pt x 232.56891pt.
+<assets/mcmc_theta.png, id=42, 703.62875pt x 524.96124pt>
+File: assets/mcmc_theta.png Graphic file (type png)
+<use assets/mcmc_theta.png>
+Package pdftex.def Info: assets/mcmc_theta.png  used on input line 250.
+(pdftex.def)             Requested size: 569.05511pt x 424.55943pt.
 
-Overfull \hbox (99.30013pt too wide) in paragraph at lines 260--261
+Overfull \hbox (99.30013pt too wide) in paragraph at lines 250--251
 [][] 
  []
 
-[7 <./assets/MCMCsim.png>]
-Overfull \hbox (9.2923pt too wide) in paragraph at lines 306--306
+[5]
+<assets/mcmc_alpha_beta.png, id=46, 708.6475pt x 524.96124pt>
+File: assets/mcmc_alpha_beta.png Graphic file (type png)
+<use assets/mcmc_alpha_beta.png>
+Package pdftex.def Info: assets/mcmc_alpha_beta.png  used on input line 255.
+(pdftex.def)             Requested size: 512.1496pt x 379.40564pt.
+
+Overfull \hbox (42.3946pt too wide) in paragraph at lines 255--256
+[][] 
+ []
+
+[6] [7 <./assets/mcmc_theta.png>] [8 <./assets/mcmc_alpha_beta.png>]
+<assets/MCMCsim.png, id=60, 1147.6476pt x 469.0323pt>
+File: assets/MCMCsim.png Graphic file (type png)
+<use assets/MCMCsim.png>
+Package pdftex.def Info: assets/MCMCsim.png  used on input line 274.
+(pdftex.def)             Requested size: 569.05511pt x 232.56891pt.
+
+Overfull \hbox (99.30013pt too wide) in paragraph at lines 274--275
+[][] 
+ []
+
+[9 <./assets/MCMCsim.png>]
+Overfull \hbox (9.2923pt too wide) in paragraph at lines 320--320
  [][]$\OML/cmm/m/it/10.95 X[]$ 
  []
 
 
-Overfull \hbox (9.2923pt too wide) in paragraph at lines 307--307
+Overfull \hbox (9.2923pt too wide) in paragraph at lines 321--321
  [][]$\OML/cmm/m/it/10.95 X[]$ 
  []
 
 
-Overfull \hbox (9.2923pt too wide) in paragraph at lines 308--308
+Overfull \hbox (9.2923pt too wide) in paragraph at lines 322--322
  [][]$\OML/cmm/m/it/10.95 X[]$ 
  []
 
 
-Overfull \hbox (9.2923pt too wide) in paragraph at lines 309--309
+Overfull \hbox (9.2923pt too wide) in paragraph at lines 323--323
  [][]$\OML/cmm/m/it/10.95 X[]$ 
  []
 
 
-Overfull \hbox (8.15169pt too wide) in paragraph at lines 310--310
+Overfull \hbox (8.15169pt too wide) in paragraph at lines 324--324
  [][]$\OML/cmm/m/it/10.95 Y[]$ 
  []
 
 
-Overfull \hbox (8.15169pt too wide) in paragraph at lines 311--311
+Overfull \hbox (8.15169pt too wide) in paragraph at lines 325--325
  [][]$\OML/cmm/m/it/10.95 Y[]$ 
  []
 
 
-Overfull \hbox (1.18805pt too wide) in paragraph at lines 312--312
+Overfull \hbox (1.18805pt too wide) in paragraph at lines 326--326
  [][]$\OT1/cmr/bx/n/10.95 ^^G[]$ 
  []
 
-[8] [9] (main.aux) ) 
+[10]
+<assets/new_theta_LCQ.png, id=69, 1180.8918pt x 339.669pt>
+File: assets/new_theta_LCQ.png Graphic file (type png)
+<use assets/new_theta_LCQ.png>
+Package pdftex.def Info: assets/new_theta_LCQ.png  used on input line 369.
+(pdftex.def)             Requested size: 56.9055pt x 16.36768pt.
+ [11 <./assets/new_theta_LCQ.png>] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 21265 strings out of 476331
- 436491 string characters out of 5787765
- 1874660 words of memory out of 5000000
- 41353 multiletter control sequences out of 15000+600000
+ 21249 strings out of 476375
+ 435804 string characters out of 5788976
+ 1874299 words of memory out of 5000000
+ 41284 multiletter control sequences out of 15000+600000
  522321 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,17n,118p,474b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,17n,118p,484b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\lmfry\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (9 pages, 419070 bytes).
+Output written on main.pdf (11 pages, 547306 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
+ 153 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

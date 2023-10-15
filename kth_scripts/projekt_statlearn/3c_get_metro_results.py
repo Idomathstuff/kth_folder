@@ -64,5 +64,5 @@ def make_scatters():
             c+=1
     plt.show()
 
-make_scatters()
-
+if __name__=="__main__":
+    make_scatters()

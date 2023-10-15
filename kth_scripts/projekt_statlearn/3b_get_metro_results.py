@@ -57,7 +57,6 @@ metro_df = pd.read_json('metro_results.json')
 metro_df.set_index('ids',inplace=True)
 
 
-
 def make_hists():
     fig, axes = plt.subplots(4, 4, figsize=(12, 8))
     fig.suptitle(r"$\theta$ Histograms")
@@ -66,10 +65,11 @@ def make_hists():
     for i in range(4):
         for j in range(4):
             thetas = metro_df.loc[Lcq_ids[c]]['thetas']
-            axes[i,j].hist(thetas, density=True)
-            axes[i,j].set_title(Lcq_ids[c])
-            c+=1
+            axes[i, j].hist(thetas, density=True)
+            axes[i, j].set_title(Lcq_ids[c])
+            c += 1
     plt.show()
+
 
 def make_scatters():
     fig, axes = plt.subplots(4, 4, figsize=(12, 8))
@@ -80,10 +80,11 @@ def make_scatters():
         for j in range(4):
             alphas = metro_df.loc[Lcq_ids[c]]['alphas']
             betas = metro_df.loc[Lcq_ids[c]]['betas']
-            axes[i,j].scatter(alphas[0],betas[0], marker='o',s=50,alpha=1, color='orange')
-            axes[i,j].plot(alphas, betas, '.-', markersize=5, alpha=0.5)
-            axes[i,j].set_title(Lcq_ids[c])
-            c+=1
+            axes[i, j].scatter(alphas[0], betas[0], marker='o',
+                               s=50, alpha=1, color='orange')
+            axes[i, j].plot(alphas, betas, '.-', markersize=5, alpha=0.5)
+            axes[i, j].set_title(Lcq_ids[c])
+            c += 1
     plt.show()
 
 def moving_avg_plot():
@@ -109,7 +110,8 @@ def moving_avg_plot():
             c+=1
     plt.show()
 
-# make_hists()
-# make_scatters()
-# moving_avg_plot()
-print(metro_df.drop(['thetas','alphas','betas'],axis=1))
+if __name__ == '__main__':
+    # make_hists()
+    # make_scatters()
+    # moving_avg_plot()
+    print(metro_df.drop(['thetas','alphas','betas'],axis=1))
