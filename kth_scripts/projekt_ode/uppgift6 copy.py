@@ -55,3 +55,6 @@ x_e_values, y_e_values, x_j_values, y_j_values = euler(X0_e,X0_j)
 plt.plot(x_e_values,y_e_values)
 plt.plot(x_j_values,y_j_values)
 plt.show()
+
+
+
