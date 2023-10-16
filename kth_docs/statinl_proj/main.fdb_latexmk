@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1697389489 "c:/kth_repos/kth_folder/kth_docs/statinl_proj/main.tex" "main.pdf" "main" 1697389498 0
+["pdflatex"] 1697433066 "c:/kth_repos/kth_folder/kth_docs/statinl_proj/main.tex" "main.pdf" "main" 1697433077 2
   "C:/Users/lmfry/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1697385519 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/lmfry/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1675961511 12668 ebe5e3c4e1c3c57b58c1c2d1956617e1 ""
   "C:/Users/lmfry/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1675251863 23173873 5447f906f40272bcb7fd9ec59765ec65 ""
@@ -178,9 +178,9 @@
   "assets/mcmc_theta.png" 1697386246 20579 c223ed3c0e72df4d6c9e5fb5a47e3898 ""
   "assets/new_theta_LCQ.png" 1697387159 31180 69401a8659c2b9556a2e0d4be4558672 ""
   "assignment.cls" 1696330308 2157 e960cdbb4c5150270baefa998b41bade ""
-  "c:/kth_repos/kth_folder/kth_docs/statinl_proj/main.tex" 1697389487 23009 c33fae430c6f088207dffa66347a2eb5 ""
-  "main.aux" 1697389497 2682 8c4e76485a5ebc60b87960b3895cd924 "pdflatex"
-  "main.tex" 1697389487 23009 c33fae430c6f088207dffa66347a2eb5 ""
+  "c:/kth_repos/kth_folder/kth_docs/statinl_proj/main.tex" 1697433052 23573 c338fb9f1eb0a79c26e71d7c02e9ad65 ""
+  "main.aux" 1697433075 2682 240daf4e0bfd1113f6dd00da75d2c508 "pdflatex"
+  "main.tex" 1697433052 23573 c338fb9f1eb0a79c26e71d7c02e9ad65 ""
   (generated)
   "main.aux"
   "main.log"

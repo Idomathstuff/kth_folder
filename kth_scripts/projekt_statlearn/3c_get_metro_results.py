@@ -59,7 +59,7 @@ def make_scatters():
             alphas = metro_df.loc[Lcq_ids[c]]['alphas']
             betas = metro_df.loc[Lcq_ids[c]]['betas']
             axes[i,j].scatter(alphas[0],betas[0], marker='o',s=50,alpha=1, color='orange')
-            axes[i,j].plot(alphas, betas, '.-', markersize=5, alpha=0.5)
+            axes[i,j].plot(alphas, betas, '.-', markersize=5, alpha=0.5, color = 'green')
             axes[i,j].set_title(Lcq_ids[c])
             c+=1
     plt.show()

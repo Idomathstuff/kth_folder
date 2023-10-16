@@ -359,14 +359,14 @@ och därmed vilka värde $\mathbf{\Theta}_i$ kommer anta.
 \subsection*{(a) Apriori fördelning för $[\Theta_i,C_i,D_i]^T$} 
 \begin{itemize}
     \item Låt $\Theta_i|C_i=c_i,D_i=d_i \sim \text{Beta} (c_i,d_i)$.
-    \item Låt $\pdf{c_i,d_i} \propto (c_i+d_i)^{-5/2}$ (egentlig icke och informativ apriori)
+    \item Låt $\pdf{c_i,d_i} \propto (c_i+d_i)^{-5/2}$ (egentlig ickeinformativ apriori)
 \end{itemize}
 \subsection*{(b) Aposteriori och simulering}
 
 \subsection*{(c) Simulera LCQ för bayesiansk modell med en hierarki}
-
+\cref{new theta lcq}
 \begin{figure}
-    \includegraphics[width = 20mm]{assets/new_theta_LCQ.png}
+    \includegraphics[width = 180mm]{assets/new_theta_LCQ.png}
     \label{new theta lcq}
     \caption{Frequency appearing in final using new heirarchal model and MoM estimation}
 \end{figure}
@@ -375,6 +375,12 @@ och därmed vilka värde $\mathbf{\Theta}_i$ kommer anta.
 ellerna? Vilka skateboardåkare är korrekt förutspådda och vilka inte är det?
 Ge några möjliga förklaringar till skillnaderna mellan de olika modellernas
 förutsägelser. Vilken modell föredrar du och varför?
+
+\textbf{Varför det finns skillnad mellan förutsägelser}
+\begin{itemize}
+    \item Apriorin som valdes¨
+    \item MCMCs stickprovstorlek
+\end{itemize}
 
 \subsection*{(b)}
 Hur jämför dina skattningar för $\theta_i$ i Uppgift 1 och dina skattade väntevär-
@@ -396,14 +402,20 @@ riktiga vinnarna?
 
 \subsection*{(d)}
 
-I alla modellerna antog vi att skateboardåkarens prestationer är oberoende.
-Till exempel antog vi att alla Vi är oberoende. Verkar detta som ett rimligt
+- I alla modellerna antog vi att skateboardåkarens prestationer är oberoende.
+Till exempel antog vi att alla $V_i$ är oberoende. Verkar detta som ett rimligt
 antagande? Motivera ditt svar.
+
+\\ För att LCQ är en individuell tävling på hög nivå är det rimlig att anta en skatebordåkares
+prestation inte påverkas av andra. Hade det varit en annan sorts tävling som 
 
 \subsection*{(e)}
 
-I alla modeller struntade vi i ordningen som skateboardåkarna turades om.
+
+- I alla modeller struntade vi i ordningen som skateboardåkarna turades om.
 Verkar detta vara en rimlig sak att göra? Varför eller varför inte?
-% \section{Kod}
-% \lstinputlisting[language=Matlab,caption=foo]{assets/tmp.m} 
+
+\\Det inte finns tillräckligt med data eller information om turordningen mellan skateboardåkarna, kan det vara svårt att inkludera detta i modellen. 
+Därför var det nödvändig att strunta i ordningen och fokusera på andra faktorer som påverkar prestationen.
+
 \end{document}

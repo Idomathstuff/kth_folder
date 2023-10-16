@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  15 OCT 2023 19:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.1)  16 OCT 2023 07:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -662,16 +662,32 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
  (C:\Users\lmfry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+
+LaTeX Warning: Reference `Histogram 1' on page 1 undefined on input line 56.
+
+
+LaTeX Warning: Reference `Spridningsdiagram' on page 1 undefined on input line 56.
+
 <assets/Figure_1.png, id=7, 462.528pt x 346.896pt>
 File: assets/Figure_1.png Graphic file (type png)
 <use assets/Figure_1.png>
 Package pdftex.def Info: assets/Figure_1.png  used on input line 61.
 (pdftex.def)             Requested size: 281.68228pt x 211.27277pt.
- [1
+[1
 
 {C:/Users/lmfry/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./assets/KTH_logga.png> <./assets/Figure_2.png>]
-Overfull \hbox (21.49081pt too wide) in paragraph at lines 97--102
-\OT1/cmr/m/n/10.95 Observera att fr^^Wan eq. (3) $[][] [] [] = [][] [] []$
+
+LaTeX Warning: Reference `properties' on page 1 undefined on input line 94.
+
+
+LaTeX Warning: Reference `MLE result' on page 1 undefined on input line 95.
+
+
+LaTeX Warning: Reference `loglike' on page 1 undefined on input line 97.
+
+
+Overfull \hbox (3.2711pt too wide) in paragraph at lines 97--102
+\OT1/cmr/m/n/10.95 Observera att fr^^Wan [] $[][] [] [] = [][] [] []$
  []
 
 
@@ -689,6 +705,9 @@ Package pdftex.def Info: assets/freq_bar_graph.png  used on input line 171.
 Overfull \hbox (99.30013pt too wide) in paragraph at lines 171--172
  [] 
  []
+
+
+LaTeX Warning: Reference `Histogram 2' on page 1 undefined on input line 175.
 
 
 Overfull \hbox (27.17426pt too wide) in paragraph at lines 160--179
@@ -722,6 +741,9 @@ Overfull \hbox (42.3946pt too wide) in paragraph at lines 255--256
  []
 
 [6] [7 <./assets/mcmc_theta.png>] [8 <./assets/mcmc_alpha_beta.png>]
+
+LaTeX Warning: Reference `MCMC freq bar' on page 1 undefined on input line 272.
+
 <assets/MCMCsim.png, id=60, 1147.6476pt x 469.0323pt>
 File: assets/MCMCsim.png Graphic file (type png)
 <use assets/MCMCsim.png>
@@ -733,6 +755,16 @@ Overfull \hbox (99.30013pt too wide) in paragraph at lines 274--275
  []
 
 [9 <./assets/MCMCsim.png>]
+
+LaTeX Warning: Reference `DAG' on page 1 undefined on input line 298.
+
+
+LaTeX Warning: Reference `DAG' on page 1 undefined on input line 303.
+
+
+LaTeX Warning: Reference `DAG' on page 1 undefined on input line 307.
+
+
 Overfull \hbox (9.2923pt too wide) in paragraph at lines 320--320
  [][]$\OML/cmm/m/it/10.95 X[]$ 
  []
@@ -768,24 +800,66 @@ Overfull \hbox (1.18805pt too wide) in paragraph at lines 326--326
  []
 
 [10]
+
+LaTeX Warning: Reference `new theta lcq' on page 1 undefined on input line 367.
+
 <assets/new_theta_LCQ.png, id=69, 1180.8918pt x 339.669pt>
 File: assets/new_theta_LCQ.png Graphic file (type png)
 <use assets/new_theta_LCQ.png>
 Package pdftex.def Info: assets/new_theta_LCQ.png  used on input line 369.
-(pdftex.def)             Requested size: 56.9055pt x 16.36768pt.
- [11 <./assets/new_theta_LCQ.png>] (main.aux) ) 
+(pdftex.def)             Requested size: 512.1496pt x 147.31427pt.
+
+Overfull \hbox (42.3946pt too wide) in paragraph at lines 369--371
+[][]
+ []
+
+[11 <./assets/new_theta_LCQ.png>]
+
+c:/kth_repos/kth_folder/kth_docs/statinl_proj/main.tex:409: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.409 \\ F
+          ör att LCQ är en individuell tävling på hög nivå är det rim...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/kth_repos/kth_folder/kth_docs/statinl_proj/main.tex:418: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.418 \\D
+         et inte finns tillräckligt med data eller information om turordnin...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[12] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 21249 strings out of 476375
- 435804 string characters out of 5788976
- 1874299 words of memory out of 5000000
- 41284 multiletter control sequences out of 15000+600000
+ 21250 strings out of 476375
+ 435825 string characters out of 5788976
+ 1873299 words of memory out of 5000000
+ 41285 multiletter control sequences out of 15000+600000
  522321 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,17n,118p,484b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\lmfry\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/lmfry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (11 pages, 547306 bytes).
+Output written on main.pdf (12 pages, 549505 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
+ 157 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
