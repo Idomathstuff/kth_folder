@@ -60,21 +60,16 @@ def get_interval(x_values,y_values):
             return lower_bound, upper_bound
 
 def plot_interval_against_step_size():
-    step_sizes = [2**(-i) for i in range(1,12)]
-    interval_lengths = []
-    for step_size in step_sizes:
+    step_size_arr = [2**(-i) for i in range(1,12)]
+    interval_lengths_arr = []
+    for step_size in step_size_arr:
         x_values, y_values = euler(step_size, f, -1, -1, 5)
         lower_bound, upper_bound = get_interval(x_values, y_values)
-        interval_lengths.append(upper_bound - lower_bound)
+        interval_lengths_arr.append(upper_bound - lower_bound)
 
-    # Convert step sizes and interval lengths to logarithmic scale
-    log_step_sizes = [np.log2(step) for step in step_sizes]
-    log_interval_lengths = [np.log2(length) for length in interval_lengths]
-
-    # Create a log-log plot
-    plt.scatter(log_step_sizes, log_interval_lengths)
-    plt.xlabel('Log Step Size (log2)')
-    plt.ylabel('Log Interval Length (log2)')
+    log_step_size_arr= [np.log2(step) for step in step_size_arr]
+    log_interval_lengths_arr = [np.log2(length) for length in interval_lengths_arr]
+    plt.scatter(step_size_arr, interval_lengths_arr)
     plt.show()
 plot_interval_against_step_size()
 
