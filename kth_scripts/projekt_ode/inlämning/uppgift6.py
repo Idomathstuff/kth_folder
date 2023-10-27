@@ -68,11 +68,6 @@ def euler(X0_e,X0_j,X0_s):
         X_e += time_step*np.array(X_e_derivs)
         X_j += time_step*np.array(X_j_derivs)
         X_s += time_step*np.array(X_s_derivs)
-
-        # state = True
-        # if np.sqrt((x_s_values[-1]-x_j_values[-1])**2+(y_s_values[-1]-y_j_values[-1])**2)<np.sqrt((X_s[0]-X_j[0])**2 + (X_s[1]-X_j[1])**2) and state:
-            # state=False
-            # X_s[3]+=2e3
     return x_e_values,y_e_values, x_j_values,y_j_values, x_s_values,y_s_values
 
 
@@ -117,6 +112,3 @@ ani = FuncAnimation(fig, animate, init_func=init,
 
 
 plt.show()
-# def escape_velocity(M, r):
-#     return np.sqrt(2*G*M/r)
-# print(escape_velocity(M,AU))
