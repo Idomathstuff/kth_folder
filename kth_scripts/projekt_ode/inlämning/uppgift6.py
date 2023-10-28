@@ -14,7 +14,7 @@ X0_j = np.array([5*AU, 0 ,0, 1.007e4])
 X0_s = np.array([-1.1*AU, 0, 0, -3.58e4]) # ändra initial hastighet för rymdskeppet för att lämna solsystemet
 X0_s = np.array([-1.1*AU, 0, 0, -3.58e4]) # ändra initial hastighet för rymdskeppet för att lämna solsystemet
 
-time_step = 60*60*24 
+time_step = 60*60*24
 
 def ode_func(X_e,X_j,X_s):
     x_e ,y_e, vx_e, vy_e = X_e
@@ -56,7 +56,7 @@ def euler(X0_e,X0_j,X0_s):
     y_j_values = []
     x_s_values = []
     y_s_values = []
-    n = 20000
+    n = 10000
     for i in range(n):
         x_e_values.append(X_e[0])
         y_e_values.append(X_e[1])
@@ -68,6 +68,14 @@ def euler(X0_e,X0_j,X0_s):
         X_e += time_step*np.array(X_e_derivs)
         X_j += time_step*np.array(X_j_derivs)
         X_s += time_step*np.array(X_s_derivs)
+    
+    def display_final_v():
+        final_vx = X_s[2]
+        final_vy = X_s[3]
+        v_mag = np.sqrt(final_vx**2+final_vy**2)
+        print("Initialhastigheten av raketen: ", 3.58e4, " m/s")
+        print("Sluthastigheten av raketen: ",np.round(v_mag,2), "m/s")
+    display_final_v()
     return x_e_values,y_e_values, x_j_values,y_j_values, x_s_values,y_s_values
 
 
@@ -85,8 +93,8 @@ earth, = ax.plot([], [], 'o', color='cyan', markersize=5)
 jupiter, = ax.plot([], [], 'o', color='orange', markersize=5)
 spaceship, = ax.plot([], [], 'o', color='blue', markersize=5)
 sun = ax.plot(0, 0, 'yo', markersize=5)
-ax.set_xlim(-20 * AU, 10 * AU)
-ax.set_ylim(-10 * AU, 10 * AU)
+ax.set_xlim(-20 * AU, 20 * AU)
+ax.set_ylim(-20 * AU, 20 * AU)
 ax.set_title("Slingshot manuever")
 ax.set_xlabel("x meters")
 ax.set_ylabel("y meters")
@@ -108,7 +116,7 @@ def animate(i):
 
 
 ani = FuncAnimation(fig, animate, init_func=init,
-                    frames=len(x_e_values), repeat=False, blit=True, interval=0.001)
+                    frames=len(x_e_values), repeat=False, blit=True, interval=0.0001)
 
 
 plt.show()
