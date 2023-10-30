@@ -2,7 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import time
-
+plt.style.use('seaborn-darkgrid')
 def tic():
     return time.time()
 
@@ -69,9 +69,12 @@ def plot_interval_against_step_size():
 
     log_step_size_arr= [np.log2(step) for step in step_size_arr]
     log_interval_lengths_arr = [np.log2(length) for length in interval_lengths_arr]
+    plt.title("Interval against step size")
+    plt.xlabel("$|h|$")
+    plt.ylabel("$|(x_0+h)-(x_0-h)|$")
     plt.scatter(step_size_arr, interval_lengths_arr)
     plt.show()
-plot_interval_against_step_size()
+# plot_interval_against_step_size()
 
 # print(get_interval(x1,y1))
 
@@ -83,6 +86,31 @@ plot_interval_against_step_size()
 # plt.legend()
 # plt.show()
 
+def make_inf_sol_demo():
+    dt = 0.1
+    a = 5
+    x0 = -a-10
+    y0 = 0
+    f = lambda x: (x/2)**2
+    x_values = np.array([x0+dt*i for i in range(300)])
+    y_values = []
+    for x in x_values:
+        if x < -a:
+            y_values.append(-f(x+a))
+        elif x>a:
+            y_values.append(f(x-a))
+        else:
+            y_values.append(0)
+    plt.plot(x_values, y_values)
+    plt.scatter(-a,0)
+    plt.scatter(a,0)
+
+    # Add labels to the scatter points
+    plt.text(-a, 0, '-a', fontsize=12, ha='right', va='bottom')
+    plt.text(a, 0, '+a', fontsize=12, ha='left', va='bottom')
+    plt.show()
+
+make_inf_sol_demo()
 
 
 

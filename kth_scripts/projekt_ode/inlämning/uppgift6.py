@@ -115,8 +115,7 @@ def animate(i):
     return earth, jupiter, spaceship
 
 
-ani = FuncAnimation(fig, animate, init_func=init,
-                    frames=len(x_e_values), repeat=False, blit=True, interval=0.0001)
+ani = FuncAnimation(fig, animate, init_func=init, frames=len(x_e_values), repeat=False, blit=True, interval=0.0001)
 
 
 plt.show()

@@ -80,13 +80,14 @@ def plot_orbit(axes, x_values, y_values, X0):
     axes.plot(x_values, y_values, '.-', label='Position')
     axes.set_xlabel('x (meters)')
     axes.set_ylabel('y (meters)')
-    # axes.set_xlim(-2 * AU, 2 * AU)
-    # axes.set_ylim(-1 * AU, 1 * AU)
+
     def format_scientific(num):
         return f"{num:.1e}"
     title = axes.set_title(f'Initial x, y, x velocity, y velocity: [{format_scientific(x_0)}, {format_scientific(y_0)}, {format_scientific(vx_0)}, {format_scientific(vy_0)}]')
     title.set_position([0.5, 1.30]) 
     plt.grid(True)
+
+
 
 def plot_different_inital_values():
     x_0 = 1*AU
@@ -110,7 +111,8 @@ def plot_different_inital_values():
 
     plt.show()
 
-def plot_energy(ax, vx_values, vy_values, x_values, y_values):
+
+def plot_energy(axes, vx_values, vy_values, x_values, y_values):
     def energy(x, y, vx, vy):
         r = np.sqrt(x**2+y**2)
         T = m*(vx**2 + vy**2)/2
@@ -120,50 +122,40 @@ def plot_energy(ax, vx_values, vy_values, x_values, y_values):
     for i in range(len(x_values)):
         energi = energy(x_values[i],y_values[i],vx_values[i],vy_values[i])
         energy_vals.append(energi)
-    time = list(range(len(x_values)))    
-    ax.plot(time,energy_vals, color = "orange")
-    ax.set_title("Total energi över tiden")
-    ax.set_xlabel('t  (dagar)')
-    ax.set_ylabel('E(t)  (Joules)')
-
-def plot_different_energy(method):
-
-    def energy(x, y, vx, vy):
-        r = np.sqrt(x**2+y**2)
-        T = m*(vx**2 + vy**2)/2
-        U = -G*M*m / r
-        print(U)
-        return T + U
+    time = list(range(len(x_values)))
+    axes.scatter(time,energy_vals, s=1, color = "orange", facecolor='black')
+    axes.set_title("Total energi över tiden")
+    axes.set_xlabel('t  (dagar)')
+    axes.set_ylabel('E(t)  (Joules)')
+    plt.grid(True)
 
 
-
-    fig, ax = plt.subplots(3,2,figsize=(9,6))
-    fig.suptitle("Metod: "+ method.__name__)
-    plt.subplots_adjust(hspace=0.5, wspace=0.2)
-
-    x_0 = 1.496e11 # orbital radius m
+def plot_different_energy():
+    
+    x_0 = 1*AU # orbital radius m
     y_0 = 0
     vx_0 = 0
     vy_0 = 2.978e4 #-1e4 # orbit velocity m/s
-    
-    X0 = [x_0,y_0,vx_0,vy_0]
-    vx_values, vy_values, x_values, y_values = method([x_0,y_0,vx_0,vy_0])
-    plot_orbit(ax[0,0], x_values, y_values, X0)
-    plot_energy(ax[0,1], vx_values, vy_values, x_values, y_values)
 
-    X0 = [x_0,y_0,vx_0,vy_0-2e4]
-    vx_values, vy_values, x_values, y_values = method([x_0,y_0,vx_0,vy_0-2e4])
-    plot_orbit(ax[1,0], x_values, y_values, X0)
-    plot_energy(ax[1,1], vx_values, vy_values, x_values, y_values)
+    fig, axes = plt.subplots(2, 2   , figsize=(8, 8))
 
+    fig.suptitle("Different initial values (simplectic)")
+    plt.subplots_adjust(hspace=0.5, wspace=0.5)
 
 
     X0 = [x_0,y_0,vx_0,vy_0+1e4]
-    vx_values, vy_values, x_values, y_values = method([x_0,y_0,vx_0,vy_0+1e4])
-    plot_orbit(ax[2,0], x_values, y_values, X0)
-    plot_energy(ax[2,1], vx_values, vy_values, x_values, y_values)
+    vx_values,vy_values,x_values,y_values = RK4_euler([x_0,y_0,vx_0,vy_0+1e4])
+    plot_orbit(axes[0,0],x_values,y_values,X0)
+    plot_energy(axes[0,1], vx_values,vy_values,x_values,y_values)
 
 
+    X0 = [x_0,y_0,vx_0,vy_0-2e4]
+    vx_values,vy_values,x_values,y_values = RK4_euler([x_0,y_0,vx_0,vy_0-2e4])
+    plot_orbit(axes[1,0],x_values,y_values,X0)
+    plot_energy(axes[1,1], vx_values,vy_values,x_values,y_values)
+
+    
     plt.show()
 
-plot_different_energy(simp_euler)
+plot_different_energy()
+# plot_different_inital_values()
