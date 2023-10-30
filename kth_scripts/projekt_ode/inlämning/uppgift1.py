@@ -2,7 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import time
-
+plt.style.use('seaborn-darkgrid')
 def tic():
     return time.time()
 
@@ -26,11 +26,9 @@ def euler(step_size, f, starty, startx, stopx):
     y = [starty]
     for k in range(n):
         next_x = x[-1]+dx
-        next_y = y[-1]+ dx*f(x[-1],y[-1])
+        next_y = y[-1]+dx*f(x[-1],y[-1])
         x.append(next_x)
         y.append(next_y)
-    # for a, b in zip(x, y):
-    #     print(round(a, 2), round(b, 2))
     return x,y
 
 
@@ -52,18 +50,67 @@ def runge_kutta(step_size, f, start_y, start_x, stop_x):
         y.append(next_y)
     return x,y
 
-x1,y1 = runge_kutta(0.01, f, -9/4, 0, 5)
-x2,y2 = runge_kutta(0.1, f, -1, -1, 5)
+x1, y1 = euler(0.011, f, -1, -1, 5)
+def get_interval(x_values,y_values):
+    n_steps = len(x_values)
+    for i in range(1,n_steps):
+        if y_values[i-1]<0 and y_values[i]>0:
+            lower_bound = x_values[i-1]
+            upper_bound = x_values[i]
+            return lower_bound, upper_bound
 
-plt.grid(True)
-# plt.plot(x1, y1)
-plt.scatter(x2,y2, marker=".", label=r"numerisk lösning, $h=0.1$")
-plt.plot(x2,[y(np.array(x),-1) for x in x2],color="orange", label=r"analytisk lösning")
-plt.xlabel('x')
-plt.ylabel('y')
-plt.legend()
-plt.show()
+def plot_interval_against_step_size():
+    step_size_arr = [2**(-i) for i in range(1,12)]
+    interval_lengths_arr = []
+    for step_size in step_size_arr:
+        x_values, y_values = euler(step_size, f, -1, -1, 5)
+        lower_bound, upper_bound = get_interval(x_values, y_values)
+        interval_lengths_arr.append(upper_bound - lower_bound)
 
+    log_step_size_arr= [np.log2(step) for step in step_size_arr]
+    log_interval_lengths_arr = [np.log2(length) for length in interval_lengths_arr]
+    plt.title("Interval against step size")
+    plt.xlabel("$|h|$")
+    plt.ylabel("$|(x_0+h)-(x_0-h)|$")
+    plt.scatter(step_size_arr, interval_lengths_arr)
+    plt.show()
+# plot_interval_against_step_size()
+
+# print(get_interval(x1,y1))
+
+# plt.grid(True)
+# plt.scatter(x1,y1, marker=".", label=r"numerisk lösning, $h=0.1$")
+# plt.plot(x1,[y(np.array(x),-1) for x in x1],color="orange", label=r"analytisk lösning")
+# plt.xlabel('x')
+# plt.ylabel('y')
+# plt.legend()
+# plt.show()
+
+def make_inf_sol_demo():
+    dt = 0.1
+    a = 5
+    x0 = -a-10
+    y0 = 0
+    f = lambda x: (x/2)**2
+    x_values = np.array([x0+dt*i for i in range(300)])
+    y_values = []
+    for x in x_values:
+        if x < -a:
+            y_values.append(-f(x+a))
+        elif x>a:
+            y_values.append(f(x-a))
+        else:
+            y_values.append(0)
+    plt.plot(x_values, y_values)
+    plt.scatter(-a,0)
+    plt.scatter(a,0)
+
+    # Add labels to the scatter points
+    plt.text(-a, 0, '-a', fontsize=12, ha='right', va='bottom')
+    plt.text(a, 0, '+a', fontsize=12, ha='left', va='bottom')
+    plt.show()
+
+make_inf_sol_demo()
 
 
 

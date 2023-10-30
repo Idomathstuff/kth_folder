@@ -15,8 +15,6 @@ def ode_func(X):
     r = np.sqrt(x**2+y**2)
     vx_prime = -x*G*M/r**3
     vy_prime = -y*G*M/r**3
-    # x_prime = vx 
-    # y_prime = vy 
     x_prime = vx + time_step*vx_prime
     y_prime = vy + time_step*vy_prime
     return np.array([x_prime,y_prime,vx_prime,vy_prime])
@@ -33,10 +31,6 @@ def euler(X0):
         y_values.append(X[1])
         vx_values.append(X[2])
         vy_values.append(X[3])
-        # X[2]+=time_step*ode_func(X)[2]
-        # X[3]+=time_step*ode_func(X)[3]
-        # X[0]+=time_step*ode_func(X)[0]
-        # X[1]+=time_step*ode_func(X)[1]
         X += time_step*ode_func(X )
     return [vx_values,vy_values,x_values,y_values]
 
@@ -53,7 +47,6 @@ def plot_orbit(x_values, y_values, X0):
             if i%skip_val!=0:
                 continue
             ax.annotate('', xy=(x_values[skip_val+i], y_values[skip_val+i]), xytext=(x_values[i], y_values[i]), arrowprops=dict(arrowstyle='->', lw=2))
-    # add_arrows()
     ax.set_xlabel('x (meters)')
     ax.set_ylabel('y (meters)')
     def format_scientific(num):
