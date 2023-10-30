@@ -6,11 +6,12 @@ mp.dps = 21  # Set the desired number of decimal places
 from decimal import Decimal, getcontext
 getcontext().prec = 30
 
-def f(t, x, y):
-    return -y
 
 def g(t, x, y):
     return x
+
+def f(t, x, y):
+    return -y
 
 def RK4_2d(tn, xn, yn, h):
     miu1, v1 = h * Decimal(f(tn, xn, yn)), h * Decimal(g(tn, xn, yn))
@@ -32,15 +33,14 @@ def interpolation(t1, t2, y1, y2):
 
 
 
-tau = Decimal('1e-20')
-h1 = Decimal('1e-4')
+h1 = Decimal('1e-6')
 xn = Decimal('0')
 yn = Decimal('1')
 tn = Decimal('0')
 
 while yn > 0:
     x_next, y_next = RK4_2d(tn, xn, yn, h1)
-    if (y_next < Decimal(0)) != (yn < Decimal(0)):
+    if (y_next < Decimal(0)):
         ans = interpolation(tn, tn + h1, yn, y_next)
         break
     tn += h1

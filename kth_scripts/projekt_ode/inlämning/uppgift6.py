@@ -83,7 +83,7 @@ x_e_values, y_e_values, x_j_values, y_j_values, x_s_values, y_s_values = euler(X
 
 
 
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(10,10))
 plt.plot(x_e_values,y_e_values, color = "cyan", label="earth")
 plt.plot(x_j_values,y_j_values, color = "orange", label="jupiter")
 plt.plot(x_s_values,y_s_values,marker='o',markersize=0.1, label="space ship")
@@ -95,7 +95,7 @@ spaceship, = ax.plot([], [], 'o', color='blue', markersize=5)
 sun = ax.plot(0, 0, 'yo', markersize=5)
 ax.set_xlim(-20 * AU, 20 * AU)
 ax.set_ylim(-20 * AU, 20 * AU)
-ax.set_title("Slingshot manuever")
+ax.set_title(f"Slingshot manuever \n Raketens initial $x,y,v_x,v_y$ = {X0_s} \n ")
 ax.set_xlabel("x meters")
 ax.set_ylabel("y meters")
 
