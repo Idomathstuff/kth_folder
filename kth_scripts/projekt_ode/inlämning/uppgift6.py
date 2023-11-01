@@ -16,6 +16,9 @@ X0_s = np.array([-1.1*AU, 0, 0, -3.58e4]) # ändra initial hastighet för rymdsk
 
 time_step = 60*60*24
 
+distances_to_jupiter = []
+vx_s_values = []
+vy_s_values = []
 def ode_func(X_e,X_j,X_s):
     x_e ,y_e, vx_e, vy_e = X_e
     x_j, y_j, vx_j, vy_j = X_j
@@ -26,6 +29,7 @@ def ode_func(X_e,X_j,X_s):
     r_e_to_j = np.sqrt((x_e-x_j)**2+(y_e-y_j)**2)
     r_s = np.sqrt(x_s**2+y_s**2)
     r_s_to_j = np.sqrt((x_s-x_j)**2+(y_s-y_j)**2)
+    distances_to_jupiter.append(r_s_to_j)
     r_s_to_e = np.sqrt((x_s-x_e)**2+(y_s-y_e)**2)
     ax_e = -x_e*G*M/r_e**3 +(x_j-x_e)*G*m_j/r_e_to_j**3
     ay_e = -y_e*G*M/r_e**3 +(y_j-y_e)*G*m_j/r_e_to_j**3
@@ -56,6 +60,8 @@ def euler(X0_e,X0_j,X0_s):
     y_j_values = []
     x_s_values = []
     y_s_values = []
+
+
     n = 10000
     for i in range(n):
         x_e_values.append(X_e[0])
@@ -64,6 +70,10 @@ def euler(X0_e,X0_j,X0_s):
         y_j_values.append(X_j[1])
         x_s_values.append(X_s[0])
         y_s_values.append(X_s[1])
+
+        vx_s_values.append(X_s[2])
+        vy_s_values.append(X_s[3])
+
         X_e_derivs,X_j_derivs,X_s_derivs = ode_func(X_e,X_j,X_s)
         X_e += time_step*np.array(X_e_derivs)
         X_j += time_step*np.array(X_j_derivs)
@@ -75,7 +85,7 @@ def euler(X0_e,X0_j,X0_s):
         v_mag = np.sqrt(final_vx**2+final_vy**2)
         print("Initialhastigheten av raketen: ", 3.58e4, " m/s")
         print("Sluthastigheten av raketen: ",np.round(v_mag,2), "m/s")
-    display_final_v()
+    # display_final_v()
     return x_e_values,y_e_values, x_j_values,y_j_values, x_s_values,y_s_values
 
 
@@ -119,3 +129,15 @@ ani = FuncAnimation(fig, animate, init_func=init, frames=len(x_e_values), repeat
 
 
 plt.show()
+
+def display_slingshot_velocity():
+    t_träff = distances_to_jupiter.index(min(distances_to_jupiter))
+    vx_before = vx_s_values[t_träff-1]
+    vy_before = vy_s_values[t_träff-1]
+    vx_after = vx_s_values[t_träff+1]
+    vy_after = vy_s_values[t_träff+1]
+    
+    print("Innan träff ", np.sqrt(vx_before**2+ vy_before**2))
+    print("Efter träff ", np.sqrt(vx_after**2+vy_after**2))
+    print("percent ökning: ", 100*(np.sqrt(vx_after**2+vy_after**2)-np.sqrt(vx_before**2+ vy_before**2))/np.sqrt(vx_before**2+ vy_before**2), "%")
+display_slingshot_velocity()
