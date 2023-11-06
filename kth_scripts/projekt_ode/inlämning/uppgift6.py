@@ -132,6 +132,11 @@ plt.show()
 
 def display_slingshot_velocity():
     t_träff = distances_to_jupiter.index(min(distances_to_jupiter))
+    x_after = x_s_values[t_träff+1]
+    y_after = y_s_values[t_träff+1]
+    r_after = np.sqrt(x_after**2+y_after**2)
+    evel = np.sqrt(2*G*M/r_after)
+    print("Flykthastighet som krävs: ", evel)
     vx_before = vx_s_values[t_träff-1]
     vy_before = vy_s_values[t_träff-1]
     vx_after = vx_s_values[t_träff+1]

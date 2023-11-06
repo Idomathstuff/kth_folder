@@ -1,82 +1,50 @@
-#vad är pi
+import math
 import numpy as np
-import matplotlib.pyplot as plt
-import json
+from mpmath import mp
+mp.dps = 21  
 from decimal import Decimal, getcontext
+getcontext().prec = 30
 
+def yprime(t, y, z):
+    return Decimal(z)
 
-def f(arr):
-    x, y, z = arr[0], arr[1], arr[2]
-    x_prime = 1
-    y_prime = z
-    z_prime = -y
-    return np.array([x_prime, y_prime, z_prime])
+def zprime(t, y, z):
+    return Decimal(-y)
 
-def linear_interpolate(x_1,x_2,y_1,y_2):
-    m = (y_2-y_1)/(x_2-x_1)
-    y_noll = 0
-    x_noll = (y_noll-y_1)/m + x_1
-    return x_noll
+root_data = []
 
-
-
-
-def runge_kutta(step_size, f, start_vals, stopx):
-    dx = step_size
-    startx, starty, startz = start_vals[0], start_vals[1], start_vals[2]
-    n = round(abs(stopx - startx) / dx)
-    xyz_vals = [start_vals]
+def RK4_euler(step_size, start_vals, stopt):
+    t_0, y_0, z_0 = Decimal(start_vals[0]), Decimal(start_vals[1]), Decimal(start_vals[2])
+    tyz_vals = [[t_0,y_0,z_0]]
+    dt = Decimal(step_size)
+    n = round(abs(stopt-float(t_0))/step_size)
     for i in range(n):
-        print(i, xyz_vals[-1][0], xyz_vals[-1][1])
-        if xyz_vals[-1][1] < 0: 
-            print("Before interpolation skattning: ",2*xyz_vals[-1][0])
+        if tyz_vals[-1][1] < Decimal(0):
+            print("Before interp", tyz_vals[-1][0])
             break
-
-        k1 = f(xyz_vals[-1])
-        k2 = f(xyz_vals[-1] + 0.5 * dx * k1)
-        k3 = f(xyz_vals[-1] + 0.5 * dx * k2)
-        k4 = f(xyz_vals[-1] + dx * k3)
+        tn, yn, zn = tyz_vals[-1]
+        k1, v1 = yprime(tn, yn, zn), zprime(tn, yn, zn)
+        k2, v2 = yprime(tn + dt/Decimal(2), yn + dt*k1/Decimal(2), zn + dt*v1/Decimal(2)), zprime(tn + dt/Decimal(2), yn + dt*k1/Decimal(2), zn + dt*v1/Decimal(2))
+        k3, v3 = yprime(tn + dt/Decimal(2), yn + dt*k2/Decimal(2), zn + dt*v2/Decimal(2)), zprime(tn + dt/Decimal(2), yn + dt*k2/Decimal(2), zn + dt*v2/Decimal(2))
+        k4, v4 = yprime(tn + dt, yn + dt*k3, zn + dt*v3), zprime(tn + dt, yn + dt*k3, zn + dt*v3)
         
-        next_val = xyz_vals[-1] + dx * (k1 + 2 * k2 + 2 * k3 + k4) / 6.0 
-        xyz_vals.append(next_val)
-    
-    x = [point[0] for point in xyz_vals]
-    y = [point[1] for point in xyz_vals]
-    
-    return x,y
+        t_next = tn+dt
+        y_next = yn + dt*(k1 + 2*k2 + 2*k3 + k4)/Decimal(6)
+        z_next = zn + dt*(v1 + 2*v2 + 2*v3 + v4)/Decimal(6)
+        tyz_vals.append([t_next,y_next,z_next])
 
-
-def make_json_file():
-    x_values, y_values = runge_kutta(1e-6 , f, [0, 1, 0], 2*np.pi)
-    data = {
-        "x_values": x_values,
-        "y_values": y_values
-    }
-    json_file = "runge_kutta_data.json"
-    with open(json_file, "w") as json_out:
-        json.dump(data, json_out)
-
-# make_json_file()
-
-def get_json_data():
-    json_file = "runge_kutta_data.json"
-    with open(json_file, "r") as json_in:
-        data = json.load(json_in)
-    x_values = data["x_values"]
-    y_values = data["y_values"]
-    return x_values, y_values
-
-x_values, y_values = get_json_data()
-
-
+    return tyz_vals
 
 def interpolation(t1, t2, y1, y2):
-    a = (y2 - y1)/(t2 - t1)
-    b =(y1 - t1*a)
-    return (-2*b/a)
+    a = Decimal(y2 - y1)/Decimal(t2 - t1)
+    b =Decimal(y1 - t1*a)
+    return Decimal(-b/a)
 
-pi_estimate = interpolation(x_values[-2],x_values[-1],y_values[-2],y_values[-1])
-print(pi_estimate)
 
-print("målet: ", round(np.pi,20))
+tyz_vals = RK4_euler(1e-1, [0,1,0], 4)
+
+t1, t2 = tyz_vals[-2][0], tyz_vals[-1][0]
+y1, y2 = tyz_vals[-2][1], tyz_vals[-1][1]
+print("interp ", 2*((interpolation(t1,t2,y1,y2))))
+print("målet: ", mp.pi)
 
