@@ -1,6 +1,6 @@
-PWD c:\Users\lmfry\OneDrive\KTHfiles\kthdocs\temp3\tmpproj\numme_proj
+PWD c:\kth_folder\kth_docs\PDE-Tex\lab1
 INPUT C:\Users\lmfry\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\lmfry\OneDrive\KTHfiles\kthdocs\temp3\tmpproj\numme_proj\main.tex
+INPUT c:\kth_folder\kth_docs\PDE-Tex\lab1\main.tex
 OUTPUT main.log
 INPUT .\assignment.cls
 INPUT .\assignment.cls
